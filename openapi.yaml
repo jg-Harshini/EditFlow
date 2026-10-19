@@ -1,0 +1,508 @@
+openapi: 3.1.0
+info:
+  title: IncuBrix Prompt-Based Video Editing Engine API
+  description: High-performance, content-anchored prompt-based conversational video
+    editing service.
+  version: 1.0.0
+paths:
+  /health:
+    get:
+      tags:
+      - Health
+      summary: Get Health
+      description: Liveness probe returning HTTP 200.
+      operationId: get_health_health_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /ready:
+    get:
+      tags:
+      - Health
+      summary: Get Ready
+      description: Readiness probe checking disk storage and environment readiness.
+      operationId: get_ready_ready_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /api/v1/sessions:
+    post:
+      tags:
+      - Sessions
+      summary: Create Session
+      description: Creates a new editing session for the given video file or URL.
+      operationId: create_session_api_v1_sessions_post
+      parameters:
+      - name: Idempotency-Key
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Idempotency-Key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSessionRequest'
+      responses:
+        '201':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                title: Response Create Session Api V1 Sessions Post
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/sessions/{session_id}:
+    get:
+      tags:
+      - Sessions
+      summary: Get Session
+      description: Retrieves session details and current timeline.
+      operationId: get_session_api_v1_sessions__session_id__get
+      parameters:
+      - name: session_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Session Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/sessions/{session_id}/steps:
+    post:
+      tags:
+      - Sessions
+      summary: Execute Step
+      description: 'Applies an editing instruction to the session.
+
+        If instruction is ''render'', dispatches a background job and returns HTTP
+        202.
+
+        Otherwise executes synchronously in < 2 seconds and returns StepResult.'
+      operationId: execute_step_api_v1_sessions__session_id__steps_post
+      parameters:
+      - name: session_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Session Id
+      - name: Idempotency-Key
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Idempotency-Key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StepRequest'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/sessions/{session_id}/render:
+    post:
+      tags:
+      - Sessions
+      summary: Trigger Render
+      description: Triggers rendering of the session timeline as a background job.
+      operationId: trigger_render_api_v1_sessions__session_id__render_post
+      parameters:
+      - name: session_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Session Id
+      - name: callback_url
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Callback Url
+      - name: Idempotency-Key
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Idempotency-Key
+      responses:
+        '202':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobAcceptedResponse'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/sessions/{session_id}/export-otio:
+    get:
+      tags:
+      - Sessions
+      summary: Export Otio
+      description: Exports session timeline to OpenTimelineIO (.otio) format.
+      operationId: export_otio_api_v1_sessions__session_id__export_otio_get
+      parameters:
+      - name: session_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Session Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/jobs/{job_id}:
+    get:
+      tags:
+      - Jobs
+      summary: Get Job Status
+      description: Retrieves the status, progress (0-100), and results of a background
+        job.
+      operationId: get_job_status_api_v1_jobs__job_id__get
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Job Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Job'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/media/upload:
+    post:
+      tags:
+      - Media
+      summary: Upload Media File
+      description: Uploads a video file (MP4 or MOV) for editing.
+      operationId: upload_media_file_api_v1_media_upload_post
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Body_upload_media_file_api_v1_media_upload_post'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MediaIngestResponse'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/media/ingest-url:
+    post:
+      tags:
+      - Media
+      summary: Ingest Media From Url
+      description: Safely downloads a media file from a URL with SSRF protection.
+      operationId: ingest_media_from_url_api_v1_media_ingest_url_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IngestUrlRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MediaIngestResponse'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/media/{file_name}:
+    get:
+      tags:
+      - Media
+      summary: Download Media
+      description: Serves ingested and rendered media files for download.
+      operationId: download_media_api_v1_media__file_name__get
+      parameters:
+      - name: file_name
+        in: path
+        required: true
+        schema:
+          type: string
+          title: File Name
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    Body_upload_media_file_api_v1_media_upload_post:
+      properties:
+        file:
+          type: string
+          format: binary
+          title: File
+      type: object
+      required:
+      - file
+      title: Body_upload_media_file_api_v1_media_upload_post
+    CreateSessionRequest:
+      properties:
+        video_uri:
+          type: string
+          title: Video Uri
+      type: object
+      required:
+      - video_uri
+      title: CreateSessionRequest
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    IngestUrlRequest:
+      properties:
+        url:
+          type: string
+          title: Url
+      type: object
+      required:
+      - url
+      title: IngestUrlRequest
+    Job:
+      properties:
+        job_id:
+          type: string
+          title: Job Id
+        status:
+          type: string
+          enum:
+          - queued
+          - running
+          - succeeded
+          - failed
+          title: Status
+          default: queued
+        progress:
+          type: integer
+          maximum: 100.0
+          minimum: 0.0
+          title: Progress
+          default: 0
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+        updated_at:
+          type: string
+          format: date-time
+          title: Updated At
+        result:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          title: Result
+        error:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          title: Error
+        callback_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Callback Url
+        idempotency_key:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Idempotency Key
+      type: object
+      required:
+      - job_id
+      title: Job
+    JobAcceptedResponse:
+      properties:
+        job_id:
+          type: string
+          title: Job Id
+        status:
+          type: string
+          title: Status
+          default: queued
+        message:
+          type: string
+          title: Message
+          default: Operation accepted for background processing
+        poll_url:
+          type: string
+          title: Poll Url
+      type: object
+      required:
+      - job_id
+      - poll_url
+      title: JobAcceptedResponse
+    MediaIngestResponse:
+      properties:
+        file_path:
+          type: string
+          title: File Path
+        download_url:
+          type: string
+          title: Download Url
+        sha256:
+          type: string
+          title: Sha256
+        duration_s:
+          type: number
+          title: Duration S
+        fps:
+          type: number
+          title: Fps
+        width:
+          type: integer
+          title: Width
+        height:
+          type: integer
+          title: Height
+      type: object
+      required:
+      - file_path
+      - download_url
+      - sha256
+      - duration_s
+      - fps
+      - width
+      - height
+      title: MediaIngestResponse
+    StepRequest:
+      properties:
+        say:
+          type: string
+          title: Say
+        answer:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Answer
+        callback_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Callback Url
+      type: object
+      required:
+      - say
+      title: StepRequest
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+        input:
+          title: Input
+        ctx:
+          type: object
+          title: Context
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
