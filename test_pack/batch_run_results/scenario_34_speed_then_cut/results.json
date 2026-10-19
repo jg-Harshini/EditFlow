@@ -18,7 +18,7 @@
       "summary": "Applied, stating which time policy was used. [Time Policy: Current Timeline Time] Sped up range [10.0s-30.0s] to 2.0x.",
       "question": null,
       "options": null,
-      "timeline_hash": "8b1d62af13ace6fe061ad2e1e33f4c46ec3ebc97966485ac7c61411bb55e1659",
+      "timeline_hash": "e50b686d60c386145747aafa066da73376a409a569fb5226e11a037e6237e6a6",
       "duration_s": 215.0,
       "warnings": []
     },
@@ -38,16 +38,16 @@
       "summary": "Applied. Cut 5.0s. Video is now 210.0s (5.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "06a752101f703174144fcb58046a6c3fcda068976f674d042aae9b4c77175914",
+      "timeline_hash": "8574b11013eb0942a943581fe820026f0b0438cc5a2c959582df3e78bae6ebb3",
       "duration_s": 210.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "ca3ece14-1b73-488a-8730-412e7f9ec131",
+    "timeline_id": "64b7f5b1-2430-45ae-b4a4-0a7775ec7eb4",
     "source_media": {
-      "id": "e318627b-603a-4390-a0a1-031920316c81",
+      "id": "9ff4bf08-ab83-4bfd-8be5-c6745c820b20",
       "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -59,8 +59,8 @@
     },
     "segments": [
       {
-        "id": "ec3317d5-182c-4c5c-962e-d282ab75f2ae",
-        "source_id": "e318627b-603a-4390-a0a1-031920316c81",
+        "id": "0cb6707f-0d6c-4407-8666-778c8c27b2c7",
+        "source_id": "9ff4bf08-ab83-4bfd-8be5-c6745c820b20",
         "source_start_ms": 5000,
         "source_end_ms": 10000,
         "speed": 1.0,
@@ -69,8 +69,8 @@
         "tags": []
       },
       {
-        "id": "c6bfac64-5172-4bac-a5c3-18af0d8809c8",
-        "source_id": "e318627b-603a-4390-a0a1-031920316c81",
+        "id": "8d3652ab-7ad0-4381-abd8-466a1c2b0c8c",
+        "source_id": "9ff4bf08-ab83-4bfd-8be5-c6745c820b20",
         "source_start_ms": 10000,
         "source_end_ms": 30000,
         "speed": 2.0,
@@ -79,8 +79,8 @@
         "tags": []
       },
       {
-        "id": "98e1a09e-1241-4e30-bade-d851896adb91",
-        "source_id": "e318627b-603a-4390-a0a1-031920316c81",
+        "id": "1804a8a3-0dd7-4a02-aaab-2f830c9d0396",
+        "source_id": "9ff4bf08-ab83-4bfd-8be5-c6745c820b20",
         "source_start_ms": 30000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -93,10 +93,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "06a752101f703174144fcb58046a6c3fcda068976f674d042aae9b4c77175914",
+    "timeline_hash": "8574b11013eb0942a943581fe820026f0b0438cc5a2c959582df3e78bae6ebb3",
     "duration_ms": 210000
   },
-  "final_timeline_hash": "06a752101f703174144fcb58046a6c3fcda068976f674d042aae9b4c77175914",
+  "final_timeline_hash": "8574b11013eb0942a943581fe820026f0b0438cc5a2c959582df3e78bae6ebb3",
   "final_duration_s": 210.0,
   "final_video": null
 }

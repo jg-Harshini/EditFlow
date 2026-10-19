@@ -17,16 +17,16 @@
       "summary": "Applied. Cut 10.0s. Video is now 215.0s (10.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "1a55c40dc74697b45118c23ac3bacb9e445606acd6a116ca6a2cab5ecfdbd144",
+      "timeline_hash": "06c03e382070a9deb52278016fc684552a27c2cd504d147abc8ed6be6ec29700",
       "duration_s": 215.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "664483e8-3835-4fb9-948c-1e49d0a62dc7",
+    "timeline_id": "012b0e5c-3e65-4cc3-8334-a75073c12ce0",
     "source_media": {
-      "id": "7d84d21f-4fc7-4ae3-a54d-72384ebf52d7",
+      "id": "4ef5d3c9-7159-4ca9-86ab-455e877ba9da",
       "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -38,8 +38,8 @@
     },
     "segments": [
       {
-        "id": "fc6d0b0f-b704-40c5-a56f-fdbaa6423545",
-        "source_id": "7d84d21f-4fc7-4ae3-a54d-72384ebf52d7",
+        "id": "67e13287-2060-4237-92af-244cf5b92bd6",
+        "source_id": "4ef5d3c9-7159-4ca9-86ab-455e877ba9da",
         "source_start_ms": 0,
         "source_end_ms": 20000,
         "speed": 1.0,
@@ -48,8 +48,8 @@
         "tags": []
       },
       {
-        "id": "5ed911b7-4254-47e9-a949-43d67257975c",
-        "source_id": "7d84d21f-4fc7-4ae3-a54d-72384ebf52d7",
+        "id": "61855316-9830-4e1a-9718-3d750b51a0bd",
+        "source_id": "4ef5d3c9-7159-4ca9-86ab-455e877ba9da",
         "source_start_ms": 30000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -62,10 +62,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "1a55c40dc74697b45118c23ac3bacb9e445606acd6a116ca6a2cab5ecfdbd144",
+    "timeline_hash": "06c03e382070a9deb52278016fc684552a27c2cd504d147abc8ed6be6ec29700",
     "duration_ms": 215000
   },
-  "final_timeline_hash": "1a55c40dc74697b45118c23ac3bacb9e445606acd6a116ca6a2cab5ecfdbd144",
+  "final_timeline_hash": "06c03e382070a9deb52278016fc684552a27c2cd504d147abc8ed6be6ec29700",
   "final_duration_s": 215.0,
   "final_video": null
 }

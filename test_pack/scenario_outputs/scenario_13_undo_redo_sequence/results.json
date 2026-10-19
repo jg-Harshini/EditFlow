@@ -17,7 +17,7 @@
       "summary": "Applied. Cut 10.0s. Video is now 215.0s (10.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "4124c3f8d2b20e23daaec26d97743d5387f156e05908197912030ef23ffdcdd3",
+      "timeline_hash": "07caec9b5666c1763e4fb67b93072af74d522b1b043bbc831afea0703cc15143",
       "duration_s": 215.0,
       "warnings": []
     },
@@ -33,7 +33,7 @@
       "summary": "Reverses step 1. The cut the first 10 seconds is undone.",
       "question": null,
       "options": null,
-      "timeline_hash": "663391b05e0d7c340e28f3801254a2be3616ebe9bb1b345d97a48aa97d9dff7c",
+      "timeline_hash": "e157b48ce9af6e12cc66d212d3f6e24cb2c2c1dc54aa0bac9361a278487c4ec8",
       "duration_s": 225.0,
       "warnings": []
     },
@@ -49,16 +49,16 @@
       "summary": "Redo applied.",
       "question": null,
       "options": null,
-      "timeline_hash": "4124c3f8d2b20e23daaec26d97743d5387f156e05908197912030ef23ffdcdd3",
+      "timeline_hash": "07caec9b5666c1763e4fb67b93072af74d522b1b043bbc831afea0703cc15143",
       "duration_s": 215.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "2c676ff0-8432-4002-9762-93b44d10be7e",
+    "timeline_id": "9b8fda78-b180-4f15-9f99-766291a82f7d",
     "source_media": {
-      "id": "46ae1f49-f616-4319-ba35-e865dc5061b7",
+      "id": "6ede4e86-17de-493d-8c0d-79e80d3f0e5f",
       "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -70,8 +70,8 @@
     },
     "segments": [
       {
-        "id": "115718ec-1177-4038-bbf4-b826be892eb9",
-        "source_id": "46ae1f49-f616-4319-ba35-e865dc5061b7",
+        "id": "0d13e85c-6304-4dc4-82bf-48d9563f6ed5",
+        "source_id": "6ede4e86-17de-493d-8c0d-79e80d3f0e5f",
         "source_start_ms": 10000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -84,10 +84,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "4124c3f8d2b20e23daaec26d97743d5387f156e05908197912030ef23ffdcdd3",
+    "timeline_hash": "07caec9b5666c1763e4fb67b93072af74d522b1b043bbc831afea0703cc15143",
     "duration_ms": 215000
   },
-  "final_timeline_hash": "4124c3f8d2b20e23daaec26d97743d5387f156e05908197912030ef23ffdcdd3",
+  "final_timeline_hash": "07caec9b5666c1763e4fb67b93072af74d522b1b043bbc831afea0703cc15143",
   "final_duration_s": 215.0,
   "final_video": null
 }
