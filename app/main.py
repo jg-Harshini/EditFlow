@@ -44,9 +44,25 @@ app = FastAPI(
     title="IncuBrix Prompt-Based Video Editing Engine API",
     version="1.0.0",
     description="High-performance, content-anchored prompt-based conversational video editing service.",
-    openapi_version="3.1.0",
     lifespan=lifespan,
 )
+
+
+def custom_openapi():
+    if app.openapi_schema:
+        return app.openapi_schema
+    openapi_schema = get_openapi(
+        title=app.title,
+        version=app.version,
+        openapi_version="3.1.0",
+        description=app.description,
+        routes=app.routes,
+    )
+    app.openapi_schema = openapi_schema
+    return app.openapi_schema
+
+
+app.openapi = custom_openapi
 
 # CORS middleware for demo/frontend integration
 app.add_middleware(
