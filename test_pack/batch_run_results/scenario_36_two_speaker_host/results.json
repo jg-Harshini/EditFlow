@@ -1,0 +1,71 @@
+{
+  "video": "test_pack/assets/multispeaker.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Remove 0:20-0:30",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "",
+          "start_ms": 20000,
+          "end_ms": 30000,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. Cut 10.0s. Video is now 140.0s (10.0s shorter).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "1c6a2e2f7e6f7f5560e55b0846c7d766b31eae75ad1eaf33e64f30f1a8b096f0",
+      "duration_s": 140.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "d5d257ca-61f0-4ed6-9764-f39e495edd30",
+    "source_media": {
+      "id": "b36108ac-cdc9-4279-8ce1-1695d34e3c12",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\multispeaker.mp4",
+      "duration_ms": 150000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "b9af2281104a98cf199159e7e7b62ad6849d9f8b3965f5750dcddde6a5facd0e"
+    },
+    "segments": [
+      {
+        "id": "51d8850b-087f-4d3e-8a58-761a4d233739",
+        "source_id": "b36108ac-cdc9-4279-8ce1-1695d34e3c12",
+        "source_start_ms": 0,
+        "source_end_ms": 20000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "c02de49a-c616-4124-9fe4-58aea500727e",
+        "source_id": "b36108ac-cdc9-4279-8ce1-1695d34e3c12",
+        "source_start_ms": 30000,
+        "source_end_ms": 150000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "1c6a2e2f7e6f7f5560e55b0846c7d766b31eae75ad1eaf33e64f30f1a8b096f0",
+    "duration_ms": 140000
+  },
+  "final_timeline_hash": "1c6a2e2f7e6f7f5560e55b0846c7d766b31eae75ad1eaf33e64f30f1a8b096f0",
+  "final_duration_s": 140.0,
+  "final_video": null
+}

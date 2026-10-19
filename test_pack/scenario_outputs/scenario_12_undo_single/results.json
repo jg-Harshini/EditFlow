@@ -1,0 +1,77 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Cut the first 10 seconds",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "",
+          "start_ms": 0,
+          "end_ms": 10000,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. Cut 10.0s. Video is now 215.0s (10.0s shorter).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "0089c6fabeea81d1cb72a4de2c3710fa2cc4ea16b73760a2eb994c8dc3bc9358",
+      "duration_s": 215.0,
+      "warnings": []
+    },
+    {
+      "step_index": 2,
+      "say": "Undo",
+      "status": "applied",
+      "operations": [
+        {
+          "op": "undo"
+        }
+      ],
+      "summary": "Reverses step 1. The cut the first 10 seconds is undone.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "1075a42575d2946cb826c7c29ab7b835820292ba92bcac5e6719eb1966ae9b86",
+      "duration_s": 225.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "57b1ab9e-5095-4aa6-95da-6df6267d56f1",
+    "source_media": {
+      "id": "52798ec6-ebf2-4f13-8b42-b4b2a84d4086",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "fc11b384-ce0d-4dc6-9854-1f41c5f3b128",
+        "source_id": "52798ec6-ebf2-4f13-8b42-b4b2a84d4086",
+        "source_start_ms": 0,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "1075a42575d2946cb826c7c29ab7b835820292ba92bcac5e6719eb1966ae9b86",
+    "duration_ms": 225000
+  },
+  "final_timeline_hash": "1075a42575d2946cb826c7c29ab7b835820292ba92bcac5e6719eb1966ae9b86",
+  "final_duration_s": 225.0,
+  "final_video": null
+}

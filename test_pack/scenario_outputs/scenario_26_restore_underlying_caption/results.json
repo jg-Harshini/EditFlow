@@ -1,0 +1,125 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Add a caption 'Welcome!' when I say welcome to the channel",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "add_caption",
+          "description": "",
+          "text": "Welcome!",
+          "target_phrase": "welcome to the channel",
+          "word_ids": [],
+          "start_ms": null,
+          "end_ms": null,
+          "time_coordinate": "current",
+          "color": "white",
+          "font_size": 24,
+          "position": "bottom"
+        }
+      ],
+      "summary": "Applied. Caption attached to those 4 words (original time 0:42-0:44).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "1a1fc4b2ee7e95c8df0ba15f4f318a5a1bb0c682ded1dc8f78cf9bb18fa80df4",
+      "duration_s": 225.0,
+      "warnings": []
+    },
+    {
+      "step_index": 2,
+      "say": "Remove 0:40-0:45",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "",
+          "start_ms": 40000,
+          "end_ms": 45000,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. Cut 5.0s. Video is now 220.0s (5.0s shorter).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "9730c087f96aa889e851b353841dbb04059ae74c6b98babcaa342faeb425dee0",
+      "duration_s": 220.0,
+      "warnings": [
+        "Caption 'Welcome!' was removed because its underlying speech was cut."
+      ]
+    },
+    {
+      "step_index": 3,
+      "say": "Undo",
+      "status": "applied",
+      "operations": [
+        {
+          "op": "undo"
+        }
+      ],
+      "summary": "Reverses step 2. The remove 0:40-0:45 is undone.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "1a1fc4b2ee7e95c8df0ba15f4f318a5a1bb0c682ded1dc8f78cf9bb18fa80df4",
+      "duration_s": 225.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "4eb616ac-4387-44f2-aa49-7c182198f8dd",
+    "source_media": {
+      "id": "28f080d8-99ab-4312-a245-c2d32d8d8efd",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "84b42701-c53a-49bf-a652-7d4790619f0b",
+        "source_id": "28f080d8-99ab-4312-a245-c2d32d8d8efd",
+        "source_start_ms": 0,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [
+      {
+        "id": "28266f55-83ca-4993-b071-406f39f888fb",
+        "source_start_ms": 42000,
+        "source_end_ms": 44000,
+        "word_ids": [
+          "w_13",
+          "w_14",
+          "w_15",
+          "w_16"
+        ],
+        "text": "Welcome!",
+        "style": {
+          "color": "white",
+          "font_size": 24,
+          "position": "bottom",
+          "background": "black@0.5"
+        },
+        "status": "active"
+      }
+    ],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "1a1fc4b2ee7e95c8df0ba15f4f318a5a1bb0c682ded1dc8f78cf9bb18fa80df4",
+    "duration_ms": 225000
+  },
+  "final_timeline_hash": "1a1fc4b2ee7e95c8df0ba15f4f318a5a1bb0c682ded1dc8f78cf9bb18fa80df4",
+  "final_duration_s": 225.0,
+  "final_video": null
+}

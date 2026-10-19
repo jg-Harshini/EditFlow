@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "timeline_id": "d9f95a99-6da6-4917-bfe7-fb38ac168f2d",
+  "source_media": {
+    "id": "e0a08080-6c68-4c69-9407-b636001a83a5",
+    "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\short_test.mp4",
+    "duration_ms": 10000,
+    "fps": 30.0,
+    "width": 1280,
+    "height": 720,
+    "audio_channels": 1,
+    "audio_sample_rate": 44100,
+    "sha256": "233d8ef468450913cf8819d61735f1e999103f52d5e670bc433f78ef774fd1c2"
+  },
+  "segments": [
+    {
+      "id": "4d982cd7-8fa9-4f91-8aa9-f18fc4257b51",
+      "source_id": "e0a08080-6c68-4c69-9407-b636001a83a5",
+      "source_start_ms": 0,
+      "source_end_ms": 10000,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    }
+  ],
+  "captions": [
+    {
+      "id": "974146bb-29c3-496d-8a2e-1673dd980b88",
+      "source_start_ms": 42000,
+      "source_end_ms": 44000,
+      "word_ids": [
+        "w_13",
+        "w_14",
+        "w_15",
+        "w_16"
+      ],
+      "text": "Fin",
+      "style": {
+        "color": "white",
+        "font_size": 24,
+        "position": "bottom",
+        "background": "black@0.5"
+      },
+      "status": "active"
+    }
+  ],
+  "audio_effects": [],
+  "background_audio": [],
+  "history_index": 0,
+  "timeline_hash": "f7f92eb66ba3a13f3d95e6bd847a4ac1c161504cb861189d0706881bd777deb9",
+  "duration_ms": 10000
+}

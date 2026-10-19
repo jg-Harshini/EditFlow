@@ -1,0 +1,61 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Remove the part about cost",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "topic:cost",
+          "start_ms": 0,
+          "end_ms": 0,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. No cut performed: start time is after or equal to end time.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "0093e1681181dbb38e89fd79b99826dbf32ec1d6a83cbbf6d3d8bcb0db1455f7",
+      "duration_s": 225.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "6fa3c1d2-c69c-4ab7-8f4b-9f6998a5961d",
+    "source_media": {
+      "id": "fd640e38-651c-4224-bc6f-742f50b26abd",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "1429d61d-0560-457a-b763-c52a99d5897d",
+        "source_id": "fd640e38-651c-4224-bc6f-742f50b26abd",
+        "source_start_ms": 0,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "0093e1681181dbb38e89fd79b99826dbf32ec1d6a83cbbf6d3d8bcb0db1455f7",
+    "duration_ms": 225000
+  },
+  "final_timeline_hash": "0093e1681181dbb38e89fd79b99826dbf32ec1d6a83cbbf6d3d8bcb0db1455f7",
+  "final_duration_s": 225.0,
+  "final_video": null
+}

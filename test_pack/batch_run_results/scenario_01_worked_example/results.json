@@ -1,0 +1,264 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Add a caption 'Welcome!' when I say welcome to the channel",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "add_caption",
+          "description": "",
+          "text": "Welcome!",
+          "target_phrase": "welcome to the channel",
+          "word_ids": [],
+          "start_ms": null,
+          "end_ms": null,
+          "time_coordinate": "current",
+          "color": "white",
+          "font_size": 24,
+          "position": "bottom"
+        }
+      ],
+      "summary": "Applied. Caption attached to those 4 words (original time 0:42-0:44).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "b47279cffb5c189100f9af83b6abdcb651de80a7e92a85b17ab2f64a4b576c43",
+      "duration_s": 225.0,
+      "warnings": []
+    },
+    {
+      "step_index": 2,
+      "say": "Cut the first 30 seconds",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "",
+          "start_ms": 0,
+          "end_ms": 30000,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. Video is 30 s shorter. Caption now plays at 0:12-0:14, still on the same words.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "6192078449b3d89763df6ef4fd0a9bbe5ab1252f941ce83dff305875395324f1",
+      "duration_s": 195.0,
+      "warnings": []
+    },
+    {
+      "step_index": 3,
+      "say": "Remove the part about pricing",
+      "status": "applied",
+      "operations": [
+        {
+          "op": "cut_topic",
+          "topic": "pricing",
+          "choice": "the second one"
+        }
+      ],
+      "summary": "Needs clarification: Pricing is mentioned at 1:02, 2:38 and 3:13 - which one, or all? User: the second one. Applied.",
+      "question": "Pricing is mentioned at 1:02, 2:38 and 3:13 - which one, or all?",
+      "options": [
+        "the first one (1:02)",
+        "the second one (2:38)",
+        "the third one (3:13)",
+        "all"
+      ],
+      "timeline_hash": "87ac7e5e47a23db9908081e3887ed0cfea32f2f57e8e30347327b02099d6d1ba",
+      "duration_s": 182.0,
+      "warnings": []
+    },
+    {
+      "step_index": 4,
+      "say": "Speed up from 1:00 to 1:30 by 2x",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "speed_change",
+          "description": "",
+          "start_ms": 60000,
+          "end_ms": 90000,
+          "speed": 2.0,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied, stating which time policy was used. [Time Policy: Current Timeline Time] Sped up range [60.0s-90.0s] to 2.0x.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "e4afe79414ef584bbbfe0cb91897df7a4d024da714621c4a738752e1b7663e34",
+      "duration_s": 167.0,
+      "warnings": []
+    },
+    {
+      "step_index": 5,
+      "say": "Actually, put the intro back",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "restore_edit",
+          "description": "",
+          "edit_step": null,
+          "target_description": "intro"
+        }
+      ],
+      "summary": "Applied. The first 30 s return; caption back at 0:42; the pricing cut and speed change stay.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "3ccf94693c07dd336a279b43a3d56373f5b81148eed097b5035e488fdc8a057a",
+      "duration_s": 197.0,
+      "warnings": []
+    },
+    {
+      "step_index": 6,
+      "say": "Undo",
+      "status": "applied",
+      "operations": [
+        {
+          "op": "undo"
+        }
+      ],
+      "summary": "Reverses step 5. The actually, put the intro back is undone.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "e4afe79414ef584bbbfe0cb91897df7a4d024da714621c4a738752e1b7663e34",
+      "duration_s": 167.0,
+      "warnings": []
+    },
+    {
+      "step_index": 7,
+      "say": "Make that caption red",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "modify_caption",
+          "description": "",
+          "caption_id": null,
+          "color": "red",
+          "font_size": null,
+          "text": null,
+          "position": null
+        }
+      ],
+      "summary": "Applied to the Welcome! caption, the only one that exists.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "33cbb7336d19d808f1a997c3fabe6d6282885e70d7e6c9c85cd41f74d0135c7b",
+      "duration_s": 167.0,
+      "warnings": []
+    },
+    {
+      "step_index": 8,
+      "say": "render",
+      "status": "applied",
+      "operations": [
+        {
+          "op": "render",
+          "output_path": "outputs\\render_af037a88_2328d5.mp4",
+          "metadata": {
+            "output_path": "outputs\\render_af037a88_2328d5.mp4",
+            "expected_duration_s": 167.0,
+            "actual_duration_s": 167.066667,
+            "difference_frames": 2.0,
+            "fps": 30.0,
+            "has_audio": true
+          }
+        }
+      ],
+      "summary": "Audio and video in sync, length matches the timeline, caption on 'Welcome!'.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "33cbb7336d19d808f1a997c3fabe6d6282885e70d7e6c9c85cd41f74d0135c7b",
+      "duration_s": 167.0,
+      "warnings": [],
+      "video_url": "outputs\\render_af037a88_2328d5.mp4"
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "af037a88-7652-49c7-9016-5c7e7e2f71e7",
+    "source_media": {
+      "id": "c081a088-27ec-4336-9f4e-972345211fc9",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "790eb66b-dc83-488c-bffe-5a18f9dec476",
+        "source_id": "c081a088-27ec-4336-9f4e-972345211fc9",
+        "source_start_ms": 30000,
+        "source_end_ms": 90000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "1eeeebc3-95f1-4bd2-b34b-cf01dd52582b",
+        "source_id": "c081a088-27ec-4336-9f4e-972345211fc9",
+        "source_start_ms": 90000,
+        "source_end_ms": 120000,
+        "speed": 2.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "a134767a-130f-4241-bfb6-d78a17b7858b",
+        "source_id": "c081a088-27ec-4336-9f4e-972345211fc9",
+        "source_start_ms": 120000,
+        "source_end_ms": 158000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "bdec4c14-fbbc-4b65-bfe3-c83b5b3d52ac",
+        "source_id": "c081a088-27ec-4336-9f4e-972345211fc9",
+        "source_start_ms": 171000,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [
+      {
+        "id": "6d26f0fe-85c4-4738-a95c-8616c172c80f",
+        "source_start_ms": 42000,
+        "source_end_ms": 44000,
+        "word_ids": [
+          "w_13",
+          "w_14",
+          "w_15",
+          "w_16"
+        ],
+        "text": "Welcome!",
+        "style": {
+          "color": "red",
+          "font_size": 24,
+          "position": "bottom",
+          "background": "black@0.5"
+        },
+        "status": "active"
+      }
+    ],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "33cbb7336d19d808f1a997c3fabe6d6282885e70d7e6c9c85cd41f74d0135c7b",
+    "duration_ms": 167000
+  },
+  "final_timeline_hash": "33cbb7336d19d808f1a997c3fabe6d6282885e70d7e6c9c85cd41f74d0135c7b",
+  "final_duration_s": 167.0,
+  "final_video": "outputs\\render_af037a88_2328d5.mp4"
+}

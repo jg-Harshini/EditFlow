@@ -1,0 +1,82 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Speed up from 0:10 to 0:30 by 4x",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "speed_change",
+          "description": "",
+          "start_ms": 10000,
+          "end_ms": 30000,
+          "speed": 4.0,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied, stating which time policy was used. [Time Policy: Current Timeline Time] Sped up range [10.0s-30.0s] to 4.0x.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "e7de78e7b8dce110c3e18bbc811c79b37747410951d806a9069f80ab016fbaee",
+      "duration_s": 210.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "4bfbabfd-ab5f-4e24-81aa-74308709e387",
+    "source_media": {
+      "id": "c5563852-6eb1-48ce-94e8-8f747ad689dd",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "82982a2f-96d5-404b-87be-5f01c1b715e9",
+        "source_id": "c5563852-6eb1-48ce-94e8-8f747ad689dd",
+        "source_start_ms": 0,
+        "source_end_ms": 10000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "e1b7cc81-f2ba-4688-84f4-f3ac040da1f7",
+        "source_id": "c5563852-6eb1-48ce-94e8-8f747ad689dd",
+        "source_start_ms": 10000,
+        "source_end_ms": 30000,
+        "speed": 4.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "0412f54e-a49a-4a98-a417-4e9076395695",
+        "source_id": "c5563852-6eb1-48ce-94e8-8f747ad689dd",
+        "source_start_ms": 30000,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "e7de78e7b8dce110c3e18bbc811c79b37747410951d806a9069f80ab016fbaee",
+    "duration_ms": 210000
+  },
+  "final_timeline_hash": "e7de78e7b8dce110c3e18bbc811c79b37747410951d806a9069f80ab016fbaee",
+  "final_duration_s": 210.0,
+  "final_video": null
+}

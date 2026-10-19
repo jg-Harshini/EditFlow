@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "timeline_id": "9f5450c5-c642-4019-8df2-69414380a2d1",
+  "source_media": {
+    "id": "16ccc2c1-82dc-47e9-8d58-94b22d9ea426",
+    "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+    "duration_ms": 225000,
+    "fps": 30.0,
+    "width": 1280,
+    "height": 720,
+    "audio_channels": 1,
+    "audio_sample_rate": 44100,
+    "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+  },
+  "segments": [
+    {
+      "id": "a6600a15-cdd5-4e63-8100-5991baf8d2ea",
+      "source_id": "16ccc2c1-82dc-47e9-8d58-94b22d9ea426",
+      "source_start_ms": 80000,
+      "source_end_ms": 225000,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    }
+  ],
+  "captions": [],
+  "audio_effects": [],
+  "background_audio": [],
+  "history_index": 0,
+  "timeline_hash": "3566b25eb57b6ed4887611b83348f9173f3b7b9119e1a2c4fd9ba07dc2e288b5",
+  "duration_ms": 145000
+}

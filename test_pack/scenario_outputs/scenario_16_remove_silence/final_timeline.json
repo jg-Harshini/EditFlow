@@ -1,0 +1,103 @@
+{
+  "version": "1.0.0",
+  "timeline_id": "f2f09084-8e3e-43bf-b625-94764795c8b4",
+  "source_media": {
+    "id": "f3eb6833-4d2e-4099-b98d-73463f5c526a",
+    "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+    "duration_ms": 225000,
+    "fps": 30.0,
+    "width": 1280,
+    "height": 720,
+    "audio_channels": 1,
+    "audio_sample_rate": 44100,
+    "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+  },
+  "segments": [
+    {
+      "id": "aca4341e-97ce-4141-8648-b4a94fe90aea",
+      "source_id": "f3eb6833-4d2e-4099-b98d-73463f5c526a",
+      "source_start_ms": 0,
+      "source_end_ms": 12100,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "a72ce9fe-3347-4f6a-9207-be94ff7730e5",
+      "source_id": "f3eb6833-4d2e-4099-b98d-73463f5c526a",
+      "source_start_ms": 39900,
+      "source_end_ms": 44100,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "f3bbc98f-20cd-4468-ab10-e3a15c94de0d",
+      "source_id": "f3eb6833-4d2e-4099-b98d-73463f5c526a",
+      "source_start_ms": 61900,
+      "source_end_ms": 71100,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "1b2f13a2-dc85-48b0-a81b-f8616dde7b9a",
+      "source_id": "f3eb6833-4d2e-4099-b98d-73463f5c526a",
+      "source_start_ms": 74900,
+      "source_end_ms": 84100,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "4b0e1b6d-9329-4b3a-979c-25d3df80996e",
+      "source_id": "f3eb6833-4d2e-4099-b98d-73463f5c526a",
+      "source_start_ms": 119900,
+      "source_end_ms": 151100,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "a64d2a40-67d9-4b6a-970e-1a403a2bc14c",
+      "source_id": "f3eb6833-4d2e-4099-b98d-73463f5c526a",
+      "source_start_ms": 157900,
+      "source_end_ms": 171100,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "76dda9bf-0bb8-4cbb-82eb-abe8df9360fd",
+      "source_id": "f3eb6833-4d2e-4099-b98d-73463f5c526a",
+      "source_start_ms": 192900,
+      "source_end_ms": 202100,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "43e19f2c-0572-466f-8cb9-007d90901ac5",
+      "source_id": "f3eb6833-4d2e-4099-b98d-73463f5c526a",
+      "source_start_ms": 209900,
+      "source_end_ms": 225000,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    }
+  ],
+  "captions": [],
+  "audio_effects": [],
+  "background_audio": [],
+  "history_index": 0,
+  "timeline_hash": "cb1942d49c119bb71cdfc4de99039a211dcf2fddb8d8e6cacc99763881d34623",
+  "duration_ms": 103400
+}

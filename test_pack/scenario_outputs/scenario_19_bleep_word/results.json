@@ -1,0 +1,71 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Bleep the word secret",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "bleep_words",
+          "description": "Bleep word: secret",
+          "word_ids": [],
+          "start_ms": null,
+          "end_ms": null,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied bleep effect.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "7d0235c3659f3aca5b5e558e13c18a99fdf78fa3a917a6f117263fbaaa9731fa",
+      "duration_s": 225.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "9f860077-c76a-4f05-8ca5-ddb53a5c68c0",
+    "source_media": {
+      "id": "39026afd-659f-4ded-8da1-07c77c4508ac",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "013cdedc-0ed5-49cd-9b4d-0c21d2838897",
+        "source_id": "39026afd-659f-4ded-8da1-07c77c4508ac",
+        "source_start_ms": 0,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [],
+    "audio_effects": [
+      {
+        "id": "5f6303f7-ac8a-4cc7-a9ba-ffc29294ecdc",
+        "type": "bleep",
+        "source_start_ms": 0,
+        "source_end_ms": 1000,
+        "word_ids": [],
+        "status": "active"
+      }
+    ],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "7d0235c3659f3aca5b5e558e13c18a99fdf78fa3a917a6f117263fbaaa9731fa",
+    "duration_ms": 225000
+  },
+  "final_timeline_hash": "7d0235c3659f3aca5b5e558e13c18a99fdf78fa3a917a6f117263fbaaa9731fa",
+  "final_duration_s": 225.0,
+  "final_video": null
+}

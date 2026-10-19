@@ -1,0 +1,119 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Add a caption 'Welcome!' when I say welcome to the channel",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "add_caption",
+          "description": "",
+          "text": "Welcome!",
+          "target_phrase": "welcome to the channel",
+          "word_ids": [],
+          "start_ms": null,
+          "end_ms": null,
+          "time_coordinate": "current",
+          "color": "white",
+          "font_size": 24,
+          "position": "bottom"
+        }
+      ],
+      "summary": "Applied. Caption attached to those 4 words (original time 0:42-0:44).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "fa1be169acdfead22b903c440a4fac610eefe6577fb3b9f46320e51582283cb9",
+      "duration_s": 225.0,
+      "warnings": []
+    },
+    {
+      "step_index": 2,
+      "say": "Remove 0:40-0:45",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "",
+          "start_ms": 40000,
+          "end_ms": 45000,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. Cut 5.0s. Video is now 220.0s (5.0s shorter).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "d38d76485eb028631813b7b4746b24420b9811b79d49f4bed470362b7bd88a8a",
+      "duration_s": 220.0,
+      "warnings": [
+        "Caption 'Welcome!' was removed because its underlying speech was cut."
+      ]
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "3704756f-58c8-4e79-8482-9506224315b2",
+    "source_media": {
+      "id": "73ada0a9-511e-4d6a-95c5-dd0b00ee296e",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "7850c636-b676-4b5f-a780-84030e839fbf",
+        "source_id": "73ada0a9-511e-4d6a-95c5-dd0b00ee296e",
+        "source_start_ms": 0,
+        "source_end_ms": 40000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "ec6da7e0-f3ee-41f5-961a-5a6fe3cae00c",
+        "source_id": "73ada0a9-511e-4d6a-95c5-dd0b00ee296e",
+        "source_start_ms": 45000,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [
+      {
+        "id": "1242fcd0-15b8-422f-93cf-4a9c3baef7dd",
+        "source_start_ms": 42000,
+        "source_end_ms": 44000,
+        "word_ids": [
+          "w_13",
+          "w_14",
+          "w_15",
+          "w_16"
+        ],
+        "text": "Welcome!",
+        "style": {
+          "color": "white",
+          "font_size": 24,
+          "position": "bottom",
+          "background": "black@0.5"
+        },
+        "status": "suppressed_by_cut"
+      }
+    ],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "d38d76485eb028631813b7b4746b24420b9811b79d49f4bed470362b7bd88a8a",
+    "duration_ms": 220000
+  },
+  "final_timeline_hash": "d38d76485eb028631813b7b4746b24420b9811b79d49f4bed470362b7bd88a8a",
+  "final_duration_s": 220.0,
+  "final_video": null
+}

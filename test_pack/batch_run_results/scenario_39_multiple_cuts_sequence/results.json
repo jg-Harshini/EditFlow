@@ -1,0 +1,111 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Cut the first 10 seconds",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "",
+          "start_ms": 0,
+          "end_ms": 10000,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. Cut 10.0s. Video is now 215.0s (10.0s shorter).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "48c8dad9a6957193cb1e90fe6d65d6ec20e505a153c47a806a0e126171717adf",
+      "duration_s": 215.0,
+      "warnings": []
+    },
+    {
+      "step_index": 2,
+      "say": "Remove 0:10-0:20",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "",
+          "start_ms": 10000,
+          "end_ms": 20000,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. Cut 10.0s. Video is now 205.0s (10.0s shorter).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "7bc9879100d518ea23d50a5795eff93dac7356a164dd2a4df0562b9bd6c5175b",
+      "duration_s": 205.0,
+      "warnings": []
+    },
+    {
+      "step_index": 3,
+      "say": "Cut the last 10 seconds",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "",
+          "start_ms": 195000,
+          "end_ms": 205000,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. Cut 10.0s. Video is now 195.0s (10.0s shorter).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "93735ad2d67a57d5aedb284794b6b301d75666796ca1958e47e4c0ce1fda3f94",
+      "duration_s": 195.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "ca08c90d-5d95-4196-bb33-7c56d1f44b37",
+    "source_media": {
+      "id": "bb374137-149a-45a6-bc55-61386636253f",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "146293d5-e09c-4e51-9928-17f106869b92",
+        "source_id": "bb374137-149a-45a6-bc55-61386636253f",
+        "source_start_ms": 10000,
+        "source_end_ms": 20000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "242ec004-5cf4-4439-b13d-e5b24f9ecb90",
+        "source_id": "bb374137-149a-45a6-bc55-61386636253f",
+        "source_start_ms": 30000,
+        "source_end_ms": 215000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "93735ad2d67a57d5aedb284794b6b301d75666796ca1958e47e4c0ce1fda3f94",
+    "duration_ms": 195000
+  },
+  "final_timeline_hash": "93735ad2d67a57d5aedb284794b6b301d75666796ca1958e47e4c0ce1fda3f94",
+  "final_duration_s": 195.0,
+  "final_video": null
+}

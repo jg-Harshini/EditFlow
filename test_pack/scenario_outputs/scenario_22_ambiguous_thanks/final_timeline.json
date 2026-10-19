@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "timeline_id": "d20f625b-4254-4ef4-93c8-80d0a2742e8a",
+  "source_media": {
+    "id": "06383e77-daab-4971-8928-70fc5019d21b",
+    "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+    "duration_ms": 225000,
+    "fps": 30.0,
+    "width": 1280,
+    "height": 720,
+    "audio_channels": 1,
+    "audio_sample_rate": 44100,
+    "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+  },
+  "segments": [
+    {
+      "id": "f5ebed59-eb16-456b-ad93-a18a618ff3c6",
+      "source_id": "06383e77-daab-4971-8928-70fc5019d21b",
+      "source_start_ms": 0,
+      "source_end_ms": 210000,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "0cf6295b-c341-4b0e-bbc1-9094d4b9573f",
+      "source_id": "06383e77-daab-4971-8928-70fc5019d21b",
+      "source_start_ms": 211000,
+      "source_end_ms": 214500,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "0dc55c14-dddd-4eb1-b850-03c596d729f6",
+      "source_id": "06383e77-daab-4971-8928-70fc5019d21b",
+      "source_start_ms": 215500,
+      "source_end_ms": 217500,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "ca9fe9ed-4765-4019-8917-3ac7997d4276",
+      "source_id": "06383e77-daab-4971-8928-70fc5019d21b",
+      "source_start_ms": 218500,
+      "source_end_ms": 220500,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "7fabae52-89e4-409b-8572-20004e9b19f0",
+      "source_id": "06383e77-daab-4971-8928-70fc5019d21b",
+      "source_start_ms": 221500,
+      "source_end_ms": 225000,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    }
+  ],
+  "captions": [],
+  "audio_effects": [],
+  "background_audio": [],
+  "history_index": 0,
+  "timeline_hash": "4fb6878aeb9871e993815230bc8b235c41cca6993679b3c689bee6e7fd4b808e",
+  "duration_ms": 221000
+}

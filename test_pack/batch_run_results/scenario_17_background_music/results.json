@@ -1,0 +1,75 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Add background music test_pack/assets/bg_music.mp3",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "add_background_music",
+          "description": "",
+          "music_uri": "test_pack/assets/bg_music.mp3",
+          "volume": 0.25,
+          "ducking_enabled": true,
+          "duck_volume_db": -14.0
+        }
+      ],
+      "summary": "Applied: added background music with automatic speech ducking.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "b4578ba7370eeccf99dd1beceb83081e3e66ce37722fb26d238c6422c831e2d1",
+      "duration_s": 225.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "b5c23b46-2237-4bbb-b4eb-af66bc6b38b7",
+    "source_media": {
+      "id": "fa2c0350-d6ff-4d0c-9a71-f5451c755039",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "46b18cc4-8722-4f2b-8ebd-86dfd846e68e",
+        "source_id": "fa2c0350-d6ff-4d0c-9a71-f5451c755039",
+        "source_start_ms": 0,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [],
+    "audio_effects": [],
+    "background_audio": [
+      {
+        "id": "66eef846-4de9-43b8-a4ff-b82daf51bed9",
+        "uri": "test_pack/assets/bg_music.mp3",
+        "timeline_start_ms": 0,
+        "timeline_end_ms": null,
+        "volume": 0.25,
+        "ducking": {
+          "enabled": true,
+          "duck_volume_db": -14.0,
+          "threshold_db": -24.0
+        }
+      }
+    ],
+    "history_index": 0,
+    "timeline_hash": "b4578ba7370eeccf99dd1beceb83081e3e66ce37722fb26d238c6422c831e2d1",
+    "duration_ms": 225000
+  },
+  "final_timeline_hash": "b4578ba7370eeccf99dd1beceb83081e3e66ce37722fb26d238c6422c831e2d1",
+  "final_duration_s": 225.0,
+  "final_video": null
+}

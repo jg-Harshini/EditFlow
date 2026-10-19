@@ -1,0 +1,102 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Speed up from 0:10 to 0:30 by 2x",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "speed_change",
+          "description": "",
+          "start_ms": 10000,
+          "end_ms": 30000,
+          "speed": 2.0,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied, stating which time policy was used. [Time Policy: Current Timeline Time] Sped up range [10.0s-30.0s] to 2.0x.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "8b1d62af13ace6fe061ad2e1e33f4c46ec3ebc97966485ac7c61411bb55e1659",
+      "duration_s": 215.0,
+      "warnings": []
+    },
+    {
+      "step_index": 2,
+      "say": "Cut the first 5 seconds",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "cut_range",
+          "description": "",
+          "start_ms": 0,
+          "end_ms": 5000,
+          "time_coordinate": "current"
+        }
+      ],
+      "summary": "Applied. Cut 5.0s. Video is now 210.0s (5.0s shorter).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "06a752101f703174144fcb58046a6c3fcda068976f674d042aae9b4c77175914",
+      "duration_s": 210.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "ca3ece14-1b73-488a-8730-412e7f9ec131",
+    "source_media": {
+      "id": "e318627b-603a-4390-a0a1-031920316c81",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "ec3317d5-182c-4c5c-962e-d282ab75f2ae",
+        "source_id": "e318627b-603a-4390-a0a1-031920316c81",
+        "source_start_ms": 5000,
+        "source_end_ms": 10000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "c6bfac64-5172-4bac-a5c3-18af0d8809c8",
+        "source_id": "e318627b-603a-4390-a0a1-031920316c81",
+        "source_start_ms": 10000,
+        "source_end_ms": 30000,
+        "speed": 2.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "98e1a09e-1241-4e30-bade-d851896adb91",
+        "source_id": "e318627b-603a-4390-a0a1-031920316c81",
+        "source_start_ms": 30000,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "06a752101f703174144fcb58046a6c3fcda068976f674d042aae9b4c77175914",
+    "duration_ms": 210000
+  },
+  "final_timeline_hash": "06a752101f703174144fcb58046a6c3fcda068976f674d042aae9b4c77175914",
+  "final_duration_s": 210.0,
+  "final_video": null
+}

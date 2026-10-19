@@ -1,0 +1,73 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Remove filler words",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "remove_filler_words",
+          "description": "",
+          "fillers": [
+            "um",
+            "uh",
+            "like"
+          ]
+        }
+      ],
+      "summary": "Applied: removed 1 filler words (um, uh, like).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "c8bc7e2103e909f5b8c4270b927f96ce2ee89f87d02b0f49dbc74b92accfe44b",
+      "duration_s": 224.5,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "4829561b-202f-41c2-a3ac-96d4a5a01d2d",
+    "source_media": {
+      "id": "8dabe831-1619-40b2-a036-d635792b925c",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "5ff15ca4-6302-4032-ba2f-9630e4d09e57",
+        "source_id": "8dabe831-1619-40b2-a036-d635792b925c",
+        "source_start_ms": 0,
+        "source_end_ms": 8500,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      },
+      {
+        "id": "d230e930-5124-4f33-98dd-ac8c7bb5f571",
+        "source_id": "8dabe831-1619-40b2-a036-d635792b925c",
+        "source_start_ms": 9000,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "c8bc7e2103e909f5b8c4270b927f96ce2ee89f87d02b0f49dbc74b92accfe44b",
+    "duration_ms": 224500
+  },
+  "final_timeline_hash": "c8bc7e2103e909f5b8c4270b927f96ce2ee89f87d02b0f49dbc74b92accfe44b",
+  "final_duration_s": 224.5,
+  "final_video": null
+}

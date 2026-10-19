@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "timeline_id": "19524a85-eef4-464b-8b4f-ffe8ecc11b82",
+  "source_media": {
+    "id": "fd76e552-d93c-4462-b124-635c1d6a1356",
+    "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\multispeaker.mp4",
+    "duration_ms": 150000,
+    "fps": 30.0,
+    "width": 1280,
+    "height": 720,
+    "audio_channels": 1,
+    "audio_sample_rate": 44100,
+    "sha256": "b9af2281104a98cf199159e7e7b62ad6849d9f8b3965f5750dcddde6a5facd0e"
+  },
+  "segments": [
+    {
+      "id": "571f5da5-3891-4912-8718-5aa73b68ac38",
+      "source_id": "fd76e552-d93c-4462-b124-635c1d6a1356",
+      "source_start_ms": 0,
+      "source_end_ms": 20000,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    },
+    {
+      "id": "1b38966a-e595-4b4c-83bc-8525f7774a11",
+      "source_id": "fd76e552-d93c-4462-b124-635c1d6a1356",
+      "source_start_ms": 30000,
+      "source_end_ms": 150000,
+      "speed": 1.0,
+      "volume": 1.0,
+      "muted": false,
+      "tags": []
+    }
+  ],
+  "captions": [],
+  "audio_effects": [],
+  "background_audio": [],
+  "history_index": 0,
+  "timeline_hash": "7c34371955b852735ceeed8cfc0fe77c0780e4dadb4e484a17ac231db3623327",
+  "duration_ms": 140000
+}

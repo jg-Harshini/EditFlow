@@ -1,0 +1,109 @@
+{
+  "video": "test_pack/assets/interview.mp4",
+  "steps": [
+    {
+      "step_index": 1,
+      "say": "Add a caption 'Hello' when I say welcome to the channel",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "add_caption",
+          "description": "",
+          "text": "Hello",
+          "target_phrase": "welcome to the channel",
+          "word_ids": [],
+          "start_ms": null,
+          "end_ms": null,
+          "time_coordinate": "current",
+          "color": "white",
+          "font_size": 24,
+          "position": "bottom"
+        }
+      ],
+      "summary": "Applied. Caption attached to those 4 words (original time 0:42-0:44).",
+      "question": null,
+      "options": null,
+      "timeline_hash": "53ffa700a2fb604f10f88f61985f9829a1f0192f35e1bb68843ca489f7e340f3",
+      "duration_s": 225.0,
+      "warnings": []
+    },
+    {
+      "step_index": 2,
+      "say": "Make that caption bigger",
+      "status": "applied",
+      "operations": [
+        {
+          "op_type": "modify_caption",
+          "description": "",
+          "caption_id": null,
+          "color": null,
+          "font_size": 32,
+          "text": null,
+          "position": null
+        }
+      ],
+      "summary": "Applied to the Hello caption, the only one that exists.",
+      "question": null,
+      "options": null,
+      "timeline_hash": "1f0c2661101053d3a0f2f3a9a3428b19a5c2430067fb50441884697383b01d86",
+      "duration_s": 225.0,
+      "warnings": []
+    }
+  ],
+  "final_timeline": {
+    "version": "1.0.0",
+    "timeline_id": "51590c08-8abe-4e5d-8f5f-f610d7c6cfc4",
+    "source_media": {
+      "id": "65d1e2b2-f335-4f90-8560-4fb1e8ccfc13",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "duration_ms": 225000,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "audio_channels": 1,
+      "audio_sample_rate": 44100,
+      "sha256": "9ff80ed37e9fffb52ad80052440952262b076088d6b03d899e62017e785af73d"
+    },
+    "segments": [
+      {
+        "id": "a4b18ff1-d79d-4665-b6a6-776895d78116",
+        "source_id": "65d1e2b2-f335-4f90-8560-4fb1e8ccfc13",
+        "source_start_ms": 0,
+        "source_end_ms": 225000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "muted": false,
+        "tags": []
+      }
+    ],
+    "captions": [
+      {
+        "id": "65420e7a-bd2e-4bb2-9fa8-5f06ca8dfd2c",
+        "source_start_ms": 42000,
+        "source_end_ms": 44000,
+        "word_ids": [
+          "w_13",
+          "w_14",
+          "w_15",
+          "w_16"
+        ],
+        "text": "Hello",
+        "style": {
+          "color": "white",
+          "font_size": 32,
+          "position": "bottom",
+          "background": "black@0.5"
+        },
+        "status": "active"
+      }
+    ],
+    "audio_effects": [],
+    "background_audio": [],
+    "history_index": 0,
+    "timeline_hash": "1f0c2661101053d3a0f2f3a9a3428b19a5c2430067fb50441884697383b01d86",
+    "duration_ms": 225000
+  },
+  "final_timeline_hash": "1f0c2661101053d3a0f2f3a9a3428b19a5c2430067fb50441884697383b01d86",
+  "final_duration_s": 225.0,
+  "final_video": null
+}
