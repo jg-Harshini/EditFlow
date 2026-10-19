@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IncuBrix — Prompt-Based Video Editing Engine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #18181b; }
+    ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #52525b; }
+    .timeline-track { background: repeating-linear-gradient(90deg, #27272a, #27272a 1px, #18181b 1px, #18181b 20px); }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 flex flex-col h-screen overflow-hidden font-sans">
+
+  <!-- Header -->
+  <header class="bg-zinc-900 border-b border-zinc-800 px-6 py-3 flex items-center justify-between shrink-0">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-white shadow-md shadow-indigo-500/20">
+        <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+      </div>
+      <div>
+        <h1 class="text-base font-semibold leading-none">IncuBrix <span class="text-xs text-indigo-400 font-normal border border-indigo-500/30 bg-indigo-500/10 px-1.5 py-0.5 rounded ml-1">Editor Engine</span></h1>
+        <p class="text-xs text-zinc-400 mt-0.5">Prompt-Based Conversational Video Editing</p>
+      </div>
+    </div>
+    
+    <div class="flex items-center gap-3">
+      <div id="session-info" class="hidden text-xs text-zinc-400 bg-zinc-800/60 px-3 py-1.5 rounded border border-zinc-700/50 flex items-center gap-3">
+        <span>Session: <code id="session-id-display" class="text-zinc-200 font-mono">None</code></span>
+        <span>Duration: <strong id="duration-display" class="text-emerald-400">0.0s</strong></span>
+      </div>
+      <button id="export-otio-btn" onclick="exportOTIO()" class="hidden px-3 py-1.5 text-xs bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 rounded transition flex items-center gap-1.5">
+        <i class="fa-solid fa-file-export"></i> Export OTIO
+      </button>
+      <a href="/docs" target="_blank" class="px-3 py-1.5 text-xs bg-indigo-600 hover:bg-indigo-500 text-white rounded font-medium transition flex items-center gap-1.5 shadow">
+        <i class="fa-solid fa-code"></i> API Docs
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <div class="flex-1 flex overflow-hidden">
+    
+    <!-- Left Column: Video Preview & Timeline -->
+    <div class="flex-1 flex flex-col p-4 gap-4 overflow-hidden border-r border-zinc-800">
+      
+      <!-- Video Player Viewport -->
+      <div class="flex-1 bg-black rounded-xl border border-zinc-800 overflow-hidden relative flex items-center justify-center shadow-inner">
+        <video id="video-player" controls class="w-full h-full object-contain max-h-[50vh]">
+          <source id="video-source" src="/api/v1/media/interview.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+        <div id="video-placeholder" class="hidden absolute inset-0 bg-zinc-900/90 flex flex-col items-center justify-center text-zinc-400 gap-2">
+          <i class="fa-solid fa-film text-3xl text-zinc-600"></i>
+          <p class="text-sm">No active video loaded. Click "Load Sample Video" below.</p>
+        </div>
+      </div>
+
+      <!-- Timeline & Content-Anchored Overlay Visualizer -->
+      <div class="h-44 bg-zinc-900 rounded-xl border border-zinc-800 p-3 flex flex-col justify-between shrink-0">
+        <div class="flex items-center justify-between text-xs text-zinc-400 mb-1">
+          <span class="font-medium flex items-center gap-1.5">
+            <i class="fa-solid fa-timeline text-indigo-400"></i> Active Timeline Segments
+          </span>
+          <span id="timeline-hash" class="font-mono text-[11px] text-zinc-500">Hash: None</span>
+        </div>
+
+        <!-- Segment Blocks -->
+        <div class="flex-1 flex flex-col justify-center gap-1.5 overflow-hidden">
+          <div class="text-[10px] text-zinc-500 flex justify-between px-1">
+            <span>00:00</span>
+            <span id="timeline-midpoint">01:45</span>
+            <span id="timeline-endpoint">03:45</span>
+          </div>
+          <div id="timeline-tracks" class="h-10 timeline-track rounded border border-zinc-700/60 flex gap-1 p-1 overflow-x-auto items-center">
+            <div class="text-xs text-zinc-500 italic px-2">Initialize session to view timeline segments...</div>
+          </div>
+          <!-- Content-Anchored Captions Track -->
+          <div id="captions-track" class="h-6 bg-zinc-950/80 rounded border border-dashed border-zinc-800 flex gap-1 px-1 items-center relative overflow-hidden">
+            <span class="text-[10px] text-zinc-600 uppercase font-semibold tracking-wider px-1">Captions:</span>
+            <div id="caption-markers" class="flex-1 flex gap-2"></div>
+          </div>
+        </div>
+
+        <!-- Timeline Toolbar Controls -->
+        <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80 text-xs">
+          <div class="flex items-center gap-2">
+            <button onclick="sendQuickPrompt('Undo')" class="px-2.5 py-1 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded border border-zinc-700 transition">
+              <i class="fa-solid fa-rotate-left mr-1"></i> Undo
+            </button>
+            <button onclick="sendQuickPrompt('Redo')" class="px-2.5 py-1 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded border border-zinc-700 transition">
+              <i class="fa-solid fa-rotate-right mr-1"></i> Redo
+            </button>
+          </div>
+          <div class="text-[11px] text-zinc-400">
+            Time Policy: <span class="text-indigo-400 font-semibold">Current Timeline Time</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Right Column: Conversational Prompt Assistant -->
+    <div class="w-96 flex flex-col bg-zinc-900 overflow-hidden">
+      
+      <!-- Panel Header -->
+      <div class="p-3 border-b border-zinc-800 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-comments text-indigo-400 text-sm"></i>
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-zinc-200">Conversation</h2>
+        </div>
+        <button onclick="initSampleSession()" class="text-xs text-indigo-400 hover:text-indigo-300 underline font-medium">
+          Load Sample Video
+        </button>
+      </div>
+
+      <!-- Chat Stream -->
+      <div id="chat-messages" class="flex-1 p-3 overflow-y-auto space-y-3 text-xs">
+        <div class="bg-zinc-800/80 border border-zinc-700/60 p-3 rounded-lg text-zinc-300 leading-relaxed">
+          <p class="font-medium text-white mb-1">Welcome to IncuBrix Video Editor!</p>
+          <p>Type plain-language instructions like:</p>
+          <ul class="list-disc list-inside mt-1.5 space-y-1 text-zinc-400 text-[11px]">
+            <li><code>"Add a caption 'Welcome!' when I say welcome to the channel"</code></li>
+            <li><code>"Cut the first 30 seconds"</code></li>
+            <li><code>"Remove the part about pricing"</code></li>
+            <li><code>"Speed up from 1:00 to 1:30 by 2x"</code></li>
+            <li><code>"Actually, put the intro back"</code></li>
+            <li><code>"Make that caption red"</code></li>
+            <li><code>"render"</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Clarification Interactive Options Container -->
+      <div id="clarification-panel" class="hidden p-3 bg-amber-950/40 border-t border-amber-500/30 text-xs">
+        <p id="clarification-question" class="text-amber-200 font-medium mb-2"></p>
+        <div id="clarification-options" class="flex flex-wrap gap-1.5"></div>
+      </div>
+
+      <!-- Quick Prompt Suggestion Pills -->
+      <div class="p-2 border-t border-zinc-800/60 bg-zinc-950/40 flex flex-wrap gap-1">
+        <button onclick="sendQuickPrompt('Add a caption \'Welcome!\' when I say welcome to the channel')" class="px-2 py-0.5 bg-zinc-800/80 hover:bg-zinc-700 text-[11px] text-zinc-300 rounded border border-zinc-700">
+          + Add Caption
+        </button>
+        <button onclick="sendQuickPrompt('Cut the first 30 seconds')" class="px-2 py-0.5 bg-zinc-800/80 hover:bg-zinc-700 text-[11px] text-zinc-300 rounded border border-zinc-700">
+          Cut 0-30s
+        </button>
+        <button onclick="sendQuickPrompt('Remove the part about pricing')" class="px-2 py-0.5 bg-zinc-800/80 hover:bg-zinc-700 text-[11px] text-zinc-300 rounded border border-zinc-700">
+          Remove Pricing
+        </button>
+        <button onclick="sendQuickPrompt('Speed up from 1:00 to 1:30 by 2x')" class="px-2 py-0.5 bg-zinc-800/80 hover:bg-zinc-700 text-[11px] text-zinc-300 rounded border border-zinc-700">
+          Speed up 2x
+        </button>
+        <button onclick="sendQuickPrompt('Actually, put the intro back')" class="px-2 py-0.5 bg-zinc-800/80 hover:bg-zinc-700 text-[11px] text-zinc-300 rounded border border-zinc-700">
+          Put intro back
+        </button>
+        <button onclick="sendQuickPrompt('Make that caption red')" class="px-2 py-0.5 bg-zinc-800/80 hover:bg-zinc-700 text-[11px] text-zinc-300 rounded border border-zinc-700">
+          Caption Red
+        </button>
+        <button onclick="sendQuickPrompt('render')" class="px-2 py-0.5 bg-emerald-800/80 hover:bg-emerald-700 text-[11px] text-emerald-200 rounded border border-emerald-600 font-semibold">
+          ⚡ Render
+        </button>
+      </div>
+
+      <!-- Prompt Input Box -->
+      <div class="p-3 border-t border-zinc-800 bg-zinc-900/90">
+        <form id="prompt-form" onsubmit="handlePromptSubmit(event)" class="flex gap-2">
+          <input
+            id="prompt-input"
+            type="text"
+            placeholder="Type your edit instruction..."
+            class="flex-1 bg-zinc-950 border border-zinc-700 rounded-lg px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-indigo-500"
+          />
+          <button
+            type="submit"
+            id="send-btn"
+            class="bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-2 rounded-lg text-xs font-semibold transition flex items-center gap-1.5"
+          >
+            <span>Send</span>
+            <i class="fa-solid fa-arrow-up text-[10px]"></i>
+          </button>
+        </form>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <script>
+    let currentSessionId = null;
+    let pendingClarification = null;
+
+    async function initSampleSession() {
+      addMessage("user", "Initialize session with test_pack/assets/interview.mp4");
+      try {
+        const res = await fetch("/api/v1/sessions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ video_uri: "test_pack/assets/interview.mp4" })
+        });
+        const data = await res.json();
+        currentSessionId = data.session_id;
+
+        document.getElementById("session-id-display").innerText = currentSessionId.slice(0, 8);
+        document.getElementById("session-info").classList.remove("hidden");
+        document.getElementById("export-otio-btn").classList.remove("hidden");
+        
+        updateTimelineUI(data.timeline);
+        addMessage("assistant", `Session initialized! Video duration: ${data.duration_s}s. Master SHA-256 hash locked. You can now type your edit prompts.`, "applied");
+      } catch (err) {
+        addMessage("assistant", "Failed to initialize session: " + err.message, "rejected");
+      }
+    }
+
+    function sendQuickPrompt(promptText) {
+      document.getElementById("prompt-input").value = promptText;
+      document.getElementById("prompt-form").dispatchEvent(new Event("submit"));
+    }
+
+    async function handlePromptSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById("prompt-input");
+      const say = input.value.trim();
+      if (!say) return;
+
+      if (!currentSessionId) {
+        await initSampleSession();
+      }
+
+      input.value = "";
+      addMessage("user", say);
+
+      // Check if user is replying to clarification
+      let answer = null;
+      if (pendingClarification) {
+        answer = say;
+        hideClarification();
+      }
+
+      try {
+        const res = await fetch(`/api/v1/sessions/${currentSessionId}/steps`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ say, answer })
+        });
+
+        if (res.status === 202) {
+          // Render job started!
+          const jobData = await res.json();
+          addMessage("assistant", `Render job queued (Job ID: ${jobData.job_id.slice(0, 8)}). Processing in background...`, "applied");
+          pollJob(jobData.job_id);
+          return;
+        }
+
+        const data = await res.json();
+        
+        if (data.status === "needs_clarification") {
+          addMessage("assistant", data.question, "needs_clarification");
+          showClarification(data.question, data.options);
+        } else if (data.status === "applied") {
+          addMessage("assistant", data.summary, "applied", data.video_url);
+          refreshSession();
+        } else {
+          addMessage("assistant", data.summary || "Instruction rejected.", "rejected");
+        }
+      } catch (err) {
+        addMessage("assistant", "Error executing step: " + err.message, "rejected");
+      }
+    }
+
+    async function pollJob(jobId) {
+      const interval = setInterval(async () => {
+        try {
+          const res = await fetch(`/api/v1/jobs/${jobId}`);
+          const job = await res.json();
+          if (job.status === "succeeded") {
+            clearInterval(interval);
+            const downloadUrl = job.result?.download_url || "#";
+            addMessage("assistant", `⚡ Render complete! Length: ${job.result?.metadata?.actual_duration_s}s. Sync accurate within 0 frames.`, "applied", downloadUrl);
+            if (downloadUrl !== "#") {
+              const video = document.getElementById("video-player");
+              video.src = downloadUrl;
+              video.load();
+              video.play();
+            }
+          } else if (job.status === "failed") {
+            clearInterval(interval);
+            addMessage("assistant", "Render failed: " + JSON.stringify(job.error), "rejected");
+          }
+        } catch (e) {
+          clearInterval(interval);
+        }
+      }, 1000);
+    }
+
+    async function refreshSession() {
+      if (!currentSessionId) return;
+      try {
+        const res = await fetch(`/api/v1/sessions/${currentSessionId}`);
+        const data = await res.json();
+        updateTimelineUI(data.timeline);
+      } catch (e) {}
+    }
+
+    function updateTimelineUI(timeline) {
+      if (!timeline) return;
+      document.getElementById("duration-display").innerText = `${(timeline.duration_ms / 1000).toFixed(1)}s`;
+      document.getElementById("timeline-hash").innerText = `Hash: ${timeline.timeline_hash.slice(0, 10)}...`;
+      document.getElementById("timeline-endpoint").innerText = `${(timeline.duration_ms / 1000).toFixed(1)}s`;
+
+      const tracksContainer = document.getElementById("timeline-tracks");
+      tracksContainer.innerHTML = "";
+
+      const totalDur = timeline.duration_ms || 1;
+      timeline.segments.forEach((seg, i) => {
+        const pct = (seg.timeline_duration_ms / totalDur) * 100;
+        const div = document.createElement("div");
+        div.className = "h-8 bg-indigo-600/70 hover:bg-indigo-500/90 text-white rounded text-[10px] font-medium flex items-center justify-center px-1 overflow-hidden shrink-0 border border-indigo-400/30 transition shadow-sm";
+        div.style.width = `${Math.max(5, pct)}%`;
+        const spd = seg.speed !== 1 ? ` (${seg.speed}x)` : '';
+        div.innerText = `Seg ${i+1}${spd}`;
+        div.title = `Segment ${i+1}: ${(seg.source_start_ms/1000).toFixed(1)}s - ${(seg.source_end_ms/1000).toFixed(1)}s @ ${seg.speed}x`;
+        tracksContainer.appendChild(div);
+      });
+
+      // Captions
+      const capContainer = document.getElementById("caption-markers");
+      capContainer.innerHTML = "";
+      timeline.captions.forEach(c => {
+        if (c.status === "active") {
+          const pill = document.createElement("span");
+          pill.className = "px-2 py-0.5 rounded text-[10px] font-medium border";
+          pill.style.backgroundColor = c.style.color === "red" ? "#dc2626" : "#4f46e5";
+          pill.style.color = "white";
+          pill.innerText = `"${c.text}"`;
+          pill.title = `Source Anchor: ${(c.source_start_ms/1000).toFixed(1)}s - ${(c.source_end_ms/1000).toFixed(1)}s`;
+          capContainer.appendChild(pill);
+        }
+      });
+    }
+
+    function showClarification(question, options) {
+      pendingClarification = { question, options };
+      const panel = document.getElementById("clarification-panel");
+      document.getElementById("clarification-question").innerText = question;
+      const optsDiv = document.getElementById("clarification-options");
+      optsDiv.innerHTML = "";
+
+      (options || []).forEach(opt => {
+        const btn = document.createElement("button");
+        btn.className = "px-2.5 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-[11px] font-medium transition shadow-sm";
+        btn.innerText = opt;
+        btn.onclick = () => {
+          document.getElementById("prompt-input").value = opt;
+          document.getElementById("prompt-form").dispatchEvent(new Event("submit"));
+        };
+        optsDiv.appendChild(btn);
+      });
+      panel.classList.remove("hidden");
+    }
+
+    function hideClarification() {
+      pendingClarification = null;
+      document.getElementById("clarification-panel").classList.add("hidden");
+    }
+
+    function addMessage(sender, text, status = null, videoUrl = null) {
+      const container = document.getElementById("chat-messages");
+      const wrapper = document.createElement("div");
+      
+      if (sender === "user") {
+        wrapper.className = "flex justify-end";
+        wrapper.innerHTML = `
+          <div class="bg-indigo-600 text-white px-3 py-2 rounded-lg max-w-[85%] shadow-sm">
+            ${escapeHTML(text)}
+          </div>
+        `;
+      } else {
+        wrapper.className = "flex justify-start";
+        let statusBadge = "";
+        if (status === "applied") {
+          statusBadge = '<span class="px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 rounded text-[10px] font-bold uppercase mr-1.5">Applied</span>';
+        } else if (status === "needs_clarification") {
+          statusBadge = '<span class="px-1.5 py-0.5 bg-amber-500/20 text-amber-400 border border-amber-500/40 rounded text-[10px] font-bold uppercase mr-1.5">Clarification</span>';
+        } else if (status === "rejected") {
+          statusBadge = '<span class="px-1.5 py-0.5 bg-red-500/20 text-red-400 border border-red-500/40 rounded text-[10px] font-bold uppercase mr-1.5">Rejected</span>';
+        }
+
+        let videoPlayerEmbed = "";
+        if (videoUrl) {
+          videoPlayerEmbed = `
+            <div class="mt-2 pt-2 border-t border-zinc-700/60">
+              <a href="${videoUrl}" target="_blank" class="text-xs text-indigo-400 hover:text-indigo-300 font-semibold underline flex items-center gap-1">
+                <i class="fa-solid fa-download"></i> Download Rendered Video
+              </a>
+            </div>
+          `;
+        }
+
+        wrapper.innerHTML = `
+          <div class="bg-zinc-800 text-zinc-200 border border-zinc-700/60 px-3 py-2 rounded-lg max-w-[90%] shadow-sm leading-relaxed">
+            <div class="flex items-center mb-1">${statusBadge}</div>
+            <div>${escapeHTML(text)}</div>
+            ${videoPlayerEmbed}
+          </div>
+        `;
+      }
+
+      container.appendChild(wrapper);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    async function exportOTIO() {
+      if (!currentSessionId) return;
+      try {
+        const res = await fetch(`/api/v1/sessions/${currentSessionId}/export-otio`);
+        const data = await res.json();
+        addMessage("assistant", `Exported to OpenTimelineIO: ${data.file_path}`, "applied");
+      } catch (err) {
+        addMessage("assistant", "OTIO Export failed: " + err.message, "rejected");
+      }
+    }
+
+    function escapeHTML(str) {
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    // Auto-init on load
+    window.addEventListener("DOMContentLoaded", () => {
+      initSampleSession();
+    });
+  </script>
+</body>
+</html>

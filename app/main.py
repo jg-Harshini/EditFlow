@@ -1,8 +1,10 @@
 import os
 from contextlib import asynccontextmanager
+from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
+from fastapi.responses import FileResponse
 import yaml
 from app.api.errors import AppException, app_exception_handler, generic_exception_handler
 from app.api.middleware import CorrelationIdMiddleware
@@ -82,6 +84,12 @@ app.add_exception_handler(Exception, generic_exception_handler)
 
 # Top-level Health Endpoints
 app.include_router(health_router)
+
+# Interactive Web UI on root /
+@app.get("/", include_in_schema=False)
+async def serve_ui():
+    ui_path = Path(__file__).parent / "static" / "index.html"
+    return FileResponse(str(ui_path))
 
 # Versioned API routes under /api/v1/
 app.include_router(api_router, prefix=settings.API_V1_STR)
