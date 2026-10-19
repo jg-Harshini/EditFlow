@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IncuBrixTimeline",
+  "description": "Deterministic, content-anchored video editing timeline model",
+  "type": "object",
+  "required": [
+    "version",
+    "timeline_id",
+    "source_media",
+    "segments",
+    "captions",
+    "audio_effects",
+    "background_audio",
+    "timeline_hash",
+    "duration_ms"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "default": "1.0.0"
+    },
+    "timeline_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "source_media": {
+      "type": "object",
+      "required": ["id", "uri", "duration_ms", "fps", "width", "height"],
+      "properties": {
+        "id": { "type": "string" },
+        "uri": { "type": "string" },
+        "duration_ms": { "type": "integer", "minimum": 0 },
+        "fps": { "type": "number", "exclusiveMinimum": 0 },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "audio_channels": { "type": "integer", "minimum": 0 },
+        "audio_sample_rate": { "type": "integer", "minimum": 0 },
+        "sha256": { "type": "string" }
+      }
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "source_id", "source_start_ms", "source_end_ms", "speed"],
+        "properties": {
+          "id": { "type": "string" },
+          "source_id": { "type": "string" },
+          "source_start_ms": { "type": "integer", "minimum": 0 },
+          "source_end_ms": { "type": "integer", "minimum": 0 },
+          "speed": { "type": "number", "exclusiveMinimum": 0 },
+          "volume": { "type": "number", "minimum": 0, "default": 1.0 },
+          "muted": { "type": "boolean", "default": false },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": []
+          }
+        }
+      }
+    },
+    "captions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "source_start_ms", "source_end_ms", "text", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "source_start_ms": { "type": "integer", "minimum": 0 },
+          "source_end_ms": { "type": "integer", "minimum": 0 },
+          "word_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": []
+          },
+          "text": { "type": "string" },
+          "style": {
+            "type": "object",
+            "properties": {
+              "color": { "type": "string", "default": "white" },
+              "font_size": { "type": "integer", "default": 24 },
+              "position": { "type": "string", "default": "bottom" },
+              "background": { "type": "string", "default": "black@0.5" }
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "suppressed_by_cut"]
+          }
+        }
+      }
+    },
+    "audio_effects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "source_start_ms", "source_end_ms", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string", "enum": ["mute", "bleep"] },
+          "source_start_ms": { "type": "integer", "minimum": 0 },
+          "source_end_ms": { "type": "integer", "minimum": 0 },
+          "word_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": []
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "suppressed_by_cut"]
+          }
+        }
+      }
+    },
+    "background_audio": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "uri", "timeline_start_ms", "volume"],
+        "properties": {
+          "id": { "type": "string" },
+          "uri": { "type": "string" },
+          "timeline_start_ms": { "type": "integer", "minimum": 0 },
+          "timeline_end_ms": { "type": "integer", "minimum": 0 },
+          "volume": { "type": "number", "minimum": 0 },
+          "ducking": {
+            "type": "object",
+            "properties": {
+              "enabled": { "type": "boolean", "default": true },
+              "duck_volume_db": { "type": "number", "default": -14.0 },
+              "threshold_db": { "type": "number", "default": -24.0 }
+            }
+          }
+        }
+      }
+    },
+    "history_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "timeline_hash": {
+      "type": "string",
+      "description": "Deterministic SHA-256 hash of the canonical timeline data"
+    },
+    "duration_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total output timeline duration in milliseconds"
+    }
+  }
+}

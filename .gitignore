@@ -1,0 +1,18 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Temporary data
+temp_data/
+*.filter
+
+# System / OS
+.DS_Store
+Thumbs.db
