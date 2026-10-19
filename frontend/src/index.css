@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color-scheme: dark;
+    background-color: #0c0d10;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #14151b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272935;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f4254;
+}
+
+/* Timeline ruler background tick styling */
+.timeline-ticks {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #272935 0px,
+    #272935 1px,
+    transparent 1px,
+    transparent 20px
+  );
+}
+
+.timeline-major-ticks {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #3f4254 0px,
+    #3f4254 1px,
+    transparent 1px,
+    transparent 100px
+  );
+}

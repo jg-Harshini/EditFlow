@@ -11,7 +11,9 @@ __pycache__/
 
 # Temporary data
 temp_data/
+outputs/
 *.filter
+frontend/node_modules/
 
 # System / OS
 .DS_Store

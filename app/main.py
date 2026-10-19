@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 import yaml
 from app.api.errors import AppException, app_exception_handler, generic_exception_handler
 from app.api.middleware import CorrelationIdMiddleware
@@ -85,9 +86,16 @@ app.add_exception_handler(Exception, generic_exception_handler)
 # Top-level Health Endpoints
 app.include_router(health_router)
 
+# Mount frontend production assets if built
+frontend_dist = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+if (frontend_dist / "assets").exists():
+    app.mount("/assets", StaticFiles(directory=str(frontend_dist / "assets")), name="frontend_assets")
+
 # Interactive Web UI on root /
 @app.get("/", include_in_schema=False)
 async def serve_ui():
+    if (frontend_dist / "index.html").exists():
+        return FileResponse(str(frontend_dist / "index.html"))
     ui_path = Path(__file__).parent / "static" / "index.html"
     return FileResponse(str(ui_path))
 

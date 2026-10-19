@@ -68,14 +68,41 @@ python tests/generate_test_media.py
 # 6. Run all automated verification tests
 python run_tests.py
 
-# 7. Start API service
+# 7. Start API service (serves both API & Frontend Studio)
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
-Alternatively, launch using Docker Compose:
+Once running, navigate to **`http://localhost:8000`** in any modern web browser to use the full visual AI Video Editing Studio.
+
+---
+
+## 3. Web Studio Interface (EditFlow AI / IncuBrix Studio)
+
+The repository includes a modern, dark-themed React + TypeScript video editing workspace built with Vite and Tailwind CSS.
+
+### Features
+- **3-Column Professional Editing Layout:**
+  - **Left Panel (AI Assistant):** Conversational prompt feed, status badges (`applied`, `needs_clarification`, `rejected`), clickable disambiguation pills, quick-prompt suggestions, and edit history.
+  - **Center Monitor (Video Preview):** HTML5 video player, timecode readout, transport controls (play/pause, seek, volume/mute), and live background rendering overlay.
+  - **Right Panel (Properties Inspector):** Contextual controls for cut/trim ranges, speed multipliers (0.5x–4x), subtitle styles, and audio ducking.
+  - **Bottom Panel (Content-Anchored Timeline):** Visual time ruler, clip blocks with speed indicators, playhead tracking, and subtitle tracks that remain synchronized across non-destructive cuts.
+- **Background Render Monitoring:** Polls `/api/v1/jobs/{id}` and displays real-time encoding progress, output verification metrics (target vs actual duration, frame difference), and one-click MP4 download.
+- **OpenTimelineIO (.otio) Export:** Generates and downloads standard NLE interchange timelines compatible with Premiere, DaVinci Resolve, and Final Cut Pro.
+
+### Running Frontend in Development Mode
 ```bash
-docker compose up --build
+cd frontend
+npm install
+npm run dev
 ```
+The Vite development server runs on `http://localhost:3000` and automatically proxies `/api` and `/health` requests to `http://localhost:8000`.
+
+### Building Frontend for Production
+```bash
+cd frontend
+npm run build
+```
+This builds the production assets into `frontend/dist`. FastAPI automatically mounts and serves these static assets at `http://localhost:8000/`.
 
 ---
 
