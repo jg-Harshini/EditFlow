@@ -17,16 +17,16 @@
       "summary": "Applied. Cut 10.0s. Video is now 140.0s (10.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "30d0e97547974d75451687cfd702f9bc5c9501bd8c4e0f17077092e6b5f12d41",
+      "timeline_hash": "0869fd4a453f4da4ad7340f7d491b7fdc803181271a45d7df943d9bbf6753d7a",
       "duration_s": 140.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "1a1871e2-55be-4951-a9ba-8b66988b46eb",
+    "timeline_id": "de3cb56f-2827-4e04-9f97-d246dfc97700",
     "source_media": {
-      "id": "e7f784f2-6e0f-4466-bd75-de18f51fa4aa",
+      "id": "4df874b5-32da-48b1-8822-047b74b9d4d8",
       "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\multispeaker.mp4",
       "duration_ms": 150000,
       "fps": 30.0,
@@ -38,8 +38,8 @@
     },
     "segments": [
       {
-        "id": "6bc07349-e371-4ed7-a23a-f748cdcb475d",
-        "source_id": "e7f784f2-6e0f-4466-bd75-de18f51fa4aa",
+        "id": "5df94306-7d7e-4ee2-8aab-c563cb499087",
+        "source_id": "4df874b5-32da-48b1-8822-047b74b9d4d8",
         "source_start_ms": 10000,
         "source_end_ms": 150000,
         "speed": 1.0,
@@ -52,10 +52,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "30d0e97547974d75451687cfd702f9bc5c9501bd8c4e0f17077092e6b5f12d41",
+    "timeline_hash": "0869fd4a453f4da4ad7340f7d491b7fdc803181271a45d7df943d9bbf6753d7a",
     "duration_ms": 140000
   },
-  "final_timeline_hash": "30d0e97547974d75451687cfd702f9bc5c9501bd8c4e0f17077092e6b5f12d41",
+  "final_timeline_hash": "0869fd4a453f4da4ad7340f7d491b7fdc803181271a45d7df943d9bbf6753d7a",
   "final_duration_s": 140.0,
   "final_video": null
 }

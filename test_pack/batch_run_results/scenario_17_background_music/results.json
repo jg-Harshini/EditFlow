@@ -18,16 +18,16 @@
       "summary": "Applied: added background music with automatic speech ducking.",
       "question": null,
       "options": null,
-      "timeline_hash": "ab7a9fe3f9902fac407d5c38207271923902901c2974250991c83a175434a693",
+      "timeline_hash": "a4a00f5fa759b7f59eb6c96c41f7b91776b670c98d884247eeef2eb8f47a457a",
       "duration_s": 225.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "abc905e4-84aa-4d65-955f-ee476f1a616b",
+    "timeline_id": "4501755d-b604-4a7e-a77b-5f9112133e01",
     "source_media": {
-      "id": "e112f5f0-5b4c-41e9-90c8-fe20a6783ef2",
+      "id": "f228d1c8-49d9-4f80-a02d-c09c550cbbf8",
       "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -39,8 +39,8 @@
     },
     "segments": [
       {
-        "id": "d1ae2587-1891-4235-8a8a-9f5a4cfd5843",
-        "source_id": "e112f5f0-5b4c-41e9-90c8-fe20a6783ef2",
+        "id": "2988de63-0425-433c-980a-58955e34dca6",
+        "source_id": "f228d1c8-49d9-4f80-a02d-c09c550cbbf8",
         "source_start_ms": 0,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -53,7 +53,7 @@
     "audio_effects": [],
     "background_audio": [
       {
-        "id": "a73fac9e-959e-4e73-8ce4-e9550b7348f4",
+        "id": "b4514818-2cff-49b8-a058-b8f63c27d481",
         "uri": "test_pack/assets/bg_music.mp3",
         "timeline_start_ms": 0,
         "timeline_end_ms": null,
@@ -66,10 +66,10 @@
       }
     ],
     "history_index": 0,
-    "timeline_hash": "ab7a9fe3f9902fac407d5c38207271923902901c2974250991c83a175434a693",
+    "timeline_hash": "a4a00f5fa759b7f59eb6c96c41f7b91776b670c98d884247eeef2eb8f47a457a",
     "duration_ms": 225000
   },
-  "final_timeline_hash": "ab7a9fe3f9902fac407d5c38207271923902901c2974250991c83a175434a693",
+  "final_timeline_hash": "a4a00f5fa759b7f59eb6c96c41f7b91776b670c98d884247eeef2eb8f47a457a",
   "final_duration_s": 225.0,
   "final_video": null
 }

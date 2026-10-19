@@ -17,16 +17,16 @@
       "summary": "Applied. Cut 10.0s. Video is now 215.0s (10.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "d6b1a17a8033830c9860e9569b9e091832808fc615f988f99f8697a059da9692",
+      "timeline_hash": "bca6389bd55e325bd0c1d422b2f3cfceaa0fd93d8dff59eb3b755e239ae1f805",
       "duration_s": 215.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "3e4e6466-4cd0-4d1e-8a81-b7e5deece3fd",
+    "timeline_id": "c0ed909f-2baa-45f5-b6f5-96c1f1dc22f8",
     "source_media": {
-      "id": "a645a8ae-973f-4811-9eaa-64ff5da03fc7",
+      "id": "4a06b508-4228-4a24-908e-facc25f46190",
       "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -38,8 +38,8 @@
     },
     "segments": [
       {
-        "id": "c42db0ff-59d2-4ab4-a05e-d4e24b5e602c",
-        "source_id": "a645a8ae-973f-4811-9eaa-64ff5da03fc7",
+        "id": "96d0d3f8-14b5-4ae0-91d6-6fb39c67e442",
+        "source_id": "4a06b508-4228-4a24-908e-facc25f46190",
         "source_start_ms": 0,
         "source_end_ms": 215000,
         "speed": 1.0,
@@ -52,10 +52,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "d6b1a17a8033830c9860e9569b9e091832808fc615f988f99f8697a059da9692",
+    "timeline_hash": "bca6389bd55e325bd0c1d422b2f3cfceaa0fd93d8dff59eb3b755e239ae1f805",
     "duration_ms": 215000
   },
-  "final_timeline_hash": "d6b1a17a8033830c9860e9569b9e091832808fc615f988f99f8697a059da9692",
+  "final_timeline_hash": "bca6389bd55e325bd0c1d422b2f3cfceaa0fd93d8dff59eb3b755e239ae1f805",
   "final_duration_s": 215.0,
   "final_video": null
 }

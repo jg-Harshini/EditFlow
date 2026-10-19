@@ -18,16 +18,16 @@
       "summary": "Applied mute effect.",
       "question": null,
       "options": null,
-      "timeline_hash": "347e3b9a89b5c6c48d79f880384bdf8c917537e86ebea7371116c07f660af18d",
+      "timeline_hash": "01e85c7981b57993598058d5e44e067ea5c3d3ae2b7138155b7e9bd53ad0076c",
       "duration_s": 225.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "289c3c01-92ad-436e-8a29-058f3428885f",
+    "timeline_id": "40ff0547-9549-4c73-b14f-d35f41cb1f7f",
     "source_media": {
-      "id": "25f47b40-5bc8-4c94-b040-a25f80712d1d",
+      "id": "b9f1ab26-101f-4995-a93e-d9be8d7ed810",
       "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -39,8 +39,8 @@
     },
     "segments": [
       {
-        "id": "abd25e8a-672d-4369-b7ea-b53ebf48ee57",
-        "source_id": "25f47b40-5bc8-4c94-b040-a25f80712d1d",
+        "id": "98c5e225-8d3a-41af-af2f-61007e82dda6",
+        "source_id": "b9f1ab26-101f-4995-a93e-d9be8d7ed810",
         "source_start_ms": 0,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -52,7 +52,7 @@
     "captions": [],
     "audio_effects": [
       {
-        "id": "2eda6d64-0f2d-4119-a6c4-6a1a6d0a9c24",
+        "id": "c03c05fc-e79b-49af-8953-80dd5b72d180",
         "type": "mute",
         "source_start_ms": 0,
         "source_end_ms": 1000,
@@ -62,10 +62,10 @@
     ],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "347e3b9a89b5c6c48d79f880384bdf8c917537e86ebea7371116c07f660af18d",
+    "timeline_hash": "01e85c7981b57993598058d5e44e067ea5c3d3ae2b7138155b7e9bd53ad0076c",
     "duration_ms": 225000
   },
-  "final_timeline_hash": "347e3b9a89b5c6c48d79f880384bdf8c917537e86ebea7371116c07f660af18d",
+  "final_timeline_hash": "01e85c7981b57993598058d5e44e067ea5c3d3ae2b7138155b7e9bd53ad0076c",
   "final_duration_s": 225.0,
   "final_video": null
 }
