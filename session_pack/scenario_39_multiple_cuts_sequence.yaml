@@ -1,0 +1,5 @@
+video: test_pack/assets/interview.mp4
+steps:
+- say: Cut the first 10 seconds
+- say: Remove 0:10-0:20
+- say: Cut the last 10 seconds

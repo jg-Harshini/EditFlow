@@ -1,0 +1,5 @@
+video: test_pack/assets/interview.mp4
+steps:
+- say: Add a caption 'Welcome!' when I say welcome to the channel
+- say: Remove 0:40-0:45
+- say: Undo

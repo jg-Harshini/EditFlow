@@ -1,0 +1,6 @@
+video: test_pack/assets/interview.mp4
+steps:
+- say: Cut the first 10 seconds
+- say: Undo
+- say: Cut the first 20 seconds
+- say: Redo

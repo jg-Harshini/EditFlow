@@ -1,0 +1,4 @@
+video: test_pack/assets/short_test.mp4
+steps:
+- say: Add a caption 'Fin' when I say welcome to the channel
+- say: render

@@ -1,0 +1,4 @@
+video: test_pack/assets/interview.mp4
+steps:
+- say: Add a caption 'Hello' when I say welcome to the channel
+- say: Make that caption bigger

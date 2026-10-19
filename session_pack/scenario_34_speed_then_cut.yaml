@@ -1,0 +1,4 @@
+video: test_pack/assets/interview.mp4
+steps:
+- say: Speed up from 0:10 to 0:30 by 2x
+- say: Cut the first 5 seconds

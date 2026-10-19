@@ -1,0 +1,3 @@
+video: test_pack/assets/multispeaker.mp4
+steps:
+- say: Remove 0:20-0:30

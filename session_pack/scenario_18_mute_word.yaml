@@ -1,0 +1,3 @@
+video: test_pack/assets/interview.mp4
+steps:
+- say: Mute the word secret

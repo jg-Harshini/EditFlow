@@ -1,0 +1,3 @@
+video: test_pack/assets/interview.mp4
+steps:
+- say: Keep only 0:10 to 0:40
