@@ -10,9 +10,12 @@ __pycache__/
 *.pytest_cache/
 
 # Temporary data
-temp_data/
-storage_data/
-outputs/
+temp_data/*
+!temp_data/.gitkeep
+storage_data/*
+!storage_data/.gitkeep
+outputs/*
+!outputs/.gitkeep
 *.filter
 frontend/node_modules/
 ~$*.xlsx

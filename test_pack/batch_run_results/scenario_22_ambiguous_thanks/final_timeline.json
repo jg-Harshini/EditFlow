@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
-  "timeline_id": "cffe8058-4c59-46a0-af78-f0aba60be236",
+  "timeline_id": "570eb6da-6eda-4501-9174-39abec8e848f",
   "source_media": {
-    "id": "edba0dd2-c2a0-4a1f-bcbc-026a915e5ea2",
-    "uri": "C:\\HARSHINI\\PLACEMENT\\video-engine\\test_pack\\assets\\interview.mp4",
+    "id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
+    "uri": "test_pack/assets/interview.mp4",
     "duration_ms": 225000,
     "fps": 30.0,
     "width": 1280,
@@ -14,8 +14,8 @@
   },
   "segments": [
     {
-      "id": "a6ef8a30-8736-41d7-adaa-9c400b31db77",
-      "source_id": "edba0dd2-c2a0-4a1f-bcbc-026a915e5ea2",
+      "id": "fb1d3c2f-d594-4ef5-a31e-084c4963cb38",
+      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
       "source_start_ms": 0,
       "source_end_ms": 210000,
       "speed": 1.0,
@@ -24,8 +24,8 @@
       "tags": []
     },
     {
-      "id": "2df7a083-08d2-45ef-b2a3-b4f76c6953bf",
-      "source_id": "edba0dd2-c2a0-4a1f-bcbc-026a915e5ea2",
+      "id": "bb5d1fc7-8545-4300-b75d-802d4d9c7954",
+      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
       "source_start_ms": 211000,
       "source_end_ms": 214500,
       "speed": 1.0,
@@ -34,8 +34,8 @@
       "tags": []
     },
     {
-      "id": "8af1a2e1-0dee-40b7-a61c-c06ade74e658",
-      "source_id": "edba0dd2-c2a0-4a1f-bcbc-026a915e5ea2",
+      "id": "aa72fe56-23bd-4ab9-acf2-32355752123e",
+      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
       "source_start_ms": 215500,
       "source_end_ms": 217500,
       "speed": 1.0,
@@ -44,8 +44,8 @@
       "tags": []
     },
     {
-      "id": "44c67b5e-4581-48ac-83d3-55f6d05014ea",
-      "source_id": "edba0dd2-c2a0-4a1f-bcbc-026a915e5ea2",
+      "id": "bde83cde-2591-43b8-9412-ad5a5e003093",
+      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
       "source_start_ms": 218500,
       "source_end_ms": 220500,
       "speed": 1.0,
@@ -54,8 +54,8 @@
       "tags": []
     },
     {
-      "id": "7779bc4f-0dfa-484d-a115-1ff60c4af81d",
-      "source_id": "edba0dd2-c2a0-4a1f-bcbc-026a915e5ea2",
+      "id": "e3ac9046-5e21-4978-be3d-f55f8bcf5d70",
+      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
       "source_start_ms": 221500,
       "source_end_ms": 225000,
       "speed": 1.0,
@@ -68,6 +68,6 @@
   "audio_effects": [],
   "background_audio": [],
   "history_index": 0,
-  "timeline_hash": "4d337dea679bd7ba4bc9e8336468ef234e03127f02857fdad6e2c44eb6fb0415",
+  "timeline_hash": "76d45f9a71d6fb96e8f6feff263b289e4e7f2c173a47e9142befdab6ae5d5310",
   "duration_ms": 221000
 }

@@ -8,13 +8,13 @@ scenario_files = sorted(list(SCENARIOS_DIR.glob("*.yaml")))
 
 
 @pytest.mark.parametrize("scenario_file", scenario_files, ids=[f.stem for f in scenario_files])
-def test_scripted_scenario(scenario_file):
+def test_scripted_scenario(scenario_file, tmp_path):
     """
     Outstanding Requirement O4:
     Automated suite of at least 40 scripted scenarios with expected results runs in CI.
     """
     runner = SessionRunner()
-    output_dir = Path("test_pack/scenario_outputs") / scenario_file.stem
+    output_dir = tmp_path / scenario_file.stem
     result = runner.run_file(str(scenario_file), output_dir=str(output_dir))
 
     assert "steps" in result

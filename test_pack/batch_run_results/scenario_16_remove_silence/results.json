@@ -16,17 +16,17 @@
       "summary": "Applied: removed 7 silences > 2.0s.",
       "question": null,
       "options": null,
-      "timeline_hash": "2f00cd62c6efc600943c4cfcbcdd96bc5e6a180e04f65c16028638ea90c08cd7",
+      "timeline_hash": "01c0b4ed88ef5bdef9f9abd3da59537e25d326a810b70476f686eb1948ac0543",
       "duration_s": 103.4,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "d0757a94-a625-4f20-ab65-e72c504b7d6d",
+    "timeline_id": "bf2f4bc2-ef56-4c6e-83c6-c58ee2de1e12",
     "source_media": {
-      "id": "1fe0dda6-436d-49f1-959b-38f5d724d291",
-      "uri": "C:\\HARSHINI\\PLACEMENT\\video-engine\\test_pack\\assets\\interview.mp4",
+      "id": "e8093fc8-1a81-41d5-b8d5-9b66f323be2b",
+      "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
       "width": 1280,
@@ -37,8 +37,8 @@
     },
     "segments": [
       {
-        "id": "400c0a92-8600-430f-9fd0-8982e30670f4",
-        "source_id": "1fe0dda6-436d-49f1-959b-38f5d724d291",
+        "id": "b39d52d9-128d-43f3-8c85-6d028e60523a",
+        "source_id": "e8093fc8-1a81-41d5-b8d5-9b66f323be2b",
         "source_start_ms": 0,
         "source_end_ms": 12100,
         "speed": 1.0,
@@ -47,8 +47,8 @@
         "tags": []
       },
       {
-        "id": "846b1dcd-3ca6-4879-8625-e584a6e3789c",
-        "source_id": "1fe0dda6-436d-49f1-959b-38f5d724d291",
+        "id": "7bc288b7-5ce3-43f3-8a9f-e2e156f3fac0",
+        "source_id": "e8093fc8-1a81-41d5-b8d5-9b66f323be2b",
         "source_start_ms": 39900,
         "source_end_ms": 44100,
         "speed": 1.0,
@@ -57,8 +57,8 @@
         "tags": []
       },
       {
-        "id": "5fad0391-a3aa-43de-abb3-e169610f1c34",
-        "source_id": "1fe0dda6-436d-49f1-959b-38f5d724d291",
+        "id": "6bf2dbf6-5987-4e38-a890-b94ddb134963",
+        "source_id": "e8093fc8-1a81-41d5-b8d5-9b66f323be2b",
         "source_start_ms": 61900,
         "source_end_ms": 71100,
         "speed": 1.0,
@@ -67,8 +67,8 @@
         "tags": []
       },
       {
-        "id": "ed8ea8e4-f742-4bcd-9e66-8cf7ec704b62",
-        "source_id": "1fe0dda6-436d-49f1-959b-38f5d724d291",
+        "id": "c39957e3-f69f-42f9-97c5-931555cd6eb4",
+        "source_id": "e8093fc8-1a81-41d5-b8d5-9b66f323be2b",
         "source_start_ms": 74900,
         "source_end_ms": 84100,
         "speed": 1.0,
@@ -77,8 +77,8 @@
         "tags": []
       },
       {
-        "id": "57072d42-f5a3-4a4f-8a58-ee5a1930ac6b",
-        "source_id": "1fe0dda6-436d-49f1-959b-38f5d724d291",
+        "id": "a311d413-7c2b-4511-831c-bcfe8cc22f17",
+        "source_id": "e8093fc8-1a81-41d5-b8d5-9b66f323be2b",
         "source_start_ms": 119900,
         "source_end_ms": 151100,
         "speed": 1.0,
@@ -87,8 +87,8 @@
         "tags": []
       },
       {
-        "id": "a0c2e296-b519-4501-9640-c58d2b00a801",
-        "source_id": "1fe0dda6-436d-49f1-959b-38f5d724d291",
+        "id": "858b1dd4-707e-44ce-8cba-a5f2833f558e",
+        "source_id": "e8093fc8-1a81-41d5-b8d5-9b66f323be2b",
         "source_start_ms": 157900,
         "source_end_ms": 171100,
         "speed": 1.0,
@@ -97,8 +97,8 @@
         "tags": []
       },
       {
-        "id": "8fc9d7bd-1f6c-4c85-a3e2-de3134f73af7",
-        "source_id": "1fe0dda6-436d-49f1-959b-38f5d724d291",
+        "id": "f8a9e61e-cd2c-47ce-a050-2c5c849756aa",
+        "source_id": "e8093fc8-1a81-41d5-b8d5-9b66f323be2b",
         "source_start_ms": 192900,
         "source_end_ms": 202100,
         "speed": 1.0,
@@ -107,8 +107,8 @@
         "tags": []
       },
       {
-        "id": "a001c2d7-e59e-4558-bf06-cea0ede446b7",
-        "source_id": "1fe0dda6-436d-49f1-959b-38f5d724d291",
+        "id": "81dccf0c-c8f2-46e1-8e34-da2f765dc88f",
+        "source_id": "e8093fc8-1a81-41d5-b8d5-9b66f323be2b",
         "source_start_ms": 209900,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -121,10 +121,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "2f00cd62c6efc600943c4cfcbcdd96bc5e6a180e04f65c16028638ea90c08cd7",
+    "timeline_hash": "01c0b4ed88ef5bdef9f9abd3da59537e25d326a810b70476f686eb1948ac0543",
     "duration_ms": 103400
   },
-  "final_timeline_hash": "2f00cd62c6efc600943c4cfcbcdd96bc5e6a180e04f65c16028638ea90c08cd7",
+  "final_timeline_hash": "01c0b4ed88ef5bdef9f9abd3da59537e25d326a810b70476f686eb1948ac0543",
   "final_duration_s": 103.4,
   "final_video": null
 }
