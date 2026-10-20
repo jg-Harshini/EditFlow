@@ -1,6 +1,6 @@
 # Engineering Assessment 2 — Official Submission Form
 
-**Candidate:** Harshini J  
+**Candidate:** Harshini J G
 **Position:** Full-Stack & Video Processing Engineer  
 **Repository:** `c:\HARSHINI\PLACEMENT\video-engine`  
 **Assessment Target:** Top Pick (Score: 85+)  
