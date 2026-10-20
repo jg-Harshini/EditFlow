@@ -1,4 +1,4 @@
-# IncuBrix Assessment 2 — Test Pack Index
+# Engineering Assessment 2 — Test Pack Index
 
 This index provides full traceability linking every requirement, performance claim, and scenario in **`REPORT.md`** and the **`Submission Form`** to its exact files, inputs, outputs, and automated tests.
 

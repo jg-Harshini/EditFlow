@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "IncuBrixTimeline",
+  "title": "Timeline",
   "description": "Deterministic, content-anchored video editing timeline model",
   "type": "object",
   "required": [

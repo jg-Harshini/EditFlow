@@ -1,6 +1,6 @@
 # AI Coding Tools and Assistants Disclosure
 
-In accordance with Section 5 of the IncuBrix Engineering Assessment 2 Brief, this document discloses all AI tools, models, and assistants utilized during the architecture, development, testing, and documentation of the **Prompt-Based Video Editing Engine**.
+In accordance with Section 5 of the Engineering Assessment 2 Brief, this document discloses all AI tools, models, and assistants utilized during the architecture, development, testing, and documentation of the **Prompt-Based Video Editing Engine**.
 
 ---
 

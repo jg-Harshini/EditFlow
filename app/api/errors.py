@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 
 
 class AppException(Exception):
-    """Base application exception following IncuBrix Integration Standard 5."""
+    """Base application exception following Integration Standard 5."""
 
     def __init__(
         self,

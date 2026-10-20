@@ -95,7 +95,7 @@ class JobService:
 
         headers = {
             "Content-Type": "application/json",
-            "X-IncuBrix-Signature": signature,
+            "X-Signature": signature,
         }
 
         try:

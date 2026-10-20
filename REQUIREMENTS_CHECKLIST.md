@@ -1,4 +1,4 @@
-# IncuBrix Engineering Assessment 2: Prompt-Based Video Editing Engine
+# Engineering Assessment 2: Prompt-Based Video Editing Engine
 ## Requirements Checklist & Implementation Mapping
 
 *Document Version:* 1.1.0  
@@ -81,7 +81,7 @@
 |---|------|-------------------|----------------|----------------------------|--------|
 | **I1** | **One-command start and test** | `docker compose up` starts service, database, storage. One command runs all tests (unit, integration, e2e) without API keys. `.env.example` lists every setting. | `docker-compose.yml`, `Dockerfile`, `run_tests.py`, `.env.example`. | Docker compose config, `python run_tests.py` test run. | `PASS` |
 | **I2** | **Documented HTTP API** | `openapi.yaml` (OpenAPI 3.1) matching running service exactly. All routes under `/api/v1/`. | FastAPI app generating OpenAPI 3.1 spec exported to `openapi.yaml`. Routes prefixed `/api/v1/`. | `openapi.yaml` validated against OpenAPI 3.1 schema. | `PASS` |
-| **I3** | **Background jobs** | Operations > 2s return HTTP 202 with `job_id`. `GET /api/v1/jobs/{job_id}` returns status (`queued`, `running`, `succeeded`, `failed`), progress 0-100, result links. Optional HMAC-SHA256 callback in `X-IncuBrix-Signature`. | Asynchronous background worker queue (`job_service.py`). Webhook dispatcher with HMAC-SHA256 signature. | `tests/test_api_integration.py::test_create_session_and_step_lifecycle` | `PASS` |
+| **I3** | **Background jobs** | Operations > 2s return HTTP 202 with `job_id`. `GET /api/v1/jobs/{job_id}` returns status (`queued`, `running`, `succeeded`, `failed`), progress 0-100, result links. Optional HMAC-SHA256 callback in `X-Signature`. | Asynchronous background worker queue (`job_service.py`). Webhook dispatcher with HMAC-SHA256 signature. | `tests/test_api_integration.py::test_create_session_and_step_lifecycle` | `PASS` |
 | **I4** | **Safe retries** | `Idempotency-Key` header on every POST: sending same request twice with same key returns same job, never re-executes. | Idempotency caching in `job_service.py` mapping key to job ID. | `tests/test_api_integration.py::test_create_session_and_step_lifecycle` (steps 3 & 4) | `PASS` |
 | **I5** | **Clear errors** | Errors are JSON: `{"error": {"code", "message", "retryable", "details"}}`. Codes in `UPPER_SNAKE_CASE` listed in README. | Custom `AppException` handler in `app/api/errors.py`. Catalog in README. | `tests/test_api_integration.py::test_structured_json_error_format` | `PASS` |
 | **I6** | **Configuration** | All settings, paths, model names, limits come from environment variables or config file. No hard-coded paths or keys. | `pydantic-settings` in `app/config.py` driven by `.env`. | `app/config.py` and `.env.example`. | `PASS` |

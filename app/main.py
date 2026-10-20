@@ -44,7 +44,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="IncuBrix Prompt-Based Video Editing Engine API",
+    title="EditFlow Prompt-Based Video Editing Engine API",
     version="1.0.0",
     description="High-performance, content-anchored prompt-based conversational video editing service.",
     lifespan=lifespan,

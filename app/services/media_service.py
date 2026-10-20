@@ -125,7 +125,11 @@ class MediaService:
 
         media = SourceMedia(
             id=str(uuid.uuid4()),
-            uri=os.path.abspath(file_path),
+            uri=(
+                os.path.relpath(os.path.abspath(file_path), os.getcwd()).replace(chr(92), "/")
+                if not os.path.relpath(os.path.abspath(file_path), os.getcwd()).startswith("..")
+                else os.path.abspath(file_path).replace(chr(92), "/")
+            ),
             duration_ms=info["duration_ms"],
             fps=info["fps"],
             width=info["width"],

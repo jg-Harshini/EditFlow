@@ -95,7 +95,7 @@ class BatchRunner:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="IncuBrix Batch Test Runner")
+    parser = argparse.ArgumentParser(description="Batch Test Runner")
     parser.add_argument("path", help="Folder or file of test inputs")
     parser.add_argument("--output", "-o", default="batch_results", help="Directory to save all results")
     args = parser.parse_args()

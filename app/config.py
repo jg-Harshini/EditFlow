@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     )
 
     # Service & Network
-    APP_NAME: str = "IncuBrix Prompt-Based Video Editing Engine"
+    APP_NAME: str = "EditFlow Prompt-Based Video Editing Engine"
     API_V1_STR: str = "/api/v1"
     HOST: str = "0.0.0.0"
     PORT: int = 8000
@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     OUTPUT_DIR: Path = Field(default_factory=lambda: Path(os.getenv("OUTPUT_DIR", "outputs")))
 
     # Security & Idempotency
-    WEBHOOK_HMAC_SECRET: str = "incubrix-super-secret-hmac-key"
+    WEBHOOK_HMAC_SECRET: str = "editflow-super-secret-hmac-key"
     IDEMPOTENCY_TTL_SECONDS: int = 86400  # 24 hours
     MAX_UPLOAD_SIZE_BYTES: int = 1024 * 1024 * 500  # 500 MB
     DOWNLOAD_TIMEOUT_SECONDS: int = 60
@@ -52,7 +52,7 @@ class Settings(BaseSettings):
     # S3 / MinIO Configuration
     S3_ENABLED: bool = False
     S3_ENDPOINT: str = "localhost:9000"
-    S3_BUCKET: str = "incubrix-videos"
+    S3_BUCKET: str = "editflow-videos"
     S3_ACCESS_KEY: str = "minioadmin"
     S3_SECRET_KEY: str = "minioadmin"
     S3_USE_SSL: bool = False

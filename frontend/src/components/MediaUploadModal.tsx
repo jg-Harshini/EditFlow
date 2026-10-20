@@ -262,7 +262,7 @@ export const MediaUploadModal: React.FC<MediaUploadModalProps> = ({ isOpen, onCl
                   className="w-full bg-surface-raised border border-border-default rounded-lg px-3 py-2 text-xs text-text-primary placeholder-text-muted focus:outline-none focus:border-accent-blue"
                 />
                 <p className="text-[10px] text-text-muted leading-relaxed">
-                  IncuBrix verifies remote URLs with strict SSRF protection (prohibiting RFC 1918 private IPs, AWS/GCP metadata endpoints, and non-HTTP protocols).
+                  EditFlow verifies remote URLs with strict SSRF protection (prohibiting RFC 1918 private IPs, AWS/GCP metadata endpoints, and non-HTTP protocols).
                 </p>
               </div>
 

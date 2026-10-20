@@ -52,4 +52,4 @@ def setup_logging(log_level: str = "INFO") -> None:
     root_logger.addHandler(handler)
 
 
-logger = logging.getLogger("incubrix")
+logger = logging.getLogger("editflow")

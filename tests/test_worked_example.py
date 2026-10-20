@@ -6,7 +6,7 @@ from app.services.stt_service import MockSTTProvider
 
 
 def test_worked_example_full_sequence():
-    """Reproduces the exact 8-step worked example from the IncuBrix Assessment 2 brief."""
+    """Reproduces the exact 8-step worked example from the Engineering Assessment 2 brief."""
     service = SessionService(stt_provider=MockSTTProvider())
     video_path = "test_pack/assets/interview.mp4"
     source_media = MediaService.inspect_and_register(video_path)

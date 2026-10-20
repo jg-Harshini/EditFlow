@@ -19,7 +19,7 @@ class BaseSTTProvider(abc.ABC):
 class MockSTTProvider(BaseSTTProvider):
     """
     Deterministic mock STT provider for reproducible CI tests and worked examples.
-    Produces accurate word-level timestamps matching the IncuBrix Assessment 2 specification.
+    Produces accurate word-level timestamps matching the Engineering Assessment 2 specification.
     """
 
     def __init__(self, custom_script: Optional[List[Dict]] = None):
@@ -28,7 +28,7 @@ class MockSTTProvider(BaseSTTProvider):
     def transcribe(self, audio_or_video_path: str) -> Transcript:
         logger.info("MockSTTProvider transcribing: %s", audio_or_video_path)
 
-        # Standard IncuBrix Worked Example Transcript (0:00 - 3:00)
+        # Standard Worked Example Transcript (0:00 - 3:00)
         # Includes intro ("welcome to the channel" at 0:42-0:44),
         # pricing mentioned 3 times (1:05, 2:40, 3:15),
         # fillers ("um", "uh", "like"), and two speakers.

@@ -52,7 +52,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onOpenUpload, onOpenExport }) =>
                   Studio
                 </span>
               </div>
-              <p className="text-[11px] text-editor-muted">IncuBrix Prompt-Based Video Engine</p>
+              <p className="text-[11px] text-editor-muted">EditFlow Prompt-Based Video Engine</p>
             </div>
           </div>
 
@@ -182,7 +182,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onOpenUpload, onOpenExport }) =>
             </div>
             <div className="text-xs text-zinc-300 space-y-3 leading-relaxed">
               <p>
-                <strong>IncuBrix Prompt-Based Video Editing Engine</strong> is a non-destructive, content-anchored editor.
+                <strong>EditFlow Prompt-Based Video Editing Engine</strong> is a non-destructive, content-anchored editor.
               </p>
               <div className="bg-editor-subpanel p-3 rounded border border-editor-border space-y-1.5">
                 <div className="font-medium text-white">How Edits Work:</div>

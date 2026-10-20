@@ -1,6 +1,6 @@
 # Sources, Dependencies, and Licensing Rationale
 
-This document tracks all external libraries, tools, models, model weights, and media assets used in the **IncuBrix Prompt-Based Video Editing Engine**, including their exact licenses and commercial-use suitability.
+This document tracks all external libraries, tools, models, model weights, and media assets used in the **EditFlow Prompt-Based Video Editing Engine**, including their exact licenses and commercial-use suitability.
 
 ---
 

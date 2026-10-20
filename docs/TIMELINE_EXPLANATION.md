@@ -1,4 +1,4 @@
-# IncuBrix Timeline Model & Content Anchoring Specification
+# Timeline Model & Content Anchoring Specification
 
 ## 1. Architectural Principles
 
@@ -6,7 +6,7 @@ In traditional non-linear video editors, effects (such as captions, bleeps, and 
 - If a user cuts the first 30 seconds of a video, an effect stored at `01:40` will now appear 30 seconds too late, desynchronized from the speaker's words.
 - If a user speeds up an interview response by 1.5x, an overlay tied to a clock interval will drift away from the gesture or statement it was intended to highlight.
 
-**The IncuBrix Rule:**  
+**The Core Rule:**  
 > **Edits belong to content, not to a clock position.**
 
 Our timeline architecture enforces **Content-Anchored Projection**. All visual and auditory effects are bound directly to immutable source media timestamps and transcript word identifiers. Output timeline coordinates are purely a deterministic projection of these content anchors through the active sequence of editorial segments.

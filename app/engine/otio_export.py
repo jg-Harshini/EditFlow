@@ -7,7 +7,7 @@ from app.models.timeline import Timeline
 
 
 class OTIOExporter:
-    """Exports IncuBrix Timeline to standard OpenTimelineIO (.otio) format."""
+    """Exports Timeline to standard OpenTimelineIO (.otio) format."""
 
     @classmethod
     def export_timeline(cls, timeline: Timeline, output_path: Optional[str] = None) -> str:
@@ -16,7 +16,7 @@ class OTIOExporter:
         Maps segments to Video/Audio tracks, source ranges, speed retiming, and caption markers.
         """
         fps = timeline.source_media.fps or 30.0
-        otio_timeline = otio.schema.Timeline(name=f"IncuBrix_{timeline.timeline_id[:8]}")
+        otio_timeline = otio.schema.Timeline(name=f"Timeline_{timeline.timeline_id[:8]}")
 
         # Tracks
         video_track = otio.schema.Track(

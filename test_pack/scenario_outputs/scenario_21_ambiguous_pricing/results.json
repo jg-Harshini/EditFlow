@@ -20,17 +20,17 @@
         "the third one (3:13)",
         "all"
       ],
-      "timeline_hash": "10b1253af40cb3a37b7c7fdbdc2d3f949858fa64a429a7a4e39458c50f48e431",
+      "timeline_hash": "40c824124f47c50c57511bfde2c2896edf5a88989d215f9ef311f77fe3b8fe4a",
       "duration_s": 216.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "90f26fcc-fe9a-4072-a788-430fcb2d59c1",
+    "timeline_id": "6ebd1fdf-8ad7-4777-a442-dfa1542cb4f8",
     "source_media": {
-      "id": "1dbcb133-390e-4ba5-a8c9-2e1ec02329d7",
-      "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
+      "id": "fdab21b4-e8b1-4b40-8a2b-024fe89701f5",
+      "uri": "C:\\HARSHINI\\PLACEMENT\\video-engine\\test_pack\\assets\\interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
       "width": 1280,
@@ -41,8 +41,8 @@
     },
     "segments": [
       {
-        "id": "462c36f6-b2f9-4d19-adbf-1993581bae9f",
-        "source_id": "1dbcb133-390e-4ba5-a8c9-2e1ec02329d7",
+        "id": "35233fb4-116c-4a4b-9a4b-f17bdeda1720",
+        "source_id": "fdab21b4-e8b1-4b40-8a2b-024fe89701f5",
         "source_start_ms": 0,
         "source_end_ms": 62000,
         "speed": 1.0,
@@ -51,8 +51,8 @@
         "tags": []
       },
       {
-        "id": "bcf716f5-593c-44a8-aab6-234994ce7bb6",
-        "source_id": "1dbcb133-390e-4ba5-a8c9-2e1ec02329d7",
+        "id": "6bf615c6-995e-4a85-9aaa-0fb922401710",
+        "source_id": "fdab21b4-e8b1-4b40-8a2b-024fe89701f5",
         "source_start_ms": 71000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -65,10 +65,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "10b1253af40cb3a37b7c7fdbdc2d3f949858fa64a429a7a4e39458c50f48e431",
+    "timeline_hash": "40c824124f47c50c57511bfde2c2896edf5a88989d215f9ef311f77fe3b8fe4a",
     "duration_ms": 216000
   },
-  "final_timeline_hash": "10b1253af40cb3a37b7c7fdbdc2d3f949858fa64a429a7a4e39458c50f48e431",
+  "final_timeline_hash": "40c824124f47c50c57511bfde2c2896edf5a88989d215f9ef311f77fe3b8fe4a",
   "final_duration_s": 216.0,
   "final_video": null
 }

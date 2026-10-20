@@ -1,5 +1,5 @@
 /**
- * TypeScript API contracts matching the IncuBrix Video Editing Engine backend exactly.
+ * TypeScript API contracts matching the EditFlow Video Editing Engine backend exactly.
  */
 
 export interface SourceMedia {

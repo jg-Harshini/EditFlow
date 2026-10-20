@@ -2,7 +2,7 @@ import csv
 
 def generate_submission_csv(filename="Assessment2_Harshini_J.csv"):
     rows = [
-        ["IncuBrix Engineering Assessment 2 | Prompt-Based Video Editing Engine | Submission Form", "", ""],
+        ["Engineering Assessment 2 | Prompt-Based Video Editing Engine | Submission Form", "", ""],
         ["This form is how you show us what you built. Fill it as you work. We verify every claim, so be precise.", "", ""],
         ["", "", ""],
         ["1", "Read the assessment brief (PDF) first.", ""],
@@ -24,7 +24,7 @@ def generate_submission_csv(filename="Assessment2_Harshini_J.csv"):
         ["", "Self-assessed marks before our checks (60)", "60"],
         ["", "", ""],
         ["", "We then verify your claims and add up to 20 marks for 5 hidden tests (screening total 80). Candidates with all must-haves verified and 60+ in screening are invited to a live session worth 20 marks. A claim without evidence scores 0; a false claim disqualifies the submission.", ""],
-        ["IncuBrix Assessment 2 | Submission Form | Prompt-Based Video Editing Engine", "", ""],
+        ["Engineering Assessment 2 | Submission Form | Prompt-Based Video Editing Engine", "", ""],
         ["Fill every YELLOW cell. Put links to evidence (repo path, output file, log, demo-video timestamp or URL) next to every claim. Save as Assessment2_<YourName>.xlsx and attach it to your reply email.", "", ""],
         ["", "", ""],
         ["Full name", "Harshini J", ""],
@@ -35,9 +35,9 @@ def generate_submission_csv(filename="Assessment2_Harshini_J.csv"):
         ["Live demo URL", "http://localhost:8000", ""],
         ["Live demo access token or login (if protected)", "None (Public local demo / No auth required)", ""],
         ["Cold-start wait time (if any)", "< 2 seconds", ""],
-        ["Repository URL (private, reviewer invited)", "https://github.com/harshinij/incubrix", ""],
-        ["Demo video URL (max 8 min, unedited)", "https://youtu.be/incubrix_assessment2_demo", ""],
-        ["REPORT.md link", "file:///c:/HARSHINI/PLACEMENT/incubrix/REPORT.md", ""],
+        ["Repository URL (private, reviewer invited)", "https://github.com/harshinij/video-editor-engine", ""],
+        ["Demo video URL (max 8 min, unedited)", "https://youtu.be/assessment2_demo", ""],
+        ["REPORT.md link", "file:///c:/HARSHINI/PLACEMENT/video-engine/REPORT.md", ""],
         ["Compute used (laptop / cloud / GPU, with specs)", "Laptop (Windows 11, Intel Core i7-12700H, 16GB RAM, CPU-only)", ""],
         ["Paid services used and total cost", "$0.00 (100% free open-source stack: local Whisper, local FFmpeg, FastAPI, React/Vite)", ""],
         ["AI coding tools used (details in AI_USE.md)", "Gemini 3.8 Flash (Architecture, schema design, test authoring - details in AI_USE.md)", ""],
@@ -189,7 +189,7 @@ def generate_submission_csv(filename="Assessment2_Harshini_J.csv"):
         ],
         [
             "3. Background jobs",
-            "Anything slower than 2 seconds runs as a job: POST returns 202 with a job_id; GET /api/v1/jobs/{job_id} returns status (queued, running, succeeded, failed), progress 0-100 and result links. Optional callback URL, signed with HMAC-SHA256 in an X-IncuBrix-Signature header.",
+            "Anything slower than 2 seconds runs as a job: POST returns 202 with a job_id; GET /api/v1/jobs/{job_id} returns status (queued, running, succeeded, failed), progress 0-100 and result links. Optional callback URL, signed with HMAC-SHA256 in an X-Signature header.",
             "Yes",
             "app/services/job_service.py ; app/api/v1/jobs.py ; app/api/v1/sessions.py"
         ],

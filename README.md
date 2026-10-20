@@ -1,4 +1,4 @@
-# IncuBrix Assessment 2: Prompt-Based Video Editing Engine
+# Engineering Assessment 2: Prompt-Based Video Editing Engine
 
 An enterprise-grade, deterministic, content-anchored video editing engine that turns natural language instructions into exact, reversible video edits and frame-accurate renders.
 
@@ -49,7 +49,7 @@ flowchart TD
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/incubrix/assessment-video-engine.git
+git clone https://github.com/harshinij/video-editor-engine.git
 cd assessment-video-engine
 
 # 2. Copy environment configuration
@@ -76,7 +76,7 @@ Once running, navigate to **`http://localhost:8000`** in any modern web browser 
 
 ---
 
-## 3. Web Studio Interface (EditFlow AI / IncuBrix Studio)
+## 3. Web Studio Interface (EditFlow AI / EditFlow Studio)
 
 The repository includes a modern, dark-themed React + TypeScript video editing workspace built with Vite and Tailwind CSS.
 
@@ -134,7 +134,7 @@ All settings are driven via environment variables with strict fallback defaults:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `APP_NAME` | `IncuBrix Prompt-Based Video Editing Engine` | Service application name |
+| `APP_NAME` | `EditFlow Prompt-Based Video Editing Engine` | Service application name |
 | `HOST` | `0.0.0.0` | API bind address |
 | `PORT` | `8000` | API bind port |
 | `DEBUG` | `false` | Debug mode |
@@ -142,7 +142,7 @@ All settings are driven via environment variables with strict fallback defaults:
 | `TEMP_DIR` | `temp_data` | Working directory for temporary filtergraphs |
 | `STORAGE_DIR` | `storage_data` | Ingested source video storage directory |
 | `OUTPUT_DIR` | `outputs` | Rendered output video directory |
-| `WEBHOOK_HMAC_SECRET` | `incubrix-super-secret-hmac-key` | Shared secret for signing webhooks |
+| `WEBHOOK_HMAC_SECRET` | `editflow-super-secret-hmac-key` | Shared secret for signing webhooks |
 | `ASYNC_THRESHOLD_SECONDS` | `2.0` | Threshold above which operations return HTTP 202 jobs |
 | `DEFAULT_TIME_POLICY` | `current` | Time reference policy: `current` (preview) or `source` (master) |
 | `MIN_CAPTION_DURATION_MS`| `700` | Minimum readable caption duration (~0.7s) |
@@ -154,7 +154,7 @@ All settings are driven via environment variables with strict fallback defaults:
 
 ## 5. Standardized Error Codes Catalog
 
-All errors conform to IncuBrix Integration Standard 5:  
+All errors conform to Integration Standard 5:  
 `{"error": {"code": "UPPER_SNAKE_CASE", "message": "...", "retryable": bool, "details": {...}}}`
 
 | Code | HTTP Status | Description |

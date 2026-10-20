@@ -24,7 +24,7 @@ class OutputManifest(BaseModel):
     })
     warnings: List[str] = Field(default_factory=list)
     licence_rights_info: Dict[str, str] = Field(default_factory=lambda: {
-        "engine_licence": "Commercial / Proprietary IncuBrix Assessment",
+        "engine_licence": "Commercial / Proprietary Assessment",
         "stt_licence": "MIT / Apache-2.0",
         "ffmpeg_licence": "LGPL v2.1+ / GPL v2+",
         "audio_assets": "Public Domain / Synthesized CC0",

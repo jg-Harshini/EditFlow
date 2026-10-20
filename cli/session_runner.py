@@ -114,7 +114,7 @@ class SessionRunner:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="IncuBrix Session Runner")
+    parser = argparse.ArgumentParser(description="Session Runner")
     parser.add_argument("script_file", help="Path to scripted session file (.yaml or .json)")
     parser.add_argument("--output-dir", "-o", default=None, help="Directory to save results.json and outputs")
     args = parser.parse_args()

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Master Test Runner for IncuBrix Engineering Assessment 2
+Master Test Runner for Engineering Assessment 2
 Executes unit tests, integration tests, worked example, hard cases, and all 42 scenarios.
 Requires no external API keys.
 """
@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT))
 
 def run_all_tests():
     print("==================================================================")
-    print(" IncuBrix Assessment 2 — Automated Verification Test Suite")
+    print(" Engineering Assessment 2 — Automated Verification Test Suite")
     print("==================================================================")
 
     # 1. Ensure test media exists

@@ -218,7 +218,7 @@ export const AIAssistantPanel: React.FC = () => {
                 Speed 2x
               </button>
               <button
-                onClick={() => handleQuickPrompt("Add subtitle 'Welcome to IncuBrix' at 1s for 3s")}
+                onClick={() => handleQuickPrompt("Add subtitle 'Welcome to EditFlow' at 1s for 3s")}
                 disabled={isProcessingPrompt || !sessionId}
                 className="px-2 py-0.5 rounded bg-surface-raised hover:bg-surface-hover text-text-secondary border border-border-default hover:border-accent-blue/40 transition-colors disabled:opacity-50"
               >

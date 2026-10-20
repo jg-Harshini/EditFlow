@@ -2,14 +2,14 @@
 
 **Candidate:** Harshini J  
 **Date:** October 2026  
-**Assessment:** IncuBrix Engineering Assessment 2 (Prompt-Based Video Editing Engine)  
+**Assessment:** Engineering Assessment 2 (Prompt-Based Video Editing Engine)  
 **Target:** Top Pick (Score: 85+)  
 
 ---
 
 ## 1. Executive Summary
 
-We have designed, built, and verified a production-grade, prompt-based conversational video editing service adhering strictly to the IncuBrix Assessment 2 brief. The engine interprets natural language instructions, performs content-anchored interval manipulations, preserves multi-speaker context, and produces frame-accurate rendered video outputs via FFmpeg.
+We have designed, built, and verified a production-grade, prompt-based conversational video editing service adhering strictly to the Engineering Assessment 2 brief. The engine interprets natural language instructions, performs content-anchored interval manipulations, preserves multi-speaker context, and produces frame-accurate rendered video outputs via FFmpeg.
 
 All **8 Must-Haves (M1–M8)** pass without exception. The complete **8-step worked example**, **all 7 hard cases**, and an automated regression suite of **42 scripted test scenarios** run cleanly in CI with zero failures.
 
@@ -45,7 +45,7 @@ To satisfy **Must-Have 4** ("Predictable: The same session always produces the s
 
 The following metrics were measured empirically across test runs and the 42-scenario batch runner:
 
-| Metric | Measured Value | IncuBrix Target / Bar | Verification Proof |
+| Metric | Measured Value | Assessment Target / Bar | Verification Proof |
 |--------|----------------|-----------------------|-------------------|
 | **Instruction Latency (Median)** | **1.2 ms** (0.0012s) | < 3,000 ms on 60m video | Measured via session runner in-memory pipeline |
 | **Instruction Latency (Slowest)** | **4.8 ms** (0.0048s) | < 3,000 ms on 60m video | Interval search on 60m synthetic transcript |
