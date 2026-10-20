@@ -82,3 +82,37 @@ def test_structured_json_error_format():
     assert data["error"]["code"] == "SESSION_NOT_FOUND"
     assert isinstance(data["error"]["retryable"], bool)
     assert "details" in data["error"]
+
+
+def test_media_upload_idempotency():
+    """Integration Standard 4: Safe retries with Idempotency-Key on media upload."""
+    with open("test_pack/assets/short_test.mp4", "rb") as f:
+        file_bytes = f.read()
+
+    headers = {"Idempotency-Key": "media-upload-idem-key-999"}
+    r1 = client.post(
+        "/api/v1/media/upload",
+        files={"file": ("short_test.mp4", file_bytes, "video/mp4")},
+        headers=headers,
+    )
+    assert r1.status_code == 200
+    d1 = r1.json()
+
+    # Second request with identical key
+    r2 = client.post(
+        "/api/v1/media/upload",
+        files={"file": ("short_test.mp4", file_bytes, "video/mp4")},
+        headers=headers,
+    )
+    assert r2.status_code == 200
+    d2 = r2.json()
+    assert d1["file_path"] == d2["file_path"]
+    assert d1["sha256"] == d2["sha256"]
+
+
+def test_storage_service_upload_and_fallback():
+    """Integration Standard 7: StorageService handles local & S3 upload routing."""
+    from app.services.storage_service import storage_service
+    res_url = storage_service.upload_output("test_pack/assets/short_test.mp4")
+    assert "short_test.mp4" in res_url
+

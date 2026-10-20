@@ -11,9 +11,11 @@ __pycache__/
 
 # Temporary data
 temp_data/
+storage_data/
 outputs/
 *.filter
 frontend/node_modules/
+~$*.xlsx
 
 # System / OS
 .DS_Store

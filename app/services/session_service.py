@@ -343,6 +343,53 @@ class SessionService:
                     f"Applied. Caption attached to those {word_count} words (original time {orig_time_str})."
                 )
 
+            # Auto-Caption Operation (Page 2: auto-caption the whole video)
+            elif isinstance(op, AutoCaptionOperation):
+                if not transcript.words:
+                    step_summaries.append("No words found in transcript to auto-caption.")
+                else:
+                    curr_tl = TimelineEngine.clone(curr_tl)
+                    chunks = []
+                    current_chunk = []
+                    for w in transcript.words:
+                        current_chunk.append(w)
+                        if (
+                            len(current_chunk) >= op.words_per_segment
+                            or w.text.endswith((".", "!", "?"))
+                        ):
+                            chunks.append(current_chunk)
+                            current_chunk = []
+                    if current_chunk:
+                        chunks.append(current_chunk)
+
+                    new_caps = []
+                    for chunk in chunks:
+                        cap_text = " ".join(cw.text for cw in chunk)
+                        cap_start = chunk[0].start_ms
+                        cap_end = max(chunk[-1].end_ms, cap_start + 700)
+                        cap_word_ids = [cw.id for cw in chunk]
+                        new_caps.append(
+                            Caption(
+                                id=str(uuid.uuid4()),
+                                source_start_ms=cap_start,
+                                source_end_ms=cap_end,
+                                word_ids=cap_word_ids,
+                                text=cap_text,
+                                style=CaptionStyle(
+                                    color=op.color,
+                                    font_size=op.font_size,
+                                    position="bottom",
+                                ),
+                            )
+                        )
+
+                    curr_tl.captions.extend(new_caps)
+                    curr_tl.update_hash_and_duration()
+                    step_ops_data.append(op.model_dump())
+                    step_summaries.append(
+                        f"Applied. Auto-captioned the whole video ({len(new_caps)} caption blocks generated across {len(transcript.words)} words)."
+                    )
+
             # Modify Caption Operation
             elif isinstance(op, ModifyCaptionOperation):
                 if not curr_tl.captions:

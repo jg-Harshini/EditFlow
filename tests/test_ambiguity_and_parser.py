@@ -49,6 +49,38 @@ def test_parser_modifies_caption_color():
     assert ops[0].color == "red"
 
 
+def test_parser_auto_caption_whole_video():
+    """Verify auto-caption the whole video is parsed and executed."""
+    from app.models.operations import AutoCaptionOperation
+    ops = CommandParser.parse("Auto-caption the whole video")
+    assert len(ops) == 1
+    assert isinstance(ops[0], AutoCaptionOperation)
+
+    ops2 = CommandParser.parse("auto caption the video")
+    assert len(ops2) == 1
+    assert isinstance(ops2[0], AutoCaptionOperation)
+
+
+def test_session_service_auto_caption():
+    from app.services.session_service import SessionService
+    from app.services.media_service import MediaService
+    service = SessionService(stt_provider=MockSTTProvider())
+    media = MediaService.inspect_and_register("test_pack/assets/interview.mp4")
+    state = service.create_session("test_pack/assets/interview.mp4", media)
+    
+    assert len(state.timeline.captions) == 0
+    res = service.process_step(state.session_id, "Auto-caption the whole video")
+    assert res.status == "applied"
+    assert "Auto-captioned the whole video" in res.summary
+    assert len(state.timeline.captions) > 5
+    # Verify word anchoring
+    first_cap = state.timeline.captions[0]
+    assert len(first_cap.word_ids) > 0
+    assert first_cap.source_end_ms > first_cap.source_start_ms
+
+
+
+
 def test_parser_rejects_whole_video_cut():
     with pytest.raises(ValueError, match="cannot cut the entire video"):
         CommandParser.parse("cut everything")

@@ -16,6 +16,7 @@ from app.models.timeline import Timeline
 from app.services.job_service import job_service
 from app.services.media_service import MediaService
 from app.services.session_service import SessionService
+from app.services.storage_service import storage_service
 
 router = APIRouter(prefix="/sessions", tags=["Sessions"])
 
@@ -102,13 +103,14 @@ async def execute_render_job(job_id: str, session_id: str, timeline: Timeline):
         output_path, meta = VideoRenderer.render(timeline)
         job_service.update_progress(job_id, 90, status="running")
 
-        # Create output manifest
+        # Create output manifest & upload to S3/MinIO if enabled
         filename = os.path.basename(output_path)
+        download_url = storage_service.upload_output(output_path)
         manifest = OutputManifest(
             timeline_id=timeline.timeline_id,
             timeline_hash=timeline.timeline_hash,
             output_video_path=output_path,
-            output_video_url=f"/api/v1/media/{filename}",
+            output_video_url=download_url,
             output_duration_s=meta["actual_duration_s"],
             models_used={"stt": settings.STT_PROVIDER},
             providers={"stt": settings.STT_PROVIDER},
@@ -120,7 +122,7 @@ async def execute_render_job(job_id: str, session_id: str, timeline: Timeline):
             job_id,
             {
                 "output_video_path": output_path,
-                "download_url": f"/api/v1/media/{filename}",
+                "download_url": download_url,
                 "metadata": meta,
                 "manifest": manifest.model_dump(),
             },
@@ -218,10 +220,12 @@ async def export_otio(session_id: str):
     try:
         state = session_service.get_session(session_id)
         out_path = OTIOExporter.export_timeline(state.timeline)
+        download_url = storage_service.upload_output(out_path)
         return {
             "status": "success",
             "file_path": out_path,
             "filename": os.path.basename(out_path),
+            "download_url": download_url,
         }
     except KeyError:
         raise AppException(

@@ -18,6 +18,8 @@ This document tracks all external libraries, tools, models, model weights, and m
 | **httpx** | `>=0.27.0` | BSD-3-Clause | Yes | Async HTTP client for SSRF-safe URL media ingestion, webhooks, and integration testing. |
 | **structlog** | `>=24.4.0` | Apache-2.0 / MIT | Yes | Structured JSON logging with context variables (correlation IDs, job IDs). |
 | **python-multipart** | `>=0.0.12` | Apache-2.0 | Yes | Form and file upload streaming parser for FastAPI. |
+| **minio** | `>=7.2.0` | Apache-2.0 | Yes | S3-compatible cloud storage client for MinIO uploads (Integration Standard 7). |
+| **openpyxl** | `>=3.1.5` | MIT | Yes | Pure-python spreadsheet generator for official assessment submission workbooks. |
 | **pytest / pytest-asyncio** | `>=8.3.0` | MIT / Apache-2.0 | Yes | Test framework for unit, integration, and scenario regression suites. |
 
 ---

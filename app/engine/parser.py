@@ -121,6 +121,10 @@ class CommandParser:
                 size = int(val[:-2])
                 return [ModifyCaptionOperation(font_size=size)]
 
+        # Auto-caption the whole video: e.g. "auto-caption the whole video", "auto caption", "caption the whole video"
+        if re.search(r"\b(?:auto[- ]?caption(?:ing)?|caption\s+(?:the\s+)?(?:whole\s+)?video|add\s+captions?\s+to\s+(?:the\s+)?(?:whole\s+)?video|generate\s+captions?)\b", lower):
+            return [AutoCaptionOperation()]
+
         # Add caption: e.g. "Add a caption 'Welcome!' when I say welcome to the channel"
         add_cap_match = re.search(
             r"add\s+(?:a\s+)?caption\s+['\"]([^'\"]+)['\"]\s+(?:when\s+(?:i\s+say|we\s+say|said)\s+['\"]?([^'\"]+)['\"]?|at\s+([0-9:a-z\s]+))",

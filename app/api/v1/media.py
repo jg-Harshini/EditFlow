@@ -2,7 +2,8 @@ import os
 import shutil
 import uuid
 from pathlib import Path
-from fastapi import APIRouter, File, HTTPException, UploadFile, status
+from typing import Dict, Optional
+from fastapi import APIRouter, File, Header, HTTPException, UploadFile, status
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, HttpUrl
 from app.api.errors import AppException, ErrorCodes
@@ -10,6 +11,9 @@ from app.config import settings
 from app.services.media_service import MediaService, MediaValidationError
 
 router = APIRouter(prefix="/media", tags=["Media"])
+
+# Idempotency cache for media ingest operations (Integration Standard 4)
+_media_idempotency_cache: Dict[str, "MediaIngestResponse"] = {}
 
 
 class IngestUrlRequest(BaseModel):
@@ -27,8 +31,14 @@ class MediaIngestResponse(BaseModel):
 
 
 @router.post("/upload", response_model=MediaIngestResponse)
-async def upload_media_file(file: UploadFile = File(...)):
+async def upload_media_file(
+    file: UploadFile = File(...),
+    idempotency_key: Optional[str] = Header(None, alias="Idempotency-Key"),
+):
     """Uploads a video file (MP4 or MOV) for editing."""
+    if idempotency_key and idempotency_key in _media_idempotency_cache:
+        return _media_idempotency_cache[idempotency_key]
+
     filename = file.filename or f"upload_{uuid.uuid4().hex[:8]}.mp4"
     ext = Path(filename).suffix.lower()
     if ext not in (".mp4", ".mov", ".m4v"):
@@ -53,7 +63,7 @@ async def upload_media_file(file: UploadFile = File(...)):
             status_code=status.HTTP_400_BAD_REQUEST,
         )
 
-    return MediaIngestResponse(
+    res = MediaIngestResponse(
         file_path=str(target_path),
         download_url=f"/api/v1/media/{target_path.name}",
         sha256=source_media.sha256,
@@ -62,11 +72,20 @@ async def upload_media_file(file: UploadFile = File(...)):
         width=source_media.width,
         height=source_media.height,
     )
+    if idempotency_key:
+        _media_idempotency_cache[idempotency_key] = res
+    return res
 
 
 @router.post("/ingest-url", response_model=MediaIngestResponse)
-async def ingest_media_from_url(payload: IngestUrlRequest):
+async def ingest_media_from_url(
+    payload: IngestUrlRequest,
+    idempotency_key: Optional[str] = Header(None, alias="Idempotency-Key"),
+):
     """Safely downloads a media file from a URL with SSRF protection."""
+    if idempotency_key and idempotency_key in _media_idempotency_cache:
+        return _media_idempotency_cache[idempotency_key]
+
     try:
         local_path = await MediaService.ingest_from_url(payload.url)
         source_media = MediaService.inspect_and_register(local_path)
@@ -78,7 +97,7 @@ async def ingest_media_from_url(payload: IngestUrlRequest):
         )
 
     p = Path(local_path)
-    return MediaIngestResponse(
+    res = MediaIngestResponse(
         file_path=local_path,
         download_url=f"/api/v1/media/{p.name}",
         sha256=source_media.sha256,
@@ -87,6 +106,9 @@ async def ingest_media_from_url(payload: IngestUrlRequest):
         width=source_media.width,
         height=source_media.height,
     )
+    if idempotency_key:
+        _media_idempotency_cache[idempotency_key] = res
+    return res
 
 
 @router.get("/{file_name}")
