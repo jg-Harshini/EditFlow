@@ -171,14 +171,27 @@ class VideoRenderer:
         curr_v = "[base_v]"
 
         font_opt = ""
-        if os.name == "nt" and os.path.exists("C:/Windows/Fonts/arial.ttf"):
-            font_opt = ":fontfile='C\\:/Windows/Fonts/arial.ttf'"
+        font_candidates = [
+            "C:/Windows/Fonts/arial.ttf",
+            "C:/Windows/Fonts/segoeui.ttf",
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "/usr/share/fonts/dejavu/DejaVuSans.ttf",
+            "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+            "/usr/share/fonts/liberation-sans/LiberationSans-Regular.ttf",
+            "/usr/share/fonts/TTF/DejaVuSans.ttf",
+            "/usr/share/fonts/truetype/freefont/FreeSans.ttf",
+        ]
+        for fc in font_candidates:
+            if os.path.exists(fc):
+                clean_fc = fc.replace(":", "\\:") if os.name == "nt" else fc
+                font_opt = f":fontfile='{clean_fc}'"
+                break
 
         for j, cap in enumerate(projected_caps):
             next_v = f"[v_cap_{j}]"
             t_s = cap.timeline_start_s
             t_e = cap.timeline_end_s
-            text_clean = cap.text.replace("'", "\\'").replace(":", "\\:")
+            text_clean = cap.text.replace("'", "’").replace(":", " - ").replace("%", "%%")
             color = cap.style.color or "white"
             size = cap.style.font_size or 24
 
@@ -256,7 +269,8 @@ class VideoRenderer:
             proc = subprocess.run(cmd, capture_output=True, text=True)
             if proc.returncode != 0:
                 logger.error("FFmpeg render failed: %s", proc.stderr)
-                raise RenderError(f"FFmpeg render process failed: {proc.stderr[:400]}")
+                error_tail = "\n".join(proc.stderr.strip().splitlines()[-6:])
+                raise RenderError(f"FFmpeg render process failed: {error_tail}")
 
         finally:
             if os.path.exists(filter_file):

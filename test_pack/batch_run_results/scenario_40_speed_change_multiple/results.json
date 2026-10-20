@@ -18,7 +18,7 @@
       "summary": "Applied, stating which time policy was used. [Time Policy: Current Timeline Time] Sped up range [10.0s-20.0s] to 2.0x.",
       "question": null,
       "options": null,
-      "timeline_hash": "f9e2bfd20ce1253c3404df40b1a771f377531f95c42e7b05fcd3d459a903980a",
+      "timeline_hash": "c5cfe99ff648bd8a1f5d658373df12e213cdc2065cd0d1d5d3fe18e27ad5bc1d",
       "duration_s": 220.0,
       "warnings": []
     },
@@ -39,16 +39,16 @@
       "summary": "Applied, stating which time policy was used. [Time Policy: Current Timeline Time] Sped up range [30.0s-40.0s] to 1.5x.",
       "question": null,
       "options": null,
-      "timeline_hash": "74ba3c5696efd2c208606dab32bcdc72e0983b3d236c5c90ef81204643c524e9",
+      "timeline_hash": "2a96ebb12f2118a81975a87e2ce68a8671faea863cddad118d321ba6a0ecf7a8",
       "duration_s": 216.667,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "4a6483bf-42f4-4fcb-8a2b-72eedd835db2",
+    "timeline_id": "0b31ae2a-0454-453d-bc49-00760dbe04db",
     "source_media": {
-      "id": "f2b63433-208e-4226-a034-26da38af719d",
+      "id": "abeffb9f-59c9-43c0-b941-3947e1a187f5",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -60,8 +60,8 @@
     },
     "segments": [
       {
-        "id": "952fc4f5-cd22-41d6-bc9f-ee66293d0675",
-        "source_id": "f2b63433-208e-4226-a034-26da38af719d",
+        "id": "c44b46b5-04d3-4a90-a54d-df417e0261b1",
+        "source_id": "abeffb9f-59c9-43c0-b941-3947e1a187f5",
         "source_start_ms": 0,
         "source_end_ms": 10000,
         "speed": 1.0,
@@ -70,8 +70,8 @@
         "tags": []
       },
       {
-        "id": "0b38987f-b010-4f29-921e-ab442020b8b7",
-        "source_id": "f2b63433-208e-4226-a034-26da38af719d",
+        "id": "8b9d188d-2019-420d-b7ee-ce627e75da67",
+        "source_id": "abeffb9f-59c9-43c0-b941-3947e1a187f5",
         "source_start_ms": 10000,
         "source_end_ms": 20000,
         "speed": 2.0,
@@ -80,8 +80,8 @@
         "tags": []
       },
       {
-        "id": "e298d05e-3679-40de-adc4-7ad83507a183",
-        "source_id": "f2b63433-208e-4226-a034-26da38af719d",
+        "id": "c2692a5b-a1ec-4734-bc9d-c57e8cd4a0b8",
+        "source_id": "abeffb9f-59c9-43c0-b941-3947e1a187f5",
         "source_start_ms": 20000,
         "source_end_ms": 35000,
         "speed": 1.0,
@@ -90,8 +90,8 @@
         "tags": []
       },
       {
-        "id": "5297405c-8ae4-4c0d-bd99-63657b97f4c2",
-        "source_id": "f2b63433-208e-4226-a034-26da38af719d",
+        "id": "633d0091-5b5a-40b3-91d8-df8e7e3a2f4a",
+        "source_id": "abeffb9f-59c9-43c0-b941-3947e1a187f5",
         "source_start_ms": 35000,
         "source_end_ms": 45000,
         "speed": 1.5,
@@ -100,8 +100,8 @@
         "tags": []
       },
       {
-        "id": "2463bbbb-e5ff-4173-a0f0-ef1d3b290787",
-        "source_id": "f2b63433-208e-4226-a034-26da38af719d",
+        "id": "24780c4d-fa8b-4ea9-abae-4b16d86de2df",
+        "source_id": "abeffb9f-59c9-43c0-b941-3947e1a187f5",
         "source_start_ms": 45000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -114,10 +114,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "74ba3c5696efd2c208606dab32bcdc72e0983b3d236c5c90ef81204643c524e9",
+    "timeline_hash": "2a96ebb12f2118a81975a87e2ce68a8671faea863cddad118d321ba6a0ecf7a8",
     "duration_ms": 216667
   },
-  "final_timeline_hash": "74ba3c5696efd2c208606dab32bcdc72e0983b3d236c5c90ef81204643c524e9",
+  "final_timeline_hash": "2a96ebb12f2118a81975a87e2ce68a8671faea863cddad118d321ba6a0ecf7a8",
   "final_duration_s": 216.667,
   "final_video": null
 }

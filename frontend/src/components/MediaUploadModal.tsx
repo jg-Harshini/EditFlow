@@ -292,6 +292,23 @@ export const MediaUploadModal: React.FC<MediaUploadModalProps> = ({ isOpen, onCl
 
               <div className="space-y-2">
                 <button
+                  onClick={() => handleLoadSynthetic('test_pack/assets/demo_speech.mp4')}
+                  disabled={isLoading}
+                  className="w-full p-3 rounded-lg border border-indigo-500/40 bg-indigo-950/20 hover:bg-indigo-900/30 hover:border-indigo-400 transition-colors text-left flex items-center justify-between group"
+                >
+                  <div>
+                    <div className="text-xs font-semibold text-indigo-300 group-hover:text-indigo-200 flex items-center gap-1.5">
+                      demo_speech.mp4
+                      <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.5 rounded font-mono">Dynamic Voice & Subtitles</span>
+                    </div>
+                    <div className="text-[11px] text-text-muted mt-0.5">
+                      12s real voice video for demonstrating dynamic Faster-Whisper transcription & auto-subtitling
+                    </div>
+                  </div>
+                  <Play className="w-4 h-4 text-indigo-400 shrink-0 ml-2" />
+                </button>
+
+                <button
                   onClick={() => handleLoadSynthetic('test_pack/assets/interview.mp4')}
                   disabled={isLoading}
                   className="w-full p-3 rounded-lg border border-border-default bg-surface-raised hover:bg-surface-hover hover:border-accent-blue/50 transition-colors text-left flex items-center justify-between group"

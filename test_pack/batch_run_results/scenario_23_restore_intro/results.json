@@ -17,7 +17,7 @@
       "summary": "Applied. Cut 30.0s. Video is now 195.0s (30.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "2a42ff803e6ade1df88d22c30868bae3ada688240063455731c517f80b8a4917",
+      "timeline_hash": "19791699a16665de99d2160e46f2ade8cc9ce2f7d53e96688089f1c91a666187",
       "duration_s": 195.0,
       "warnings": []
     },
@@ -36,16 +36,16 @@
       "summary": "Applied. The first 30 s return; caption back at 0:42; the pricing cut and speed change stay.",
       "question": null,
       "options": null,
-      "timeline_hash": "46a257c36d0f1b070bddcc57088e21e384725948f16bfd060915b50fb7171446",
+      "timeline_hash": "76225839d00ba42de21ca6fcd853f593d629ada40e31d409d92e8d3931df9ebb",
       "duration_s": 225.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "9c21c2ac-3f62-4bb2-8283-b8f5b4b41b47",
+    "timeline_id": "b4cdb216-3134-4f0f-b0f7-e4e507c8b6cb",
     "source_media": {
-      "id": "fb4e4c58-9460-45ab-8a2c-b3771b1acdfa",
+      "id": "b6f30c41-c5a0-4ad8-82fc-9a43714bd1e8",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -57,8 +57,8 @@
     },
     "segments": [
       {
-        "id": "d426fc31-55ac-4a03-93d1-26f4ae15bd50",
-        "source_id": "fb4e4c58-9460-45ab-8a2c-b3771b1acdfa",
+        "id": "971057d2-e7d0-4f97-b965-d53e45e13703",
+        "source_id": "b6f30c41-c5a0-4ad8-82fc-9a43714bd1e8",
         "source_start_ms": 0,
         "source_end_ms": 30000,
         "speed": 1.0,
@@ -67,8 +67,8 @@
         "tags": []
       },
       {
-        "id": "bc924d16-be85-4bc8-96af-a25c925964fe",
-        "source_id": "fb4e4c58-9460-45ab-8a2c-b3771b1acdfa",
+        "id": "50c1642f-ec01-4bd6-815f-07355dc7c652",
+        "source_id": "b6f30c41-c5a0-4ad8-82fc-9a43714bd1e8",
         "source_start_ms": 30000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -81,10 +81,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "46a257c36d0f1b070bddcc57088e21e384725948f16bfd060915b50fb7171446",
+    "timeline_hash": "76225839d00ba42de21ca6fcd853f593d629ada40e31d409d92e8d3931df9ebb",
     "duration_ms": 225000
   },
-  "final_timeline_hash": "46a257c36d0f1b070bddcc57088e21e384725948f16bfd060915b50fb7171446",
+  "final_timeline_hash": "76225839d00ba42de21ca6fcd853f593d629ada40e31d409d92e8d3931df9ebb",
   "final_duration_s": 225.0,
   "final_video": null
 }

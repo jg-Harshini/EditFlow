@@ -2,343 +2,343 @@
   "total_tests": 42,
   "passed": 42,
   "failed": 0,
-  "total_time_s": 46.1,
+  "total_time_s": 15.93,
   "results": [
     {
       "file": "scenario_01_worked_example.yaml",
       "status": "PASSED",
       "steps_count": 8,
-      "timeline_hash": "95a817719e2891c85ad4a194a2d1c2c99eb0036d2f066fb003d1c6061979a170",
+      "timeline_hash": "dd1a22f75fb91600d63e11c2a92bf8b74c05ee9b4fe7a530e0d0e5fb320a9cb1",
       "duration_s": 167.0,
-      "elapsed_time_s": 35.996
+      "elapsed_time_s": 12.367
     },
     {
       "file": "scenario_02_cut_start.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "9c47c91b6990f86726557b8652cd91b21e40243a1e6060604da06d54f84b5b90",
+      "timeline_hash": "f8fce12604a9c72fc34c0172edb255689991d989595f8e6f8f31cde3967cb1cf",
       "duration_s": 215.0,
-      "elapsed_time_s": 0.132
+      "elapsed_time_s": 0.049
     },
     {
       "file": "scenario_03_cut_middle.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "745e54f38dae0940a896834caedb799dcfec459b6524446700f740606f726902",
+      "timeline_hash": "55b03ef87c15e4ecff4fa98a2f7e17f94b92d646f328c51aa97d2192f9c5bbc7",
       "duration_s": 215.0,
-      "elapsed_time_s": 0.124
+      "elapsed_time_s": 0.051
     },
     {
       "file": "scenario_04_cut_end.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "674ad736f96bce839b92afb8363e943e1a48c8ef4b3d985a2ad2eb56ec4eeaf6",
+      "timeline_hash": "0c18055add32826c64e15eb02190459d26323890d3935ad677f15d41436ae9cd",
       "duration_s": 215.0,
-      "elapsed_time_s": 0.131
+      "elapsed_time_s": 0.049
     },
     {
       "file": "scenario_05_keep_range.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "41c33707110a44eaa94d85f9372b8ae80a2c1570464d86d75a747ff56212dae7",
+      "timeline_hash": "3a15fb92a93f0beb223a61d393c409fabe3a38128b31e0457f147b10e2dbf0cf",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.177
+      "elapsed_time_s": 0.052
     },
     {
       "file": "scenario_06_speed_up_2x.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "b586fc66947e138d7c12c79488e1fab7e44d0a3c5324b4823ceb28869d24ee4b",
+      "timeline_hash": "a02377fb07ffbb0c81836c35a2d2b05b1ae920fe57afaa36d4effc10355bb686",
       "duration_s": 215.0,
-      "elapsed_time_s": 0.126
+      "elapsed_time_s": 0.049
     },
     {
       "file": "scenario_07_speed_up_4x.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "016152de5d2d6556622bb6dc555a931da3d26ff3087700617b82aed244a40f7a",
+      "timeline_hash": "8f3c0b85bb6d552ea81619fa19c89d5daf2d49605573a89f6bd962a82c2f559d",
       "duration_s": 210.0,
-      "elapsed_time_s": 0.135
+      "elapsed_time_s": 0.047
     },
     {
       "file": "scenario_08_slow_down_05x.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "c39dd1df22a05fb3209043a62c5a3c036ee7a03df0e1c9de723efcbb0cb7f37d",
+      "timeline_hash": "bfb2e42208ae52ffb72f1a8031bb0dc36515bfcb40e6f800e70628a2797c95a3",
       "duration_s": 235.0,
-      "elapsed_time_s": 0.133
+      "elapsed_time_s": 0.048
     },
     {
       "file": "scenario_09_add_caption.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "fb56459577393df46d4d801e5408d8bfe9c3f79213ef3e46f07faef3df1c660f",
+      "timeline_hash": "fed41257bcbc55884a40acd3c7e804aa3efa9714958e99fdb3bd5d5bd4c23f77",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.136
+      "elapsed_time_s": 0.054
     },
     {
       "file": "scenario_10_modify_caption_color.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "dd1c4fb70cc12bb5152fd0605ca4a8660fbc4599729f99d19dfd510030ccf9e3",
+      "timeline_hash": "7e21910c144bf28f6257231da48b0c2692fd1a8475f81cc35e16dde08c13b066",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.146
+      "elapsed_time_s": 0.047
     },
     {
       "file": "scenario_11_modify_caption_size.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "c864025a71dab27033cc2c1bf14130c3140dba82c68be3463a20187aa8e25f93",
+      "timeline_hash": "4344d4fce0aa470c7ab7007d5a8ef05d39df86e30ea7bd35a020298cb20ec172",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.139
+      "elapsed_time_s": 0.048
     },
     {
       "file": "scenario_12_undo_single.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "e381467b07f027a35d06b08c74e42be7fa16acf2e99bc3842b744ad39956dd91",
+      "timeline_hash": "4dfa7dd944fc4dfa71bdea70f35676886c52f7834d3cbba87431b151e29f744b",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.125
+      "elapsed_time_s": 0.048
     },
     {
       "file": "scenario_13_undo_redo_sequence.yaml",
       "status": "PASSED",
       "steps_count": 3,
-      "timeline_hash": "d38701e4558b0aecbd8bf9c4dd83685e21177a1ce847d1f6abcec05dc4dfe6e2",
+      "timeline_hash": "c00797e1e425e9097ca465ed218b3d17a4254c0744b62338735967768aa552e9",
       "duration_s": 215.0,
-      "elapsed_time_s": 0.132
+      "elapsed_time_s": 0.049
     },
     {
       "file": "scenario_14_redo_cleared_by_new_edit.yaml",
       "status": "PASSED",
       "steps_count": 4,
-      "timeline_hash": "e7027c139d11254b4f83ca3b254a8677ec51ecff9c49b17643bca69f0030bad1",
+      "timeline_hash": "c536de909f4e4f73ee6b54620babad585618527ea20302e85712042119a17f1c",
       "duration_s": 205.0,
-      "elapsed_time_s": 0.128
+      "elapsed_time_s": 0.047
     },
     {
       "file": "scenario_15_remove_fillers.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "586f1720ec0cec01ea1b2b8a87e0cc814d296100d2ec750c57f360042807c4fd",
+      "timeline_hash": "42ef23f91f184d4524114180570bfce2177ba654c31c1cd55022aa5d9d19c0c3",
       "duration_s": 224.5,
-      "elapsed_time_s": 0.144
+      "elapsed_time_s": 0.051
     },
     {
       "file": "scenario_16_remove_silence.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "9f7ae343ccdbe71e2e157e437347892a1181e9b981f6a3c9b99fc0f969df29ad",
+      "timeline_hash": "2855394a39e9aa1c0efcc7f280f94388a0ceef6e460c625f828fc4f07a608e73",
       "duration_s": 103.4,
-      "elapsed_time_s": 0.15
+      "elapsed_time_s": 0.05
     },
     {
       "file": "scenario_17_background_music.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "8971a2cc13c7e9bbba345adfbf0853f4fe73e4bbadaf958900ad08aed5c3e414",
+      "timeline_hash": "fd376e3d9b6e3af4d2a01209497cb31a6662ad81e729a476a06f0f991e2f1048",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.136
+      "elapsed_time_s": 0.054
     },
     {
       "file": "scenario_18_mute_word.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "1e8f692585ce4c107294f763c17ce8621fa4de0eb24243987dae4eeb6ee623bd",
+      "timeline_hash": "ea1799d651bcbf7a816f0682e3d8c1638bec570a86dc85e65be9615a318ce774",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.14
+      "elapsed_time_s": 0.048
     },
     {
       "file": "scenario_19_bleep_word.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "24fe902885f0b78a2a3f032b672421f62908d64113d4d2672c09e30195fee0ae",
+      "timeline_hash": "84e234a191dbc4b484e9ade9560fa2e8a7717310d2ec298c0620720fde9ddb2f",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.142
+      "elapsed_time_s": 0.046
     },
     {
       "file": "scenario_20_reorder_sections.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "f3fa4b34504259ed9bebbfaa8283ef6a4ab7e4db302030099c81998061288587",
+      "timeline_hash": "91295c6df3e43b34f6346070c0bc6b8396c2115ba3c66e5e08b1c463ccb28342",
       "duration_s": 220.0,
-      "elapsed_time_s": 0.151
+      "elapsed_time_s": 0.045
     },
     {
       "file": "scenario_21_ambiguous_pricing.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "2b34f42947639e01395fa4893b1634c338082da207ca46528837f4cdc0d1f468",
+      "timeline_hash": "9ae63da4b21e526fee6f73a29126469655e01d8a4170ec9a0c2f95f9c5b16551",
       "duration_s": 216.0,
-      "elapsed_time_s": 0.124
+      "elapsed_time_s": 0.055
     },
     {
       "file": "scenario_22_ambiguous_thanks.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "1710908d5280f6637512ed9c920649450d195f20bf800d2d846f77234b6ba961",
+      "timeline_hash": "6df3a816ece2cf6ac9f0f288da842a9f5d6861d1fc6522e4252980340cba8833",
       "duration_s": 221.0,
-      "elapsed_time_s": 0.136
+      "elapsed_time_s": 0.048
     },
     {
       "file": "scenario_23_restore_intro.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "46a257c36d0f1b070bddcc57088e21e384725948f16bfd060915b50fb7171446",
+      "timeline_hash": "76225839d00ba42de21ca6fcd853f593d629ada40e31d409d92e8d3931df9ebb",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.128
+      "elapsed_time_s": 0.049
     },
     {
       "file": "scenario_24_content_anchor_shift.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "b9d3793225b8532cee8613bff4734d4155c7fc1722bc8e40e9e4fefa86f32ee9",
+      "timeline_hash": "4ce4ab50c126076a8ebb961dc7edd50a04aae18a9054b8dc79d631d9501cc69c",
       "duration_s": 210.0,
-      "elapsed_time_s": 0.138
+      "elapsed_time_s": 0.052
     },
     {
       "file": "scenario_25_cut_underlying_caption.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "abc5cc17dc890af0cc666750dbd886f859255d00f49f30d4fbc8c4b67a952a3a",
+      "timeline_hash": "d1e1fe62be80f43816a56d3b15dea52d371ba7d6c7cfc35b9e5e2ef00101b6d1",
       "duration_s": 220.0,
-      "elapsed_time_s": 0.127
+      "elapsed_time_s": 0.05
     },
     {
       "file": "scenario_26_restore_underlying_caption.yaml",
       "status": "PASSED",
       "steps_count": 3,
-      "timeline_hash": "de50dba8bf314d7a4ca09e8be0936f1ee5ab9d282595f763545a70c3c3cd99a8",
+      "timeline_hash": "ab8f4ba844d0015e23ed77c0e30e9d867886a774c44472b9c6b46e8b481d30a6",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.137
+      "elapsed_time_s": 0.047
     },
     {
       "file": "scenario_27_colloquial_80_seconds.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "a31feb97418a10e1d493d138df2e913b7cbc497517592c9673c3b265239daf4b",
+      "timeline_hash": "a00512a1142d6d36c0702309a6e94e131f31eebdf9213fbd9c06a10403e3b595",
       "duration_s": 145.0,
-      "elapsed_time_s": 0.124
+      "elapsed_time_s": 0.046
     },
     {
       "file": "scenario_28_colloquial_minute_twenty.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "c7146c760db737589b5a056b0129db478b7fc29c1f4b7fb9cf8735fd4d1c8a04",
+      "timeline_hash": "fbf0ae812badaeec5521bd2bc59ee8f579641397a794816562bc05da8b8dcb69",
       "duration_s": 145.0,
-      "elapsed_time_s": 0.133
+      "elapsed_time_s": 0.047
     },
     {
       "file": "scenario_29_colloquial_last_10_seconds.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "5140e743d27dc07891308d7926230387e1b48af76f5a5288c25b504116b8d8ff",
+      "timeline_hash": "ba256a9d1dc49a68e660cda769ac8265cd5a5d7b2ff2f00e87270e462ba3f7c9",
       "duration_s": 215.0,
-      "elapsed_time_s": 0.135
+      "elapsed_time_s": 0.047
     },
     {
       "file": "scenario_30_reject_whole_cut.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "ebba8f3b5406576708dc7cc0b4e3a0a0176dddb2bec5e9f5909600cc71514e43",
+      "timeline_hash": "2b0af482504c72ec30b59174c2e977b8ac4ec3887d864b546cf6b1bb72edcfc6",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.134
+      "elapsed_time_s": 0.048
     },
     {
       "file": "scenario_31_reject_empty_undo.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "d78b3b87deb0235e8701a670f155a3052c0af8a7cfcd2a83654c7647342215b4",
+      "timeline_hash": "f054b4164c49ca4de34a9c1bf3861ecd2f318e8d599fa4ae0f2b6b8d28bec311",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.136
+      "elapsed_time_s": 0.049
     },
     {
       "file": "scenario_32_reject_empty_redo.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "cba22abd7bd95272a6c613c71a63707e8c029d418eab0c56ea3ba4a539ca9c30",
+      "timeline_hash": "f6de886ed4085967c840f81bced0e1f91f8627033da9fb5fa9bc23bbf8fe065b",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.123
+      "elapsed_time_s": 0.048
     },
     {
       "file": "scenario_33_reject_missing_caption.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "e1177368be56046cd3b2931f67ac84440e12be9f1dc7f33d5e5eb3656303ab17",
+      "timeline_hash": "b0909d7495b6bceb7c7404483c9f86f578b1a4fd50352dd67374180afb8e9c09",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.134
+      "elapsed_time_s": 0.047
     },
     {
       "file": "scenario_34_speed_then_cut.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "3011f7e3402b8eeaed1ee972b934b995857fa64ad89733e3216d675e7497153f",
+      "timeline_hash": "cd0c612ec1a426b4cf3cea5bf63e718e8e33fb5e31fd65f5b87ae0d566023da5",
       "duration_s": 210.0,
-      "elapsed_time_s": 0.142
+      "elapsed_time_s": 0.05
     },
     {
       "file": "scenario_35_two_speaker_guest.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "9a3b5f8478aff082c9f4e804ad51bf7c51acc82764d01062259c4291fae22114",
+      "timeline_hash": "035082d6c4e59a49ca1391fa3fc612f31d5bf27b8459426266095ec46e4ed7e6",
       "duration_s": 140.0,
-      "elapsed_time_s": 0.133
+      "elapsed_time_s": 0.041
     },
     {
       "file": "scenario_36_two_speaker_host.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "0dd55b3ec08632bb1936fab35fd8ba74132307cf3fadd4284da08c142b3d22fc",
+      "timeline_hash": "50648240b0e604e34a41644b96c286fba5617f94dacb2818a4526db004158df5",
       "duration_s": 140.0,
-      "elapsed_time_s": 0.127
+      "elapsed_time_s": 0.046
     },
     {
       "file": "scenario_37_meaning_search_cost.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "08004a925100b90251bf93c9175ceef368a8907c9a00a86d3bc83ebeff613785",
+      "timeline_hash": "25fa073e12ed43e01b895b8b60da00985bc110903398bea00872a891f697e6e4",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.139
+      "elapsed_time_s": 0.048
     },
     {
       "file": "scenario_38_meaning_search_price.yaml",
       "status": "PASSED",
       "steps_count": 1,
-      "timeline_hash": "99cce07b729e809d2db20e501c5580bc60f52b4e49d0f07b7c4a4ea62daf0278",
+      "timeline_hash": "61c6f0cadb00c0904a8a5d3bc6fa1d335b28b8edb0a58235a4eeed827413c91b",
       "duration_s": 225.0,
-      "elapsed_time_s": 0.133
+      "elapsed_time_s": 0.048
     },
     {
       "file": "scenario_39_multiple_cuts_sequence.yaml",
       "status": "PASSED",
       "steps_count": 3,
-      "timeline_hash": "309f83927a61706227a2bba4263745a0ed94e00beffbab6f2e587ef280ea44ce",
+      "timeline_hash": "9b89712873cda7af2afc4cb4da463fbe34e6fbb0ed910cc766089c0b1ad94f3b",
       "duration_s": 195.0,
-      "elapsed_time_s": 0.13
+      "elapsed_time_s": 0.051
     },
     {
       "file": "scenario_40_speed_change_multiple.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "74ba3c5696efd2c208606dab32bcdc72e0983b3d236c5c90ef81204643c524e9",
+      "timeline_hash": "2a96ebb12f2118a81975a87e2ce68a8671faea863cddad118d321ba6a0ecf7a8",
       "duration_s": 216.667,
-      "elapsed_time_s": 0.121
+      "elapsed_time_s": 0.05
     },
     {
       "file": "scenario_41_quick_render.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "1a315a4132fb94972dec5955965275271aee140bbb005c11d3b6097815352190",
+      "timeline_hash": "701d6eee1024d72bf9f718e1015dd7584c8ee7df30d34084c8d4a80de3f9abc0",
       "duration_s": 8.0,
-      "elapsed_time_s": 2.364
+      "elapsed_time_s": 0.791
     },
     {
       "file": "scenario_42_render_and_otio.yaml",
       "status": "PASSED",
       "steps_count": 2,
-      "timeline_hash": "40a088e364a88ccbdfb8858da9ed49cfd636aff461cfc0d71e134b4201f7d36a",
+      "timeline_hash": "0427a2b9dfec7aa9c376b9b2a62a55379c15308e8e374931ae7bce9e70ec84f7",
       "duration_s": 10.0,
-      "elapsed_time_s": 2.447
+      "elapsed_time_s": 0.861
     }
   ]
 }

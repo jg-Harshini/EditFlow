@@ -18,16 +18,16 @@
       "summary": "Applied bleep effect.",
       "question": null,
       "options": null,
-      "timeline_hash": "24fe902885f0b78a2a3f032b672421f62908d64113d4d2672c09e30195fee0ae",
+      "timeline_hash": "84e234a191dbc4b484e9ade9560fa2e8a7717310d2ec298c0620720fde9ddb2f",
       "duration_s": 225.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "03b70ef2-5086-4953-8dfa-9a6d5f29f7c4",
+    "timeline_id": "c4c25ea4-d7ab-4c9a-9b02-69961b4ea2da",
     "source_media": {
-      "id": "a699e19e-bf99-4c5d-baa6-0b1794207570",
+      "id": "83a592c6-ddc9-4632-93a6-507414db5dc6",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -39,8 +39,8 @@
     },
     "segments": [
       {
-        "id": "1110acb6-02cd-4a83-a4df-372e01695762",
-        "source_id": "a699e19e-bf99-4c5d-baa6-0b1794207570",
+        "id": "bf7cff16-a6f8-441c-8540-ca5e3004e757",
+        "source_id": "83a592c6-ddc9-4632-93a6-507414db5dc6",
         "source_start_ms": 0,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -52,7 +52,7 @@
     "captions": [],
     "audio_effects": [
       {
-        "id": "7870bda6-e016-466f-9b44-12adef36611b",
+        "id": "4b00141c-fc1c-44d7-bbc1-8d68a59857e5",
         "type": "bleep",
         "source_start_ms": 0,
         "source_end_ms": 1000,
@@ -62,10 +62,10 @@
     ],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "24fe902885f0b78a2a3f032b672421f62908d64113d4d2672c09e30195fee0ae",
+    "timeline_hash": "84e234a191dbc4b484e9ade9560fa2e8a7717310d2ec298c0620720fde9ddb2f",
     "duration_ms": 225000
   },
-  "final_timeline_hash": "24fe902885f0b78a2a3f032b672421f62908d64113d4d2672c09e30195fee0ae",
+  "final_timeline_hash": "84e234a191dbc4b484e9ade9560fa2e8a7717310d2ec298c0620720fde9ddb2f",
   "final_duration_s": 225.0,
   "final_video": null
 }

@@ -19,16 +19,16 @@
       "summary": "Applied: removed 1 filler words (um, uh, like).",
       "question": null,
       "options": null,
-      "timeline_hash": "586f1720ec0cec01ea1b2b8a87e0cc814d296100d2ec750c57f360042807c4fd",
+      "timeline_hash": "42ef23f91f184d4524114180570bfce2177ba654c31c1cd55022aa5d9d19c0c3",
       "duration_s": 224.5,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "319e2e05-0302-49a5-8fb2-288382877724",
+    "timeline_id": "71402b28-8b89-49b6-b9eb-33325882390b",
     "source_media": {
-      "id": "e36be6a4-82d5-4daa-a4ce-b9880ebe6fae",
+      "id": "0b34df07-be74-4f5d-824a-fac70e676514",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -40,8 +40,8 @@
     },
     "segments": [
       {
-        "id": "3712c31a-e4a2-4dff-9751-40ea83e2c934",
-        "source_id": "e36be6a4-82d5-4daa-a4ce-b9880ebe6fae",
+        "id": "7564b445-6b96-4a86-a9f8-b069f3344cb3",
+        "source_id": "0b34df07-be74-4f5d-824a-fac70e676514",
         "source_start_ms": 0,
         "source_end_ms": 8500,
         "speed": 1.0,
@@ -50,8 +50,8 @@
         "tags": []
       },
       {
-        "id": "a175c83d-bba3-4eef-beb9-9ca188841fcb",
-        "source_id": "e36be6a4-82d5-4daa-a4ce-b9880ebe6fae",
+        "id": "9dd16835-1b80-4af5-b914-7f58dacb6358",
+        "source_id": "0b34df07-be74-4f5d-824a-fac70e676514",
         "source_start_ms": 9000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -64,10 +64,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "586f1720ec0cec01ea1b2b8a87e0cc814d296100d2ec750c57f360042807c4fd",
+    "timeline_hash": "42ef23f91f184d4524114180570bfce2177ba654c31c1cd55022aa5d9d19c0c3",
     "duration_ms": 224500
   },
-  "final_timeline_hash": "586f1720ec0cec01ea1b2b8a87e0cc814d296100d2ec750c57f360042807c4fd",
+  "final_timeline_hash": "42ef23f91f184d4524114180570bfce2177ba654c31c1cd55022aa5d9d19c0c3",
   "final_duration_s": 224.5,
   "final_video": null
 }

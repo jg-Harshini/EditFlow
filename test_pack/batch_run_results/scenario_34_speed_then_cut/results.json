@@ -18,7 +18,7 @@
       "summary": "Applied, stating which time policy was used. [Time Policy: Current Timeline Time] Sped up range [10.0s-30.0s] to 2.0x.",
       "question": null,
       "options": null,
-      "timeline_hash": "e528cba44b07d74c207c3a675fbb88bf149e35aefa14e6d05c088a4989c39061",
+      "timeline_hash": "843b1c0a5561bea72dc5b8f451dc9a0dbc6b720eff48eaa37ad4e86b924f6bee",
       "duration_s": 215.0,
       "warnings": []
     },
@@ -38,16 +38,16 @@
       "summary": "Applied. Cut 5.0s. Video is now 210.0s (5.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "3011f7e3402b8eeaed1ee972b934b995857fa64ad89733e3216d675e7497153f",
+      "timeline_hash": "cd0c612ec1a426b4cf3cea5bf63e718e8e33fb5e31fd65f5b87ae0d566023da5",
       "duration_s": 210.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "94fbd82c-3d11-4560-a69a-18a509e2c7dc",
+    "timeline_id": "9c5b847a-e08c-4de2-a2c0-c341da2f8a6a",
     "source_media": {
-      "id": "357e81f2-8c11-4e45-8127-741ade9396db",
+      "id": "4ec0570b-f31d-44f9-b7e7-8cbac4a608e2",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -59,8 +59,8 @@
     },
     "segments": [
       {
-        "id": "cffd5dd8-3cd6-48d4-bd45-6ac8ee1de7b2",
-        "source_id": "357e81f2-8c11-4e45-8127-741ade9396db",
+        "id": "9e3dfc3e-052a-48bd-8f28-23487b2225ae",
+        "source_id": "4ec0570b-f31d-44f9-b7e7-8cbac4a608e2",
         "source_start_ms": 5000,
         "source_end_ms": 10000,
         "speed": 1.0,
@@ -69,8 +69,8 @@
         "tags": []
       },
       {
-        "id": "709395b3-9f01-46c8-87dc-bb0ad0204939",
-        "source_id": "357e81f2-8c11-4e45-8127-741ade9396db",
+        "id": "f88813ff-ad84-4cf2-978d-5250ea105ef7",
+        "source_id": "4ec0570b-f31d-44f9-b7e7-8cbac4a608e2",
         "source_start_ms": 10000,
         "source_end_ms": 30000,
         "speed": 2.0,
@@ -79,8 +79,8 @@
         "tags": []
       },
       {
-        "id": "5e9a408b-ac09-43dd-8f8f-a25e7dd73685",
-        "source_id": "357e81f2-8c11-4e45-8127-741ade9396db",
+        "id": "8f2810ac-b719-4033-9b9f-4fd7d8efbee7",
+        "source_id": "4ec0570b-f31d-44f9-b7e7-8cbac4a608e2",
         "source_start_ms": 30000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -93,10 +93,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "3011f7e3402b8eeaed1ee972b934b995857fa64ad89733e3216d675e7497153f",
+    "timeline_hash": "cd0c612ec1a426b4cf3cea5bf63e718e8e33fb5e31fd65f5b87ae0d566023da5",
     "duration_ms": 210000
   },
-  "final_timeline_hash": "3011f7e3402b8eeaed1ee972b934b995857fa64ad89733e3216d675e7497153f",
+  "final_timeline_hash": "cd0c612ec1a426b4cf3cea5bf63e718e8e33fb5e31fd65f5b87ae0d566023da5",
   "final_duration_s": 210.0,
   "final_video": null
 }
