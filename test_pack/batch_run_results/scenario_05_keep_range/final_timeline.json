@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "timeline_id": "3d8a0813-0933-4210-9400-5a456efe5a5a",
+  "timeline_id": "530c7578-353a-4ddb-8439-0bcda39a77be",
   "source_media": {
-    "id": "b41508a5-a640-4a1a-ba62-3dc1f09e6a80",
+    "id": "309564f2-e235-410e-988a-2849227d2568",
     "uri": "test_pack/assets/interview.mp4",
     "duration_ms": 225000,
     "fps": 30.0,
@@ -14,8 +14,8 @@
   },
   "segments": [
     {
-      "id": "5ba54b19-5892-4971-be3a-3fdabafa6f28",
-      "source_id": "b41508a5-a640-4a1a-ba62-3dc1f09e6a80",
+      "id": "354f24f8-4837-4020-a4e8-350878c9044a",
+      "source_id": "309564f2-e235-410e-988a-2849227d2568",
       "source_start_ms": 0,
       "source_end_ms": 225000,
       "speed": 1.0,
@@ -28,6 +28,6 @@
   "audio_effects": [],
   "background_audio": [],
   "history_index": 0,
-  "timeline_hash": "8d32d897bf9e39fab8927d4a1fd22f599e0405bc329c4476712c3006382ffb71",
+  "timeline_hash": "41c33707110a44eaa94d85f9372b8ae80a2c1570464d86d75a747ff56212dae7",
   "duration_ms": 225000
 }

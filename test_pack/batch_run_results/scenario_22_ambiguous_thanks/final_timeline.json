@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "timeline_id": "570eb6da-6eda-4501-9174-39abec8e848f",
+  "timeline_id": "93be18dc-4c83-4890-ad2d-6aa05b18d6dd",
   "source_media": {
-    "id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
+    "id": "e13a4b4a-79c4-4f35-923b-73b874662517",
     "uri": "test_pack/assets/interview.mp4",
     "duration_ms": 225000,
     "fps": 30.0,
@@ -14,8 +14,8 @@
   },
   "segments": [
     {
-      "id": "fb1d3c2f-d594-4ef5-a31e-084c4963cb38",
-      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
+      "id": "d9746dc3-776b-4837-93f1-a3c140a1c4a3",
+      "source_id": "e13a4b4a-79c4-4f35-923b-73b874662517",
       "source_start_ms": 0,
       "source_end_ms": 210000,
       "speed": 1.0,
@@ -24,8 +24,8 @@
       "tags": []
     },
     {
-      "id": "bb5d1fc7-8545-4300-b75d-802d4d9c7954",
-      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
+      "id": "37fa83a4-79ba-496d-88ad-97785feee889",
+      "source_id": "e13a4b4a-79c4-4f35-923b-73b874662517",
       "source_start_ms": 211000,
       "source_end_ms": 214500,
       "speed": 1.0,
@@ -34,8 +34,8 @@
       "tags": []
     },
     {
-      "id": "aa72fe56-23bd-4ab9-acf2-32355752123e",
-      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
+      "id": "a82e5fef-7ef2-432c-a70c-8593d30efdba",
+      "source_id": "e13a4b4a-79c4-4f35-923b-73b874662517",
       "source_start_ms": 215500,
       "source_end_ms": 217500,
       "speed": 1.0,
@@ -44,8 +44,8 @@
       "tags": []
     },
     {
-      "id": "bde83cde-2591-43b8-9412-ad5a5e003093",
-      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
+      "id": "fa84aaa3-8cad-4b5d-943f-415b27d3b7be",
+      "source_id": "e13a4b4a-79c4-4f35-923b-73b874662517",
       "source_start_ms": 218500,
       "source_end_ms": 220500,
       "speed": 1.0,
@@ -54,8 +54,8 @@
       "tags": []
     },
     {
-      "id": "e3ac9046-5e21-4978-be3d-f55f8bcf5d70",
-      "source_id": "e37bfb8b-abed-43a1-8063-ee79c4c262c9",
+      "id": "88b27720-ef72-416c-b67d-9148af34094b",
+      "source_id": "e13a4b4a-79c4-4f35-923b-73b874662517",
       "source_start_ms": 221500,
       "source_end_ms": 225000,
       "speed": 1.0,
@@ -68,6 +68,6 @@
   "audio_effects": [],
   "background_audio": [],
   "history_index": 0,
-  "timeline_hash": "76d45f9a71d6fb96e8f6feff263b289e4e7f2c173a47e9142befdab6ae5d5310",
+  "timeline_hash": "1710908d5280f6637512ed9c920649450d195f20bf800d2d846f77234b6ba961",
   "duration_ms": 221000
 }

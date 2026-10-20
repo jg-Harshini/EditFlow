@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useRef, ReactNode } from 'react';
 import { api } from '../api/client';
 import { Timeline, JobStatusResponse, StepResult, JobAcceptedResponse } from '../types/api';
 
@@ -76,36 +76,47 @@ export const EditorProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const [error, setError] = useState<string | null>(null);
 
   // Poll active background jobs
+  const hasFiredSuccessRef = useRef(false);
+
   useEffect(() => {
     if (!activeJob || activeJob.status === 'succeeded' || activeJob.status === 'failed') {
+      hasFiredSuccessRef.current = false;
       return;
     }
 
     const interval = setInterval(async () => {
       try {
         const updated = await api.getJobStatus(activeJob.job_id);
-        setActiveJob(updated);
 
         if (updated.status === 'succeeded') {
-          const downloadUrl = updated.result?.download_url;
-          if (downloadUrl) {
-            setActiveVideoUrl(downloadUrl);
+          clearInterval(interval);
+          setActiveJob(updated);
+          if (!hasFiredSuccessRef.current) {
+            hasFiredSuccessRef.current = true;
+            const downloadUrl = updated.result?.download_url;
+            if (downloadUrl) {
+              setActiveVideoUrl(downloadUrl);
+            }
+            addAssistantMessage(
+              `Render finished successfully! Length: ${updated.result?.metadata?.actual_duration_s ?? 'N/A'}s (frame difference: ${updated.result?.metadata?.difference_frames ?? 0}).`,
+              'applied',
+              downloadUrl
+            );
           }
-          addAssistantMessage(
-            `Render finished successfully! Length: ${updated.result?.metadata?.actual_duration_s ?? 'N/A'}s (frame difference: ${updated.result?.metadata?.difference_frames ?? 0}).`,
-            'applied',
-            downloadUrl
-          );
         } else if (updated.status === 'failed') {
+          clearInterval(interval);
+          setActiveJob(updated);
           addAssistantMessage(`Render failed: ${updated.error?.message || 'Unknown render error'}`, 'rejected');
+        } else {
+          setActiveJob(updated);
         }
       } catch (err: any) {
         console.error('Job polling failed:', err);
       }
-    }, 1000);
+    }, 1500);
 
     return () => clearInterval(interval);
-  }, [activeJob]);
+  }, [activeJob?.job_id]);
 
   const addAssistantMessage = (
     text: string,

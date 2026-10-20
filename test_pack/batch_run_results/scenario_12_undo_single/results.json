@@ -17,7 +17,7 @@
       "summary": "Applied. Cut 10.0s. Video is now 215.0s (10.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "42e2f4a2b31d2d34cd01dd7b36b9893a4a99403d24c58310b07af4fcf367d1f2",
+      "timeline_hash": "140a3961ed9fc754d4665fbdf58ed0240aa4082350e4a619432ceeb32dcdbe86",
       "duration_s": 215.0,
       "warnings": []
     },
@@ -33,16 +33,16 @@
       "summary": "Reverses step 1. The cut the first 10 seconds is undone.",
       "question": null,
       "options": null,
-      "timeline_hash": "b5564be6fdd26af399ddfd2ff314f3e03a8c723ef671a342bc3ee7f01dfdde09",
+      "timeline_hash": "e381467b07f027a35d06b08c74e42be7fa16acf2e99bc3842b744ad39956dd91",
       "duration_s": 225.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "51293f21-9be5-40fe-adc2-ae7fc13fa5ce",
+    "timeline_id": "b69f29b6-659a-4412-ac41-bbc0b3214190",
     "source_media": {
-      "id": "843d43a9-82ba-4255-bec6-171a50351108",
+      "id": "47d13eb7-6dc1-49e9-8b40-31f1fcbe6b3d",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -54,8 +54,8 @@
     },
     "segments": [
       {
-        "id": "0129dc00-ebd0-4f76-b719-009ad8182d0f",
-        "source_id": "843d43a9-82ba-4255-bec6-171a50351108",
+        "id": "410cfd9d-745b-41af-b17d-dfbb18d3e91a",
+        "source_id": "47d13eb7-6dc1-49e9-8b40-31f1fcbe6b3d",
         "source_start_ms": 0,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -68,10 +68,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "b5564be6fdd26af399ddfd2ff314f3e03a8c723ef671a342bc3ee7f01dfdde09",
+    "timeline_hash": "e381467b07f027a35d06b08c74e42be7fa16acf2e99bc3842b744ad39956dd91",
     "duration_ms": 225000
   },
-  "final_timeline_hash": "b5564be6fdd26af399ddfd2ff314f3e03a8c723ef671a342bc3ee7f01dfdde09",
+  "final_timeline_hash": "e381467b07f027a35d06b08c74e42be7fa16acf2e99bc3842b744ad39956dd91",
   "final_duration_s": 225.0,
   "final_video": null
 }

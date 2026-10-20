@@ -260,6 +260,40 @@ class CommandParser:
             target_word = mute_match.group(1)
             return [MuteWordsOperation(description=f"Mute word: {target_word}")]
 
+        # Global speed change: "Speed up to 2x", "Speed 2x", "Speed up the video 2x", "Slow down to 0.5x"
+        global_speed_match = re.search(
+            r"(?:speed\s+(?:up\s+)?(?:to\s+)?|slow\s+down\s+(?:to\s+)?|set\s+speed\s+(?:to\s+)?)([0-9]+(?:\.[0-9]+)?)x?",
+            lower,
+        )
+        if global_speed_match and timeline is not None:
+            spd = float(global_speed_match.group(1))
+            if 0.1 <= spd <= 16.0:
+                return [SpeedChangeOperation(start_ms=0, end_ms=timeline.duration_ms, speed=spd, time_coordinate="current")]
+
+        # Add subtitle / add caption with "at Xs for Ys" syntax
+        subtitle_match = re.search(
+            r"add\s+(?:a\s+)?(?:subtitle|caption|text)\s+['\"]?([^'\"]+?)['\"]?\s+at\s+([0-9:a-z\s]+?)\s+for\s+([0-9:a-z\s]+)",
+            instruction,
+            re.IGNORECASE,
+        )
+        if subtitle_match:
+            cap_text = subtitle_match.group(1).strip()
+            start_str = subtitle_match.group(2).strip()
+            dur_str = subtitle_match.group(3).strip()
+            s_ms = parse_time_str(start_str)
+            d_ms = parse_time_str(dur_str)
+            if s_ms is not None and d_ms is not None:
+                return [AddCaptionOperation(text=cap_text, start_ms=s_ms, end_ms=s_ms + d_ms)]
+
+        # Colloquial speed: "Make it faster", "Speed things up"
+        if any(p in lower for p in ("make it faster", "speed things up", "go faster", "faster please")):
+            if timeline is not None:
+                return [SpeedChangeOperation(start_ms=0, end_ms=timeline.duration_ms, speed=1.5, time_coordinate="current")]
+
+        if any(p in lower for p in ("make it slower", "slow it down", "go slower", "slower please")):
+            if timeline is not None:
+                return [SpeedChangeOperation(start_ms=0, end_ms=timeline.duration_ms, speed=0.75, time_coordinate="current")]
+
         # Fallback / General intent detection for topics (e.g. "Remove the part about pricing")
         topic_match = re.search(
             r"(?:cut|remove|delete)\s+(?:the\s+part\s+about\s+|everything\s+about\s+|the\s+bit\s+about\s+)?([a-z0-9_\s]+)",

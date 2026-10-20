@@ -17,16 +17,16 @@
       "summary": "Applied. Cut 80.0s. Video is now 145.0s (80.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "d5010f3e9a0eaa885cb3edbc5e5d6091930bd625d5e8a1bb55bce987bd1c127f",
+      "timeline_hash": "a31feb97418a10e1d493d138df2e913b7cbc497517592c9673c3b265239daf4b",
       "duration_s": 145.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "df50d456-1f8e-4a8b-82a8-388ce48773de",
+    "timeline_id": "0bc9b5ac-10c9-4551-81e7-052d5b8db764",
     "source_media": {
-      "id": "bebed653-8e1a-4b6c-aa71-9266b52758e3",
+      "id": "db3743c6-8784-4739-bf60-216b6e39d081",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -38,8 +38,8 @@
     },
     "segments": [
       {
-        "id": "2e5641c5-599e-43cc-a079-a9a606b6f517",
-        "source_id": "bebed653-8e1a-4b6c-aa71-9266b52758e3",
+        "id": "1a1d01ec-ee77-410d-899a-e741c5e7d5d5",
+        "source_id": "db3743c6-8784-4739-bf60-216b6e39d081",
         "source_start_ms": 80000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -52,10 +52,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "d5010f3e9a0eaa885cb3edbc5e5d6091930bd625d5e8a1bb55bce987bd1c127f",
+    "timeline_hash": "a31feb97418a10e1d493d138df2e913b7cbc497517592c9673c3b265239daf4b",
     "duration_ms": 145000
   },
-  "final_timeline_hash": "d5010f3e9a0eaa885cb3edbc5e5d6091930bd625d5e8a1bb55bce987bd1c127f",
+  "final_timeline_hash": "a31feb97418a10e1d493d138df2e913b7cbc497517592c9673c3b265239daf4b",
   "final_duration_s": 145.0,
   "final_video": null
 }

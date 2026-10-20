@@ -17,16 +17,16 @@
       "summary": "Applied. Cut 10.0s. Video is now 140.0s (10.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "347c62b31110139676d12d3b95f7e3706c667b63c8f66f62ffefbcaa4ea46679",
+      "timeline_hash": "0dd55b3ec08632bb1936fab35fd8ba74132307cf3fadd4284da08c142b3d22fc",
       "duration_s": 140.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "ac9bf995-881c-435b-9706-5c3c25c69c6e",
+    "timeline_id": "7151e655-22e6-4140-80b9-cc62d6f74d3e",
     "source_media": {
-      "id": "8f5f7f43-d6ac-4d01-9a77-eca7ca1b3935",
+      "id": "e24384a6-b9e5-4a45-b8c8-e5a5e0ac631b",
       "uri": "test_pack/assets/multispeaker.mp4",
       "duration_ms": 150000,
       "fps": 30.0,
@@ -38,8 +38,8 @@
     },
     "segments": [
       {
-        "id": "d157cf7a-17db-4174-91dd-a51ea7aa9b01",
-        "source_id": "8f5f7f43-d6ac-4d01-9a77-eca7ca1b3935",
+        "id": "7231da20-25be-4c57-af15-fc23c29246e0",
+        "source_id": "e24384a6-b9e5-4a45-b8c8-e5a5e0ac631b",
         "source_start_ms": 0,
         "source_end_ms": 20000,
         "speed": 1.0,
@@ -48,8 +48,8 @@
         "tags": []
       },
       {
-        "id": "e32255d2-5d5f-48b8-8108-1ca281b51b83",
-        "source_id": "8f5f7f43-d6ac-4d01-9a77-eca7ca1b3935",
+        "id": "f50a64ed-e091-4fb7-a8db-6f8ba6e1a5a5",
+        "source_id": "e24384a6-b9e5-4a45-b8c8-e5a5e0ac631b",
         "source_start_ms": 30000,
         "source_end_ms": 150000,
         "speed": 1.0,
@@ -62,10 +62,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "347c62b31110139676d12d3b95f7e3706c667b63c8f66f62ffefbcaa4ea46679",
+    "timeline_hash": "0dd55b3ec08632bb1936fab35fd8ba74132307cf3fadd4284da08c142b3d22fc",
     "duration_ms": 140000
   },
-  "final_timeline_hash": "347c62b31110139676d12d3b95f7e3706c667b63c8f66f62ffefbcaa4ea46679",
+  "final_timeline_hash": "0dd55b3ec08632bb1936fab35fd8ba74132307cf3fadd4284da08c142b3d22fc",
   "final_duration_s": 140.0,
   "final_video": null
 }

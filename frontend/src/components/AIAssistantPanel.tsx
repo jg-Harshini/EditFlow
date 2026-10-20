@@ -225,11 +225,18 @@ export const AIAssistantPanel: React.FC = () => {
                 Add Subtitle
               </button>
               <button
-                onClick={() => handleQuickPrompt("Duck audio by 50%")}
+                onClick={() => handleQuickPrompt("Auto-caption the whole video")}
                 disabled={isProcessingPrompt || !sessionId}
                 className="px-2 py-0.5 rounded bg-surface-raised hover:bg-surface-hover text-text-secondary border border-border-default hover:border-accent-blue/40 transition-colors disabled:opacity-50"
               >
-                Duck Audio
+                Auto-Caption
+              </button>
+              <button
+                onClick={() => handleQuickPrompt("Remove filler words")}
+                disabled={isProcessingPrompt || !sessionId}
+                className="px-2 py-0.5 rounded bg-surface-raised hover:bg-surface-hover text-text-secondary border border-border-default hover:border-accent-blue/40 transition-colors disabled:opacity-50"
+              >
+                Remove Fillers
               </button>
               <button
                 onClick={() => handleQuickPrompt("Undo")}

@@ -114,20 +114,29 @@ async def ingest_media_from_url(
 @router.get("/{file_name}")
 async def download_media(file_name: str):
     """Serves ingested and rendered media files for download."""
-    storage_file = settings.STORAGE_DIR / file_name
-    output_file = settings.OUTPUT_DIR / file_name
-
+    search_dirs = [
+        settings.STORAGE_DIR,
+        settings.OUTPUT_DIR,
+        Path("test_pack/assets"),  # allow streaming sample assets during demo
+    ]
     target = None
-    if storage_file.exists():
-        target = storage_file
-    elif output_file.exists():
-        target = output_file
+    for d in search_dirs:
+        candidate = d / file_name
+        if candidate.exists():
+            target = candidate
+            break
 
-    if not target or not target.exists():
+    if not target:
         raise AppException(
             code=ErrorCodes.MEDIA_NOT_FOUND,
             message=f"Media file '{file_name}' not found.",
             status_code=status.HTTP_404_NOT_FOUND,
         )
 
-    return FileResponse(path=str(target), media_type="video/mp4", filename=file_name)
+    media_type = "video/mp4"
+    if file_name.endswith(".mp3"):
+        media_type = "audio/mpeg"
+    elif file_name.endswith(".mov"):
+        media_type = "video/quicktime"
+
+    return FileResponse(path=str(target), media_type=media_type, filename=file_name)

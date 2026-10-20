@@ -9,16 +9,16 @@
       "summary": "Rejected: Nothing to undo.",
       "question": null,
       "options": null,
-      "timeline_hash": "9714b12b4b3a605b1996378fe429b31c50fb2ec32838981a83bbb777483c9246",
+      "timeline_hash": "d78b3b87deb0235e8701a670f155a3052c0af8a7cfcd2a83654c7647342215b4",
       "duration_s": 225.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "229b12ed-2ef2-4d29-bcb0-3d4b87ffe7ef",
+    "timeline_id": "d3367ca7-54a8-4141-a4ed-6346bf5c2d15",
     "source_media": {
-      "id": "1b8581c4-2987-4799-a852-a1b077e98631",
+      "id": "6fb862b5-df6b-4f23-8c0d-ad9b0929a507",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -30,8 +30,8 @@
     },
     "segments": [
       {
-        "id": "6f4b8f63-e17e-45dd-af86-6ff92df301c6",
-        "source_id": "1b8581c4-2987-4799-a852-a1b077e98631",
+        "id": "d6fd01fa-d63f-45f6-8fad-0d780f57ea0f",
+        "source_id": "6fb862b5-df6b-4f23-8c0d-ad9b0929a507",
         "source_start_ms": 0,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -44,10 +44,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "9714b12b4b3a605b1996378fe429b31c50fb2ec32838981a83bbb777483c9246",
+    "timeline_hash": "d78b3b87deb0235e8701a670f155a3052c0af8a7cfcd2a83654c7647342215b4",
     "duration_ms": 225000
   },
-  "final_timeline_hash": "9714b12b4b3a605b1996378fe429b31c50fb2ec32838981a83bbb777483c9246",
+  "final_timeline_hash": "d78b3b87deb0235e8701a670f155a3052c0af8a7cfcd2a83654c7647342215b4",
   "final_duration_s": 225.0,
   "final_video": null
 }

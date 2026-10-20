@@ -210,7 +210,7 @@ class SessionService:
         if not ops:
             res = StepResult(
                 status="rejected",
-                summary=f"Rejected: Could not recognize or validate instruction '{instruction}'.",
+                summary=f"Instruction not recognized: '{instruction}'. Try commands like: 'Cut from 0:30 to 1:00', 'Speed up to 2x', 'Add caption \"Hello\" at 5s', 'Cut the first 10 seconds', 'Undo', 'Render'.",
                 timeline_hash=timeline.timeline_hash,
                 duration_s=timeline.duration_ms / 1000.0,
             )

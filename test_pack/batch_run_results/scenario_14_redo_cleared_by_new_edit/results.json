@@ -17,7 +17,7 @@
       "summary": "Applied. Cut 10.0s. Video is now 215.0s (10.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "7f238c16ae253b28b3508bc9f5b869221a93a88cd6e17638633c6e75ba2c8d8b",
+      "timeline_hash": "9c0db9ab2fde2af7fc678363e87ec9504a0325e4527639075fa83fce729b2c0f",
       "duration_s": 215.0,
       "warnings": []
     },
@@ -33,7 +33,7 @@
       "summary": "Reverses step 1. The cut the first 10 seconds is undone.",
       "question": null,
       "options": null,
-      "timeline_hash": "ab3a0be55599ef1267770558df3d0950cb6f5b78177d9159f45af3c7ef54bb37",
+      "timeline_hash": "aac683ad3b667f9bb7c2f8a8f73b8f176d8613dee4d9e4d11f28afac5218bb12",
       "duration_s": 225.0,
       "warnings": []
     },
@@ -53,7 +53,7 @@
       "summary": "Applied. Cut 20.0s. Video is now 205.0s (20.0s shorter).",
       "question": null,
       "options": null,
-      "timeline_hash": "e05f21c52418827415d454ff698296b03934bec8ea66ecc3f63f0e389d269ef1",
+      "timeline_hash": "e7027c139d11254b4f83ca3b254a8677ec51ecff9c49b17643bca69f0030bad1",
       "duration_s": 205.0,
       "warnings": []
     },
@@ -65,16 +65,16 @@
       "summary": "Rejected: Nothing to redo.",
       "question": null,
       "options": null,
-      "timeline_hash": "e05f21c52418827415d454ff698296b03934bec8ea66ecc3f63f0e389d269ef1",
+      "timeline_hash": "e7027c139d11254b4f83ca3b254a8677ec51ecff9c49b17643bca69f0030bad1",
       "duration_s": 205.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "82286c2c-897d-49c9-ad2d-76b277d2ce2c",
+    "timeline_id": "9d352a83-665e-4aa7-aa28-44f6527b03c2",
     "source_media": {
-      "id": "78fd3e37-220c-4479-96fb-7944cf68aa36",
+      "id": "1912a639-7863-46f7-bdd9-a397c667d118",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -86,8 +86,8 @@
     },
     "segments": [
       {
-        "id": "c9534f68-caa6-4808-8820-8d6db8b26bb2",
-        "source_id": "78fd3e37-220c-4479-96fb-7944cf68aa36",
+        "id": "7584349b-3fbe-481d-9650-c1cef8c5f43e",
+        "source_id": "1912a639-7863-46f7-bdd9-a397c667d118",
         "source_start_ms": 20000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -100,10 +100,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "e05f21c52418827415d454ff698296b03934bec8ea66ecc3f63f0e389d269ef1",
+    "timeline_hash": "e7027c139d11254b4f83ca3b254a8677ec51ecff9c49b17643bca69f0030bad1",
     "duration_ms": 205000
   },
-  "final_timeline_hash": "e05f21c52418827415d454ff698296b03934bec8ea66ecc3f63f0e389d269ef1",
+  "final_timeline_hash": "e7027c139d11254b4f83ca3b254a8677ec51ecff9c49b17643bca69f0030bad1",
   "final_duration_s": 205.0,
   "final_video": null
 }

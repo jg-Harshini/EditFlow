@@ -23,7 +23,7 @@
       "summary": "Applied. Caption attached to those 4 words (original time 0:42-0:44).",
       "question": null,
       "options": null,
-      "timeline_hash": "41fa8587bb6d7f521788b3dae2332fa3c79430302c9440ad76707f5907c0189e",
+      "timeline_hash": "1da6b09509d922d93f33b0dabf1196da496ec1da1de9c37b2c501e227f23b153",
       "duration_s": 225.0,
       "warnings": []
     },
@@ -43,7 +43,7 @@
       "summary": "Applied. Video is 30 s shorter. Caption now plays at 0:12-0:14, still on the same words.",
       "question": null,
       "options": null,
-      "timeline_hash": "375ce8c3462de0c19a3c84b5571fbdb0b9db29b5bbee1a3458b7a8ca5c028cf2",
+      "timeline_hash": "e571bf8876803db2ee7792aacf916150239bc56b0c559ce059ffa1d759f549c5",
       "duration_s": 195.0,
       "warnings": []
     },
@@ -66,7 +66,7 @@
         "the third one (3:13)",
         "all"
       ],
-      "timeline_hash": "8bfda08f81a81021b3cb5a8edf0877df07191988a4e4b62be5f581d2cef15838",
+      "timeline_hash": "338483c8287ad76c2a8490933e6f134dc5827ce69998ea74be9a1a4939b69943",
       "duration_s": 182.0,
       "warnings": []
     },
@@ -87,7 +87,7 @@
       "summary": "Applied, stating which time policy was used. [Time Policy: Current Timeline Time] Sped up range [60.0s-90.0s] to 2.0x.",
       "question": null,
       "options": null,
-      "timeline_hash": "16fc7c5cdb209d6059c5ccd4835ad550b1bc4cb3067df5798b600717d61200a7",
+      "timeline_hash": "d18e984e7e174f75e267dfdb16023d9e5b2a234481a9e23931e4e2399aeeb90d",
       "duration_s": 167.0,
       "warnings": []
     },
@@ -106,7 +106,7 @@
       "summary": "Applied. The first 30 s return; caption back at 0:42; the pricing cut and speed change stay.",
       "question": null,
       "options": null,
-      "timeline_hash": "c1e16af46efa0d4cc7be5bb25aecc231ea032c6507c8ea010b02a3aa99ee781f",
+      "timeline_hash": "bf34217f5dba1d81e1f245b6cce748c0477be3ce7ab76a496f239b622305e0d9",
       "duration_s": 197.0,
       "warnings": []
     },
@@ -122,7 +122,7 @@
       "summary": "Reverses step 5. The actually, put the intro back is undone.",
       "question": null,
       "options": null,
-      "timeline_hash": "16fc7c5cdb209d6059c5ccd4835ad550b1bc4cb3067df5798b600717d61200a7",
+      "timeline_hash": "d18e984e7e174f75e267dfdb16023d9e5b2a234481a9e23931e4e2399aeeb90d",
       "duration_s": 167.0,
       "warnings": []
     },
@@ -144,7 +144,7 @@
       "summary": "Applied to the Welcome! caption, the only one that exists.",
       "question": null,
       "options": null,
-      "timeline_hash": "7e20892a801b1cec3f3ffdb975dc52d4917ed31c2e1906bd7ff0edb2eb3093e9",
+      "timeline_hash": "95a817719e2891c85ad4a194a2d1c2c99eb0036d2f066fb003d1c6061979a170",
       "duration_s": 167.0,
       "warnings": []
     },
@@ -155,9 +155,9 @@
       "operations": [
         {
           "op": "render",
-          "output_path": "outputs\\render_d15529fc_1b03f4.mp4",
+          "output_path": "outputs\\render_dd0f461e_c32ca9.mp4",
           "metadata": {
-            "output_path": "outputs\\render_d15529fc_1b03f4.mp4",
+            "output_path": "outputs\\render_dd0f461e_c32ca9.mp4",
             "expected_duration_s": 167.0,
             "actual_duration_s": 167.066667,
             "difference_frames": 2.0,
@@ -169,17 +169,17 @@
       "summary": "Audio and video in sync, length matches the timeline, caption on 'Welcome!'.",
       "question": null,
       "options": null,
-      "timeline_hash": "7e20892a801b1cec3f3ffdb975dc52d4917ed31c2e1906bd7ff0edb2eb3093e9",
+      "timeline_hash": "95a817719e2891c85ad4a194a2d1c2c99eb0036d2f066fb003d1c6061979a170",
       "duration_s": 167.0,
       "warnings": [],
-      "video_url": "outputs\\render_d15529fc_1b03f4.mp4"
+      "video_url": "outputs\\render_dd0f461e_c32ca9.mp4"
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "d15529fc-9ff6-4404-918f-236ace808833",
+    "timeline_id": "dd0f461e-d4f6-41fd-869e-3d7dcf05bcfa",
     "source_media": {
-      "id": "a855a40b-452a-4329-acc6-36819577ad62",
+      "id": "77e523c0-3e22-4ecf-91e0-8d4c47ecac45",
       "uri": "test_pack/assets/interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -191,8 +191,8 @@
     },
     "segments": [
       {
-        "id": "e920cd68-a963-461f-ae24-d8482601ba5c",
-        "source_id": "a855a40b-452a-4329-acc6-36819577ad62",
+        "id": "506c6c0a-23b9-4427-bb83-884d7f3260f4",
+        "source_id": "77e523c0-3e22-4ecf-91e0-8d4c47ecac45",
         "source_start_ms": 30000,
         "source_end_ms": 90000,
         "speed": 1.0,
@@ -201,8 +201,8 @@
         "tags": []
       },
       {
-        "id": "52c75961-485c-4268-8d53-ccbd00f7207f",
-        "source_id": "a855a40b-452a-4329-acc6-36819577ad62",
+        "id": "ec9d590b-64c8-4d2e-9617-577b7bf7f8d9",
+        "source_id": "77e523c0-3e22-4ecf-91e0-8d4c47ecac45",
         "source_start_ms": 90000,
         "source_end_ms": 120000,
         "speed": 2.0,
@@ -211,8 +211,8 @@
         "tags": []
       },
       {
-        "id": "488a5924-e184-4491-a7ac-7aa22bf14c0b",
-        "source_id": "a855a40b-452a-4329-acc6-36819577ad62",
+        "id": "f9e45d07-1264-446b-a4ec-d93399984d5b",
+        "source_id": "77e523c0-3e22-4ecf-91e0-8d4c47ecac45",
         "source_start_ms": 120000,
         "source_end_ms": 158000,
         "speed": 1.0,
@@ -221,8 +221,8 @@
         "tags": []
       },
       {
-        "id": "ebb9893d-e893-4fa6-a14c-a7bd10d679c1",
-        "source_id": "a855a40b-452a-4329-acc6-36819577ad62",
+        "id": "1e782cc1-ba6a-44ed-9a78-986e00506fea",
+        "source_id": "77e523c0-3e22-4ecf-91e0-8d4c47ecac45",
         "source_start_ms": 171000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -233,7 +233,7 @@
     ],
     "captions": [
       {
-        "id": "946b5979-d9df-4ec7-b1a5-5d1fe32acd1c",
+        "id": "0bac694a-77d7-4813-a44d-aa90d6c067bb",
         "source_start_ms": 42000,
         "source_end_ms": 44000,
         "word_ids": [
@@ -255,10 +255,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "7e20892a801b1cec3f3ffdb975dc52d4917ed31c2e1906bd7ff0edb2eb3093e9",
+    "timeline_hash": "95a817719e2891c85ad4a194a2d1c2c99eb0036d2f066fb003d1c6061979a170",
     "duration_ms": 167000
   },
-  "final_timeline_hash": "7e20892a801b1cec3f3ffdb975dc52d4917ed31c2e1906bd7ff0edb2eb3093e9",
+  "final_timeline_hash": "95a817719e2891c85ad4a194a2d1c2c99eb0036d2f066fb003d1c6061979a170",
   "final_duration_s": 167.0,
-  "final_video": "outputs\\render_d15529fc_1b03f4.mp4"
+  "final_video": "outputs\\render_dd0f461e_c32ca9.mp4"
 }

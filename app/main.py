@@ -4,7 +4,7 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response as FastAPIResponse
 from fastapi.staticfiles import StaticFiles
 import yaml
 from app.api.errors import AppException, app_exception_handler, generic_exception_handler
@@ -85,6 +85,10 @@ app.add_exception_handler(Exception, generic_exception_handler)
 
 # Top-level Health Endpoints
 app.include_router(health_router)
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    return FastAPIResponse(status_code=204)
 
 # Mount frontend production assets if built
 frontend_dist = Path(__file__).resolve().parent.parent / "frontend" / "dist"
