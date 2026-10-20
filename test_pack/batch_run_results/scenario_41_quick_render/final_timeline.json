@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "timeline_id": "94bc8d47-658a-45d2-89f0-df1e2b4a66f2",
+  "timeline_id": "3ecfc80a-e754-4926-b97c-b6222b7046a1",
   "source_media": {
-    "id": "8acc9f8d-2f8b-42af-bb30-ea94515b1987",
+    "id": "4440d647-4a83-436d-83b9-fb250f627fa5",
     "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\short_test.mp4",
     "duration_ms": 10000,
     "fps": 30.0,
@@ -14,8 +14,8 @@
   },
   "segments": [
     {
-      "id": "3d0e712c-d3e4-4e7a-9349-70afb0f50b03",
-      "source_id": "8acc9f8d-2f8b-42af-bb30-ea94515b1987",
+      "id": "13c0b7e7-2b1b-4fe6-b088-045a1b5bf89e",
+      "source_id": "4440d647-4a83-436d-83b9-fb250f627fa5",
       "source_start_ms": 2000,
       "source_end_ms": 10000,
       "speed": 1.0,
@@ -28,6 +28,6 @@
   "audio_effects": [],
   "background_audio": [],
   "history_index": 0,
-  "timeline_hash": "ba46cb1333facbc542f62e6e0be34cd7c0eb90412a1dd2d9fa3141e7284e8f4c",
+  "timeline_hash": "7c9d9135518add1f08b64c3abdce85c0e1c6dd61c054ca3d6eab39efde5c85c8",
   "duration_ms": 8000
 }

@@ -20,16 +20,16 @@
         "the third one (3:13)",
         "all"
       ],
-      "timeline_hash": "19ddfa775d42211225b1b5673464ec376f18b28e76e5ea14b28ce6769e6145ce",
+      "timeline_hash": "d6184b97560db1d007bfdcfdda1a2ea36a1a74bb33ac3b36a80b21317cd08ab1",
       "duration_s": 216.0,
       "warnings": []
     }
   ],
   "final_timeline": {
     "version": "1.0.0",
-    "timeline_id": "4775f0d3-68c9-43e0-8aaf-959701d5c704",
+    "timeline_id": "9684812a-90b9-4e77-a391-9d5ce192fdd9",
     "source_media": {
-      "id": "66d40504-6b2f-4629-8020-f584300b7fbe",
+      "id": "5adf2876-2057-40c9-946f-582227d724dd",
       "uri": "C:\\HARSHINI\\PLACEMENT\\incubrix\\test_pack\\assets\\interview.mp4",
       "duration_ms": 225000,
       "fps": 30.0,
@@ -41,8 +41,8 @@
     },
     "segments": [
       {
-        "id": "814e3c6c-44c6-4580-841b-14cf94b36818",
-        "source_id": "66d40504-6b2f-4629-8020-f584300b7fbe",
+        "id": "d4692ad9-05cd-48a7-aecf-31173cb9ba64",
+        "source_id": "5adf2876-2057-40c9-946f-582227d724dd",
         "source_start_ms": 0,
         "source_end_ms": 62000,
         "speed": 1.0,
@@ -51,8 +51,8 @@
         "tags": []
       },
       {
-        "id": "0c73671c-3a2b-4b8f-85ab-30746e00f8b7",
-        "source_id": "66d40504-6b2f-4629-8020-f584300b7fbe",
+        "id": "27b86655-46c7-48ce-b2e7-ea36d9e506e5",
+        "source_id": "5adf2876-2057-40c9-946f-582227d724dd",
         "source_start_ms": 71000,
         "source_end_ms": 225000,
         "speed": 1.0,
@@ -65,10 +65,10 @@
     "audio_effects": [],
     "background_audio": [],
     "history_index": 0,
-    "timeline_hash": "19ddfa775d42211225b1b5673464ec376f18b28e76e5ea14b28ce6769e6145ce",
+    "timeline_hash": "d6184b97560db1d007bfdcfdda1a2ea36a1a74bb33ac3b36a80b21317cd08ab1",
     "duration_ms": 216000
   },
-  "final_timeline_hash": "19ddfa775d42211225b1b5673464ec376f18b28e76e5ea14b28ce6769e6145ce",
+  "final_timeline_hash": "d6184b97560db1d007bfdcfdda1a2ea36a1a74bb33ac3b36a80b21317cd08ab1",
   "final_duration_s": 216.0,
   "final_video": null
 }
